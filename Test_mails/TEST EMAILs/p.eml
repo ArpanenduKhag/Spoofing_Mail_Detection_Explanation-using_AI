@@ -1,0 +1,28 @@
+Return-Path: <security@paypai.com>
+Received: from unknownhost.fakeisp.net (unknownhost.fakeisp.net. [203.0.113.45])
+        by mx.google.com with ESMTP id q7si1743646plp.179.2025.07.01.04.53.21
+        for <user@gmail.com>;
+        Tue, 01 Jul 2025 04:53:21 -0700 (PDT)
+Received-SPF: fail (google.com: domain of security@paypai.com does not designate 203.0.113.45 as permitted sender) client-ip=203.0.113.45;
+Authentication-Results: mx.google.com;
+       dkim=fail header.i=@paypal.com;
+       spf=fail (google.com: domain of paypai.com does not designate 203.0.113.45 as permitted sender) smtp.mailfrom=security@paypai.com;
+       dmarc=fail (p=REJECT sp=REJECT dis=NONE) header.from=paypal.com
+From: PayPal Security <security@paypai.com>
+Reply-To: noreply@secure-paypal.com
+To: user@gmail.com
+Subject: ⚠️ Your PayPal account has been limited
+Date: Tue, 01 Jul 2025 04:52:57 -0700
+Message-ID: <20250701045257.13743.qmail@paypai.com>
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<body>
+<p>Dear customer,</p>
+<p>We have noticed suspicious activity in your PayPal account. To avoid permanent limitation, please verify your information immediately by clicking the link below:</p>
+<p><a href="http://secure-paypai-verification.com/login">Verify your account</a></p>
+<p>Thank you,<br>PayPal Security Team</p>
+</body>
+</html>

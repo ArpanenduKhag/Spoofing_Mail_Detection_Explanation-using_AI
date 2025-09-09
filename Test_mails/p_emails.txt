@@ -1,0 +1,192 @@
+Email 1: AMEX Card Confirmation Scam
+Subject: Confirm your recent card request
+
+From: Seb from CanIPhish 
+
+AMERICAN EXPRESS
+
+Can you please confirm this card request?
+
+Either you or an authorized user requested a new card for your account. To help us keep your account safe, can you please confirm this request?
+
+[Confirm Request] | [Something's Wrong]
+
+As always, you can sign in to your account to verify your account info is accurate.
+
+Thanks for choosing American Express®
+
+Simple. Flexible. Mobile.
+Download the secure American Express Mobile app.
+
+Important Information from American Express
+
+Email 2: Netflix Password Expiry Scam
+Subject: Netflix password expiring in 3 days
+
+From: Seb from CanIPhish 
+
+NETFLIX
+
+Password expiring soon
+
+Hi Alice,
+
+Your password is due to expire in 3 days.
+
+[Reset Password]
+
+Netflix are requesting all its customers perform a password reset due to a recent increase in account compromises.
+
+Your friends at Netflix
+
+Email 3: High-severity alert: Phish delivered due to tenant or user override (Microsoft Alert)
+Subject: High-severity alert: Phish delivered due to tenant or user override
+
+From: Microsoft microsoft@email-records.com
+To: me
+Date: 4:22 PM (14 minutes ago)
+
+Office 365
+
+A high-severity alert has been triggered
+
+Phish delivered due to tenant or user override
+
+Severity: High
+Time: 01/22/2021
+Activity: Protection
+Details: 1 message hit on 2aec-43aa-a943-08d7333445aee-1065783939474734-1, sent by Unknown to at time 01/22/2021 9:22 PM.
+
+[View alert details]
+
+Thank you,
+The Office 365 Team
+
+Microsoft
+One Microsoft Way
+Redmond, WA
+98052-6399 USA
+
+Email 4: LinkedIn Notification Scam
+Subject: Demo, see what your network has been up to
+
+From: Support support@careerbuildcompany.com
+To: me
+Date: 3:10 PM (1 hour ago)
+
+LinkedIn
+
+See what's new
+
+Notifications and updates from your network
+
+1 message
+
+2 invitations
+
+24 new updates
+
+1 profile view
+
+Email 5: SupremeInvoice: New bill Scam
+Subject: SupremeInvoice: New bill
+
+From: domain@domain-name.com
+To: Your email
+
+SupremeInvoice
+
+Here is the new invoice for last week's activities.
+
+Invoice Number
+
+Amount
+
+Click below to connect to the invoice system
+
+36691
+
+$1,265.68
+
+[System Invoice Connect]
+
+Thank you for using SupremeInvoice
+
+Email 6: Apple Facetime Information Disclosure Scam
+Subject: Apple Facetime Information Disclosure
+
+From: domain@domain-name.com
+To: Your email
+
+National Security Department
+
+A vulnerability has been identified in the Apple Facetime mobile applications that allow an attacker to record calls and videos from your mobile device without your knowledge.
+
+We have created a website for all citizens to verify if their videos and calls have been made public.
+
+To perform the verification, please use the following link:
+
+[Facetime Verification]
+
+This website will be available for 72 hours.
+
+National Security Department
+
+
+Email 7: Dropbox File Share Scam
+Subject: I used Dropbox to share a file with you
+
+From: Dropbox
+To: [Recipient's Email Address - Implied]
+
+Dropbox
+
+I used Dropbox to share a file with you
+
+For security purposes, you would be required to sign into your email address to view.
+
+[Click here to view.]
+
+2016 DropBox Inc.
+
+Email 8: Microsoft Outlook Password Expiry Scam
+Subject: Your Password Has Expired
+
+From: Microsoft Outlook msoutlook94@service.outlook.com
+To: [Recipient's Email Address - Implied]
+Date: Wed 10/5/2016 11:21 PM
+
+Password Expired.
+
+Your password for the Microsoft Outlook account [Your Email Address] has expired.
+
+For your account's security, your current password will cease to work shortly.
+
+You are now required to change your password immediately.
+
+Click below to change your password
+http://msoutlook.service.outlook.com/msacks/reset.html
+
+This is a system notification not an email message and you can't reply to it.
+
+Email 9: Nigerian 419 Scam (Naomi Surugaba)
+Subject: [No Subject - Implied from context, but often generic or urgent]
+
+From: Naomi Surugaba azlin@moa.gov.my
+To: Inbox
+Date: Monday, March 10, 2014 1:18 PM
+
+Dear Beloved Friend,
+
+I know this message will come to you as surprised but permit me of my desire to go into business relationship with you.
+
+I am Miss Naomi Surugaba a daughter to late Al-badari Surugaba of Libya whom was murdered during the recent civil war in Libya in March 2011, before his death my late father was a strong supporter and a member of late Moammar Gadhafi Government in Tripoli.
+
+Meanwhile before the incident, my late Father came to Cotonou Benin republic with the sum of USD4, 200,000.00 (US$4.2M) which he deposited in a Bank here in Cotonou Benin Republic West Africa for safe keeping.
+
+I am here seeking for an avenue to transfer the fund to you in only you're reliable and trustworthy person to Investment the fund. I am here in Benin Republic because of the death of my parent's and I want you to help me transfer the fund into your bank account for investment purpose.
+
+Please I will offer you 20% of the total sum of USD4.2M for your assistance. Please I wish to transfer the fund urgently without delay into your account and also wish to relocate to your country due to the poor condition in Benin, as to enable me continue my education as was a medical student before the sudden death of my parent's. Reply to my alternative email:missnaomisurugaba2@hotmail.com, Your immediate response would be appreciated.
+
+Remain blessed,
+Miss Naomi Surugaba.

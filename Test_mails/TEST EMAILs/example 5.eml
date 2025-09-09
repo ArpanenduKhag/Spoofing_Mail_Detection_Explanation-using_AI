@@ -1,0 +1,403 @@
+Delivered-To: killmonger0805@gmail.com
+Received: by 2002:a17:505:a483:b0:1ce1:d7bf:5e96 with SMTP id nd3csp325435njc;
+        Sat, 17 May 2025 13:02:30 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IHY4+2fRmx1hcetxczY9MTWoNlVIxPE3uis5SKGyLSHCP1nqlfLA2jqjKEtDkr/4xUOZXqj
+X-Received: by 2002:a05:6102:32cc:b0:4c3:43e:5227 with SMTP id ada2fe7eead31-4e049e60b0fmr7118165137.9.1747512150584;
+        Sat, 17 May 2025 13:02:30 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1747512150; cv=none;
+        d=google.com; s=arc-20240605;
+        b=de0mXLMJfNqtjcRtmwYE6IFAjwdWDMtDX4X1ETdlBgE79Vj59AhA3BGGbveM0c9a58
+         UGvc38bbf1cyt9BcKEs5ZKsFkGH4yiY6evmKnrghCFspVtado1P88gtfoF3/YP2zIziG
+         bV+/goDi8AcvchPpOEn/qTuRca1TAZrC8+x5T/dWTMc7V5eZAdYK7TR/Y4N1Wx6xQ3YW
+         Y8nZrNs3+d0YZjddPm2ckyBzhJHQZ/tU7hPjb6FfWnub1euvDPIdIp5KeFdDAB/bkECQ
+         uDxK2jK+xfOil4iPpmWZ+24KxAELt4NzUSCvqt+X0p4thP9cjFPGvLB8YGLHVToiLsZP
+         kZZA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:date:message-id:subject:to:from:dkim-signature
+         :dkim-signature;
+        bh=+1XPktUo1D9JJ6GdjCGWnLwmFQCToaTWVCLWAcj0aFw=;
+        fh=1eKjZLOE8U31C3N2FzbSuwffjB92qdpwc9Z7LE6Zk7c=;
+        b=a0yryKoQexZfYwW0PIRcZVneNxECs7E0NCIUpWWA4YZ9eTKg6Vwoic8svAtAyClXqS
+         DtTJ460UBZ7BPMDDt7ek3+GMKF2rCMn4VzUD1KGO+/m4wt40g36FnQbbjZ7dhwfkCnKo
+         QIIATLffVEcOmn5tdOmMOKDUTpXJ/JzoAiGqt123Ep2Vw7gG6I8HDV9J5b0gjzFXu2j0
+         21ftTjSj7kggf0t87tNKEoucgLmGixbtgPwLWAa+N+YE/OoT/ZtgClWkcelId0lSC4Dv
+         9P4c2u8i0bsXxhs2QBp4XWaBBaFrE9kLN7v8QwHeIx7zFzNB3D/BnGtv9+GjhRC/SFta
+         xdvw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@royalenfield.com header.s=pepipost header.b=e1GASuPt;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=kdzs8UdP;
+       spf=pass (google.com: domain of 17474211792059317-60387-0-gmail.com@delivery.royalenfield.com designates 175.158.66.155 as permitted sender) smtp.mailfrom=17474211792059317-60387-0-gmail.com@delivery.royalenfield.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=royalenfield.com
+Return-Path: <17474211792059317-60387-0-gmail.com@delivery.royalenfield.com>
+Received: from mta6-66.155.ptransmail.com (mta6-66.155.ptransmail.com. [175.158.66.155])
+        by mx.google.com with ESMTPS id ada2fe7eead31-4dfa668aae7si2279229137.53.2025.05.17.13.02.30
+        for <killmonger0805@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 17 May 2025 13:02:30 -0700 (PDT)
+Received-SPF: pass (google.com: domain of 17474211792059317-60387-0-gmail.com@delivery.royalenfield.com designates 175.158.66.155 as permitted sender) client-ip=175.158.66.155;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@royalenfield.com header.s=pepipost header.b=e1GASuPt;
+       dkim=pass header.i=@env.etransmail.com header.s=fnc header.b=kdzs8UdP;
+       spf=pass (google.com: domain of 17474211792059317-60387-0-gmail.com@delivery.royalenfield.com designates 175.158.66.155 as permitted sender) smtp.mailfrom=17474211792059317-60387-0-gmail.com@delivery.royalenfield.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=royalenfield.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=royalenfield.com; s=pepipost;
+	h=content-type:mime-version:message-id:subject:to:from:from:to:subject;
+	bh=+1XPktUo1D9JJ6GdjCGWnLwmFQCToaTWVCLWAcj0aFw=;
+	b=e1GASuPtqMyLfAaSPk0H0WJAkCag93IkF9VwCKxcClm63aNSVsGdZ+Uv3DrkBVtu2pIkZmkZvqEDU
+	 K/+oBeKIpnHDma/XRjxJdLGf7DDwnJtL4kI6aE4rr8stCb0mWRzMr/VupkTw/UMtzr6DIAncbtxo0U
+	 2iLJhpRqSYX6woiw=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=env.etransmail.com; s=fnc;
+	h=content-type:mime-version:message-id:subject:to:from:from:to:subject;
+	bh=+1XPktUo1D9JJ6GdjCGWnLwmFQCToaTWVCLWAcj0aFw=;
+	b=kdzs8UdPBywFwV/wJ52uLSzwYuKRV52rp0jvDasjtqqZUli02THszEH/5KNsBjsSGEb5+oCkJJS0M
+	 FGlNIWgDBB1eGrrf6yiu+ZVM2ecM+tKtu2p51HJEAB99/xrI9fEcOVFzmImK9U6HW7xK27vKy3U49c
+	 iOW0OEAGuSp1f8VQ=
+From: noreply@royalenfield.com
+To: killmonger0805@gmail.com
+Subject: Welcome to Royal Enfield - Your New Account
+Message-ID: <2db87466-4bda-2f35-e741-ef662143b66c@royalenfield.com>
+Date: Sun, 18 May 2025 01:32:30 +0530
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--_NmP-a2c575adf53f5647-Part_1"
+X-InjTime: 1747512149
+X-FNCID: 60387-17474211792059317-0
+X-Traffic-Type: 60387-2
+
+----_NmP-a2c575adf53f5647-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 7bit
+
+Thank you for Registration
+----_NmP-a2c575adf53f5647-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=3D"utf-8">
+    <meta name=3D"viewport" content=3D"width=3Ddevice-width">
+    <title></title>
+</head>
+<body>
+
+<div leftmargin=3D"0" topmargin=3D"0" marginwidth=3D"0" marginheight=3D"0"
+     style=3D"font-family: Arial, Helvetica, sans-serif, serif, EmojiFont; =
+background:#e9e9e9;">
+    <table width=3D"100%" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" =
+style=3D"background-color:#e9e9e9">
+        <tbody>
+        <tr>
+            <td>
+                <table width=3D"725" border=3D"0" cellpadding=3D"0" cellspa=
+cing=3D"0" align=3D"center"
+                       style=3D"margin-top:30px; margin-bottom:10px">
+                    <tbody>
+                    <tr>
+                        <td width=3D"100%" valign=3D"top" bgcolor=3D"#fffff=
+f">
+                            <table width=3D"725" border=3D"0" cellpadding=
+=3D"0" cellspacing=3D"0" align=3D"center">
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <table width=3D"725" border=3D"0" c=
+ellspacing=3D"0" cellpadding=3D"0">
+                                            <tbody>
+                                            <tr>
+                                                <td width=3D"20">&nbsp;</td>
+                                                <td width=3D"685">&nbsp;</t=
+d>
+                                                <td width=3D"20">&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>
+                                                    <table width=3D"685" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td width=3D"15=
+3"><a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3DJkw=
+BVVNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD18H=
+BAxbBAhT&fl=3DDURFFRZeGUtCEREcFFtNUQ1SWwMMXQpRGloNWg=3D=3D"
+                                                                           =
+    style=3D"display:block; vertical-align:top; border:none"><img
+                                                                           =
+ src=3D"https://www.royalenfield.com/node/assets/MailerImages/logo.jpg"
+                                                                           =
+ alt=3D"" border=3D"0"></a></td>
+                                                            <td width=3D"53=
+2">&nbsp;</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            <tr>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                                <td>&nbsp;</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td valign=3D"top" bgcolor=3D"#ffffff" =
+style=3D"padding:0"><img
+                                                src=3D"https://www.royalenf=
+ield.com/node/assets/MailerImages/new-header.jpg" alt=3D""
+                                                style=3D"display:block; wid=
+th: 100%; vertical-align:top; border:none"></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <table width=3D"725" border=3D"0" c=
+ellpadding=3D"0" cellspacing=3D"0">
+                                            <tbody>
+                                            <tr>
+                                                <td width=3D"20">&nbsp;</td>
+                                                <td width=3D"685">
+                                                    <table width=3D"685" bo=
+rder=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                                                        <tbody>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                Dear Vishal=
+ singh,
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                We welcome =
+you to the Royal Enfield community! Your registration at RoyalEnfield.com  =
+is complete, and we are excited to have you on board.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                To access a=
+nd manage your user profile, simply click on the link provided below (or co=
+py and paste the URL into your web browser):
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                <a href=3Dh=
+ttps://www.royalenfield.com/in/en/users/user-profile.html?userid=3D4d004665=
+-6e94-484d-a690-0757457fbb35 style=3D"text-decoration:
+                                                                        non=
+e;color: #B30002">https://www.royalenfield.com/in/en/users/user-profile.htm=
+l?userid=3D4d004665-6e94-484d-a690-0757457fbb35</a></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                If you enco=
+unter any challenges or have questions, our dedicated support team is here =
+to assist you. Feel free to contact us at support@royalenfield.com, and we'=
+ll be delighted to provide the support you need.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                Thank you f=
+or choosing Royal Enfield. We are excited about the journey ahead and can't=
+ wait to offer you an exceptional and pure motorcycling experience!
+                                                            </td>
+                                                        </tr>
+                                                        <!-- <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                Best Regard=
+s,<br>Royal Enfield Team
+                                                            </td>
+                                                        </tr> -->
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td height=3D"1=
+px" bgcolor=3D"#cccccc"></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-family: Arial, 'sans-serif';font-size: 14px;color: #000000;">
+                                                                <strong>FOL=
+LOW ROYAL ENFIELD</strong></td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>
+                                                                <table widt=
+h=3D"685" border=3D"0" cellspacing=3D"0"
+                                                                       cell=
+padding=3D"0">
+                                                                    <tbody>
+                                                                    <tr>
+                                                                        <td=
+><a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3DJkwBV=
+VNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD18HBA=
+xbBAhT&fl=3DDURFFRZeGUtCEREcFFtNUQ1SWwMMXQpRGloNWhYNXhoAXh4NCglTSw=3D=3D"
+                                                                           =
+    target=3D"_blank"><img
+                                                                           =
+             src=3D"https://www.royalenfield.com/node/assets/MailerImages/a=
+nnouncement-mailer_14.jpg"
+                                                                           =
+             alt=3D"OFFICIAL WEBSITE"
+                                                                           =
+             style=3D"display:block; vertical-align:top; border:none"></a>
+                                                                        </t=
+d>
+                                                                        <td=
+><a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3DJkwBV=
+VNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD18HBA=
+xbBAhT&fl=3DDURFFRZeGUtCEREcAFVXVQNYWg5LWwlYG2sNTlgIdVsDWVQJAUs=3D"
+                                                                           =
+    target=3D"_blank"><img
+                                                                           =
+             src=3D"https://www.royalenfield.com/node/assets/MailerImages/a=
+nnouncement-mailer_15.jpg"
+                                                                           =
+             alt=3D"FACEBOOK"
+                                                                           =
+             style=3D"display:block; vertical-align:top; border:none"></a>
+                                                                        </t=
+d>
+                                                                        <td=
+><a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3DJkwBV=
+VNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD18HBA=
+xbBAhT&fl=3DDURFFRZeGUtBEQ9GElFGHgJYWEoXVx9UWFwMUVABXFE=3D"
+                                                                           =
+    target=3D"_blank"><img
+                                                                           =
+             src=3D"https://www.royalenfield.com/node/assets/MailerImages/a=
+nnouncement-mailer_16.jpg"
+                                                                           =
+             alt=3D"TWITTER"
+                                                                           =
+             style=3D"display:block; vertical-align:top; border:none"></a>
+                                                                        </t=
+d>
+                                                                        <!-=
+- <td><a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3D=
+JkwBVVNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD=
+18HBAxbBAhT&fl=3DDURFFRZeGUtFChNBSFNbXwZbUEsGVwsaH0sNTlgIVVsDWVQJAUtGC0YSFQ=
+=3D=3D" target=3D"_blank"><img  src=3D"https://www.royalenfield.com/node/as=
+sets/MailerImages/announcement-mailer_17.jpg" style=3D"display:block; verti=
+cal-align:top; border:none" alt=3D"GOOGLE PLUS"></a></td> -->
+                                                                        <td=
+><a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3DJkwBV=
+VNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD18HBA=
+xbBAhT&fl=3DDURFFRZeGUtCEREcD1pHRABQRwQIFgVaWRYQWEAFXFALVlgACQAZ"
+                                                                           =
+    target=3D"_blank"><img
+                                                                           =
+             src=3D"https://www.royalenfield.com/node/assets/MailerImages/a=
+nnouncement-mailer_18.jpg"
+                                                                           =
+             style=3D"display:block; vertical-align:top; border:none"
+                                                                           =
+             alt=3D"INSTAGRAM"></a></td>
+                                                                        <td>
+                                                                           =
+ <a href=3D"https://delivery.royalenfield.com/CGTBDMKREA?id=3D60387=3DJkwBV=
+VNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDBFYDB1RUD18HBA=
+xbBAhT&fl=3DDURFFRZeGUtCEREcH1tBRBRVUEsGVwsaRlYbVlUBXlMMVV0B"
+                                                                           =
+    target=3D"_blank"
+                                                                           =
+    rel=3D"noopener noreferrer"><img
+                                                                           =
+             src=3D"https://www.royalenfield.com/node/assets/MailerImages/a=
+nnouncement-mailer_19.jpg"
+                                                                           =
+             style=3D"display:block; vertical-align:top; border:none"
+                                                                           =
+             alt=3D"YOUTUBE"></a></td>
+                                                                    </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td style=3D"fo=
+nt-size:11px; text-transform:uppercase;font-family: Arial, 'sans-serif';">
+                                                                COPYRIGHT 2=
+025 ROYAL ENFIELD
+                                                                RESERVED.
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>&nbsp;</td>
+                                                        </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </td>
+                                                <td width=3D"20">&nbsp;</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<img id=3D'SBBBB' src=3D'https://delivery.royalenfield.com/CGTBDMKREA?id=3D=
+60387=3DKkwBVVNUBVwCGlYCVgQEAFEHBRk=3DDlEKWVlWDFBcFgANVQVxAggFXwgbBQlfGgUDB=
+FYDB1RUD18HBAxbBAhT' /></body>
+</html>=
+
+----_NmP-a2c575adf53f5647-Part_1--

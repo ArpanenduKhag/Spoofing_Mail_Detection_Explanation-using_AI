@@ -1,0 +1,547 @@
+Delivered-To: arkaghosh566@gmail.com
+Received: by 2002:a05:7300:d003:b0:175:6bed:b121 with SMTP id ni3csp3043841dyb;
+        Mon, 23 Jun 2025 23:47:36 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IH86mwXCvvNAB9yyGAwzwd8INOXim6Ut3o3XYG1Rt7smWi7ay44Ze4Cxgfaq7y2BTvDKRkD
+X-Received: by 2002:a17:902:ccce:b0:234:db06:ab5 with SMTP id d9443c01a7336-237d9b0a44amr86239585ad.12.1750747655824;
+        Mon, 23 Jun 2025 23:47:35 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1750747655; cv=none;
+        d=google.com; s=arc-20240605;
+        b=T3RF16dGB6kKx3Fg52FJVCEjssUCwI6E6nyFPi0081cN6BEnfO/A3HnTf7l7gH9I9C
+         d/yQPe1MLt/KrhBdfycdOk/JmjFlM97VM94Izk+kmz2dcBRv8MLh0NFy/pGo43KbcKIC
+         5+Oac6Meu2g31R9rM+u8VX7yRft46IR7R2zUkSjWlFbwzRz59sz3adP4aiJBErPctSCI
+         DMzYLFjCrIVheSo24WTUDRarqtOjIP94mJgLYxrtJxxk5wFvUD8dAzp/zHGC3ltKDwbl
+         75KDEimZ8/3iNBgmqyiIbUhTqGU1figbKqwv+dvkaPBEfPQlLdjP/zhQ3zmkmwhmynvI
+         xAXQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:reply-to:subject
+         :message-id:mime-version:from:date:content-transfer-encoding
+         :dkim-signature:dkim-signature;
+        bh=MWREUJmuQEaIgTVOJk7NsH/oHXWGIahKo7XlltxInmM=;
+        fh=ClW7gX02LDgGKVEErVW4DaoZbFRCSOU0BRuXzBDzYNc=;
+        b=CvsPh0d4Dv1Ypsu+ls0e98OPiCbCby56o5ezBM2CC0h2vFSHWb/wOD+7v1PGfALdkl
+         MGWgtSy9CBIcYEK6poI9iJ+HFpW4Uokn+dqoITjFlffxiTL5NLijVAMmtKz5XKLeIVuv
+         BSDAjRR/3ipLoLvPF0xURn3k7Xc+MCO6ZocxDLI+0jyjIfHXfBMKIzyW5EX6OM2jlhjN
+         Fbl0WiExMQhvEsZ9rRlbMg8Z+huNN25XOGgXj3kzaFWLEYe7o+2lJqbibqX4lJzr/1ZJ
+         I/yciGUVvrLFgH3kQhMqlz7JQentIhAwNRyXip9gkYaAh+pkf3PZPZrVb3tTIMVav8w4
+         Kpzw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@content.glassdoor.com header.s=s1 header.b=igS3V7MC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ceSMQ3Lv;
+       spf=pass (google.com: domain of bounces+9795912-0c0a-arkaghosh566=gmail.com@mail9.content.glassdoor.com designates 149.72.129.83 as permitted sender) smtp.mailfrom="bounces+9795912-0c0a-arkaghosh566=gmail.com@mail9.content.glassdoor.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=glassdoor.com
+Return-Path: <bounces+9795912-0c0a-arkaghosh566=gmail.com@mail9.content.glassdoor.com>
+Received: from wrqvvkrp.outbound-mail.sendgrid.net (wrqvvkrp.outbound-mail.sendgrid.net. [149.72.129.83])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-b31f11c831fsi12749291a12.36.2025.06.23.23.47.35
+        for <arkaghosh566@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 23 Jun 2025 23:47:35 -0700 (PDT)
+Received-SPF: pass (google.com: domain of bounces+9795912-0c0a-arkaghosh566=gmail.com@mail9.content.glassdoor.com designates 149.72.129.83 as permitted sender) client-ip=149.72.129.83;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@content.glassdoor.com header.s=s1 header.b=igS3V7MC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ceSMQ3Lv;
+       spf=pass (google.com: domain of bounces+9795912-0c0a-arkaghosh566=gmail.com@mail9.content.glassdoor.com designates 149.72.129.83 as permitted sender) smtp.mailfrom="bounces+9795912-0c0a-arkaghosh566=gmail.com@mail9.content.glassdoor.com";
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=glassdoor.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=content.glassdoor.com;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:list-unsubscribe:list-unsubscribe-post:to:cc:content-type:feedback-id:
+	from:subject:to;
+	s=s1; bh=MWREUJmuQEaIgTVOJk7NsH/oHXWGIahKo7XlltxInmM=;
+	b=igS3V7MCfZDN7qmlLAIOQGmXDuz+150d4KIZ18xPU0MGpsG9Qx0EUztRxIyL7UE2+0tI
+	8DwHwu88/XBiiUTsvZbRwhtQjM++7Brg8EB1mMuX3Ka8LpY+2hNVVd38KfupYu/hSHJ/XA
+	SHhPuGvFTQ0Xc4Se+lb4vAW9NLcFux1tGV8HoCr7SdVmBBIXQBxzl3bZvbRJ+wl4N0t2+N
+	jtL6QW2rm4QRDkSr1idLh9DmC4UAK2PH61/u/8FLSf0z5deOlsSMic7aBhYLlF2EuCYCLb
+	4zAqSVZK2zYY/xkNFvbh08p6CAhautLwF3dg0sWo/pP+JadKdUxZErg6z5SqF2BQ==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-transfer-encoding:content-type:from:mime-version:subject:
+	reply-to:list-unsubscribe:list-unsubscribe-post:to:cc:content-type:feedback-id:
+	from:subject:to;
+	s=smtpapi; bh=MWREUJmuQEaIgTVOJk7NsH/oHXWGIahKo7XlltxInmM=;
+	b=ceSMQ3LveuinzH4+mqWh+u4JGcQ0E1S5miIOd74fbs43UDsQIlsbRSe7DfY91OjXxukQ
+	uVRButRgyXL7A6PppGY24tKfjWPqhcvgHPPr9yLt+sNnYga0ofaYA7i6c7Zw4kJ0Ijydq3
+	qNEm8yjuSn3THcLZ+zwHTtln5wi7G0C1w=
+Received: by recvd-5967777f64-cnhrr with SMTP id recvd-5967777f64-cnhrr-1-685A4A06-1E
+	2025-06-24 06:47:34.875977627 +0000 UTC m=+1693040.336476328
+Received: from OTc5NTkxMg (unknown)
+	by geopod-ismtpd-4 (SG) with HTTP
+	id EssDPUCFS6KowOrKZRcNaw
+	Tue, 24 Jun 2025 06:47:34.844 +0000 (UTC)
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Date: Tue, 24 Jun 2025 06:47:34 +0000 (UTC)
+From: Glassdoor Community <noreply@glassdoor.com>
+Mime-Version: 1.0
+Message-ID: <EssDPUCFS6KowOrKZRcNaw@geopod-ismtpd-4>
+Subject: Has anyone ever worked somewhere with absolutely no structure?, I was
+ told that...
+Reply-To: Glassdoor <noreply@glassdoor.com>
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fpartner-api=2Eglassdoor=2Ecom=2Femail=2FoneClickUnsubscribe=3Fk?=
+ =?us-ascii?Q?ey=3DoprginmP=3A2wi76u3cNuI1mgJSwv1Ugw&emai?=
+ =?us-ascii?Q?lType=3DCOMMUNITY=5FSOCIAL=5FDIGEST&emailCate?=
+ =?us-ascii?Q?gory=3DCOMMUNITY=5FSOCIAL=5FDIGEST&encryptedU?=
+ =?us-ascii?Q?serId=3D06CD332A73F012BC903896D7C7C1BEB7&?=
+ =?us-ascii?Q?utm=5Fmedium=3Demail&utm=5Fsource=3DsocialBowlD?=
+ =?us-ascii?Q?igest&utm=5Fcampaign=3DsocialBowlDigest&utm?=
+ =?us-ascii?Q?=5Fcontent=3DsocialBowlDigest-unsubscribe=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2E1yI41bvGak6sXv1vXkF3+xiRLYYaBx7GPbrrZwkkBNIYJ+XSld2NeronM?=
+ =?us-ascii?Q?BsBz=2FW66E8eLPDhGO8uNOlUYLWWT4pJSluehEQ9?=
+ =?us-ascii?Q?qlVDCTnGaBemeXrRDsoUPhHhgXEVuF5tZoFjlgc?=
+ =?us-ascii?Q?=2Fy0UKNkZ+ws1wpSDqGGcfGyPK4ne7tmG7xTPXug?=
+ =?us-ascii?Q?92BmUfzlDIEXKJpEq2K+t7CMI37wTXTG7ZHkWG4?=
+ =?us-ascii?Q?jrUFS5i90yorHKc52Z9ojfLSNL47U3O7bZwbz+U?= =?us-ascii?Q?=2Fbyk?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3Bj1hKHlgX804hvPclpv9TxKVfp0W9afcxBxux?=
+ =?us-ascii?Q?czk0=2FjYFht890jJXmPfqziyucftOd99H+yflodK?=
+ =?us-ascii?Q?9v=2FoPI9PUkAYH2pUvzwraC89ifwUqsT88GV5RUC?=
+ =?us-ascii?Q?SMMpsZYd8J6UYZcZKMIHfU0QTIGaxxjZHECAFBl?=
+ =?us-ascii?Q?bXQ96w0k3NeyTBtA1=2FoM3QVA00EVdTXbZkSavnO?=
+ =?us-ascii?Q?Gj7veXXv9MphG+S5zpIciV+2refjEQdT8LwauZo?=
+ =?us-ascii?Q?0SbYEqoA5zHx=2Fi55oEOUiLSmrae16k4e+tRQTAr?=
+ =?us-ascii?Q?iLuBGLek=3D?=
+To: arkaghosh566@gmail.com
+X-Entity-ID: u001.7FZjbFulvxU9k/egspKUCA==
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.=
+w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html dir=3D"ltr" lang=3D"en"=
+><head><link rel=3D"preload" as=3D"image" href=3D"https://www.glassdoor.com=
+/assets/email/brandRefresh/logo.png"/><link rel=3D"preload" as=3D"image" hr=
+ef=3D"https://www.glassdoor.com/assets/email/brandRefresh/identities/topic-=
+placeholder.png"/><link rel=3D"preload" as=3D"image" href=3D"https://www.gl=
+assdoor.com/assets/email/brandRefresh/reactions-icons.png"/><link rel=3D"pr=
+eload" as=3D"image" href=3D"https://www.glassdoor.com/assets/email/brandRef=
+resh/icons/community-icon.png"/><link rel=3D"preload" as=3D"image" href=3D"=
+https://www.glassdoor.com/assets/email/brandRefresh/logomark.png"/><meta co=
+ntent=3D"text/html; charset=3DUTF-8" http-equiv=3D"Content-Type"/><meta nam=
+e=3D"x-apple-disable-message-reformatting"/><style>
+    @font-face {
+      font-family: 'Glassdoor Sans';
+      font-style: normal;
+      font-weight: 300;
+      mso-font-alt: 'sans-serif';
+      src: url(https://www.glassdoor.com/assets/fonts/GlassdoorSans-Light.w=
+off2) format('woff2');
+    }
+
+    * {
+      font-family: 'Glassdoor Sans', sans-serif;
+    }
+  </style><style>
+    @font-face {
+      font-family: 'Glassdoor Sans';
+      font-style: normal;
+      font-weight: 400;
+      mso-font-alt: 'sans-serif';
+      src: url(https://www.glassdoor.com/assets/fonts/GlassdoorSans-Regular=
+.woff2) format('woff2');
+    }
+
+    * {
+      font-family: 'Glassdoor Sans', sans-serif;
+    }
+  </style><style>
+    @font-face {
+      font-family: 'Glassdoor Sans';
+      font-style: normal;
+      font-weight: 600;
+      mso-font-alt: 'sans-serif';
+      src: url(https://www.glassdoor.com/assets/fonts/GlassdoorSans-Semibol=
+d.woff2) format('woff2');
+    }
+
+    * {
+      font-family: 'Glassdoor Sans', sans-serif;
+    }
+  </style><style>
+            .postcard-container {
+              padding-left : 28px;
+              padding-right : 28px;
+            } =20
+       =20
+            @media only screen and (max-width : 748px) {
+                 .banner-text {
+                    font-size : 19px !important;
+                    line-height: 19px !important;
+                    width: auto !important;
+                }
+
+                .download-banner-img {
+                    width: 162px !important;
+                    height: 171px !important;
+                }
+
+                h1 {
+                  font-size : 24px !important;
+                }
+                h2 {
+                  font-size : 14px !important;
+                }
+
+                 .post-card-box {
+                   padding: 0 4px !important;
+                }
+
+                .salary-range {
+                  font-size : 36px !important;
+                }
+
+                 .header-image {
+                  display: none !important;
+                }
+                .header-image-container {
+                  display: none;
+                }
+
+                 .job-card-container {
+                  padding: 12px 4px !important;
+                }
+            }
+       =20
+        </style></head><div style=3D"display:none;overflow:hidden;line-heig=
+ht:1px;opacity:0;max-height:0;max-width:0">Arka, check out the latest trend=
+ing posts from the community =F0=9F=94=A5<div>=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=
+=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=
+=8C=E2=80=8B=E2=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=
+=80=8D=E2=80=8E=E2=80=8F=EF=BB=BF=C2=A0=E2=80=8C=E2=80=8B=E2=80=8D=E2=80=8E=
+=E2=80=8F=EF=BB=BF</div></div><body style=3D"padding:24px 0;background-colo=
+r:#F9FAFB"><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=
+=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"max-width:37.5em;wi=
+dth:100%"><tbody><tr style=3D"width:100%"><td><table align=3D"center" width=
+=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presenta=
+tion" style=3D"max-width:37.5em"><tbody><tr style=3D"width:100%"><td><table=
+ align=3D"center" width=3D"100%" class=3D"test-greeting" border=3D"0" cellP=
+adding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"background-co=
+lor:#B780FF;width:100%;border-radius:16px 16px 0 0;padding:8px 24px 8px 24p=
+x;font-family:&quot;Glassdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, =
+Roboto, sans-serif"><tbody><tr><td><table align=3D"center" width=3D"100%" b=
+order=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=
+=3D"margin-bottom:8px;text-align:center"><tbody style=3D"width:100%"><tr st=
+yle=3D"width:100%"><td data-id=3D"__react-email-column"><img src=3D"https:/=
+/www.glassdoor.com/assets/email/brandRefresh/logo.png" style=3D"display:inl=
+ine-block;outline:none;border:none;text-decoration:none;width:68px"/></td><=
+/tr></tbody></table><table align=3D"center" width=3D"100%" border=3D"0" cel=
+lPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody style=3D"widt=
+h:100%"><tr style=3D"width:100%"><td data-id=3D"__react-email-column"><p st=
+yle=3D"font-size:20px;line-height:39px;margin:0;font-weight:600;margin-bott=
+om:8px">Bowl buzz</p><p style=3D"font-size:18px;line-height:24px;margin:0;m=
+argin-top:8px;font-weight:600">Hey Arka</p><section style=3D"font-size:14px=
+;font-weight:400;margin-top:4px">Catch up on the latest trending posts from=
+ the community.</section></td></tr></tbody></table></td></tr></tbody></tabl=
+e></td></tr></tbody></table><table align=3D"center" width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"m=
+ax-width:37.5em;background-color:#FFFFFF;padding:24px 0px"><tbody><tr style=
+=3D"width:100%"><td><table align=3D"center" width=3D"100%" class=3D"postcar=
+d-container" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"prese=
+ntation" style=3D"max-width:37.5em;padding-top:0;padding-bottom:8px;margin:=
+0 auto;padding-left:1.6vw;padding-right:1.6vw"><tbody><tr style=3D"width:10=
+0%"><td><table align=3D"center" width=3D"100%" class=3D"post-card-box" bord=
+er=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D=
+"max-width:37.5em"><tbody><tr style=3D"width:100%"><td><a href=3D"https://w=
+ww.glassdoor.co.in/Community/bowl-B64beac87e27faf8fd16ba3b3/post-P685499a1b=
+c068b800094d03e.htm?uvk=3DoprginmP%3A2wi76u3cNuI1mgJSwv1Ugw&amp;utm_medium=
+=3Demail&amp;utm_source=3DsocialBowlDigest&amp;utm_campaign=3DsocialBowlDig=
+est&amp;utm_content=3DsocialBowlDigest_postpos1-2_1750740615287%3A-81203326=
+14812579413" class=3D"test-post" style=3D"color:#067df7;text-decoration:non=
+e;width:100%;padding:16px 0;border-radius:12px;border:1px solid #DADEE2;dis=
+play:table;background-color:#ffffff;margin:0 auto" target=3D"_blank"><span>
+                 <!--[if mso]>
+                <a href=3D"https://www.glassdoor.co.in/Community/bowl-B64be=
+ac87e27faf8fd16ba3b3/post-P685499a1bc068b800094d03e.htm?uvk=3DoprginmP%3A2w=
+i76u3cNuI1mgJSwv1Ugw&utm_medium=3Demail&utm_source=3DsocialBowlDigest&utm_c=
+ampaign=3DsocialBowlDigest&utm_content=3DsocialBowlDigest_postpos1-2_175074=
+0615287%3A-8120332614812579413">Has anyone ever worked somewhere with absol=
+utely no structure?, I was told that everyone is responsible for their own =
+filing=E2=80=94which I was fine with...</a>
+               <![endif]-->
+        </span><table align=3D"center" width=3D"100%" border=3D"0" cellPadd=
+ing=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"padding-left:16p=
+x;padding-right:12px"><tbody style=3D"width:100%"><tr style=3D"width:100%">=
+<td data-id=3D"__react-email-column"><table align=3D"center" width=3D"100%"=
+ border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tb=
+ody style=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"__react-em=
+ail-column" style=3D"width:32px"><img src=3D"https://www.glassdoor.com/asse=
+ts/email/brandRefresh/identities/topic-placeholder.png" style=3D"display:in=
+line-block;outline:none;border:1px solid #DADEE2;text-decoration:none;borde=
+r-radius:50%;overflow:hidden;box-sizing:border-box;object-fit:cover;height:=
+32px;width:32px"/></td><td data-id=3D"__react-email-column"><table align=3D=
+"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" ro=
+le=3D"presentation" style=3D"margin-left:8px"><tbody style=3D"width:100%"><=
+tr style=3D"width:100%"><td data-id=3D"__react-email-column"><p style=3D"fo=
+nt-size:14px;line-height:20px;margin:0;color:#008050;font-family:&quot;Glas=
+sdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-=
+style:normal;font-weight:600">The Water Cooler</p><p style=3D"font-size:14p=
+x;line-height:20px;margin:0;color:#647380;font-family:&quot;Glassdoor Sans&=
+quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-style:norma=
+l;font-weight:400">works at Turner Construction</p></td></tr></tbody></tabl=
+e></td></tr></tbody></table></td></tr></tbody></table><table align=3D"cente=
+r" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"=
+presentation" style=3D"color:#00060C;padding:8px 12px 16px 16px;font-family=
+:&quot;Glassdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-=
+serif;font-size:14px;font-style:normal;font-weight:400;line-height:20px"><t=
+body style=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"__react-e=
+mail-column" style=3D"vertical-align:top"><p style=3D"font-size:14px;line-h=
+eight:var(--truncated-line-height, 20px);margin:0;position:relative;display=
+:inline-block">Has anyone ever worked somewhere with absolutely no structur=
+e?, I was told that everyone is responsible for their own filing=E2=80=94wh=
+ich I was fine with...<span style=3D"background-color:var(--truncated-backg=
+round-color, #ffffff);margin:0;line-height:var(--truncated-line-height, 20p=
+x)"><span style=3D"color:#008855;font-weight:bold">read more</span></span><=
+/p></td></tr></tbody></table><table align=3D"center" width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"m=
+argin:10px 0 10px 0"><tbody style=3D"width:100%"><tr style=3D"width:100%"><=
+td data-id=3D"__react-email-column" style=3D"color:#00060C;font-family:&quo=
+t;Glassdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif=
+;font-size:14px;font-style:normal;font-weight:400;line-height:20px;padding-=
+left:16px;text-align:left"><table align=3D"center" width=3D"100%" border=3D=
+"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody><tr><t=
+d><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cel=
+lSpacing=3D"0" role=3D"presentation"><tbody style=3D"width:100%"><tr style=
+=3D"width:100%"><td align=3D"left" data-id=3D"__react-email-column" style=
+=3D"display:table-cell;margin:10px 0 0 0"><span><img height=3D"16" src=3D"h=
+ttps://www.glassdoor.com/assets/email/brandRefresh/reactions-icons.png" sty=
+le=3D"display:inherit;outline:none;border:none;text-decoration:none;padding=
+-right:8px;vertical-align:middle" width=3D"40"/><span style=3D"vertical-ali=
+gn:middle;display:inline-block;line-height:16px;padding-top:2px">4</span></=
+span></td></tr></tbody></table></td></tr></tbody></table></td><td data-id=
+=3D"__react-email-column" style=3D"color:#00060C;font-family:&quot;Glassdoo=
+r Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-size=
+:14px;font-style:normal;font-weight:400;line-height:20px;padding-right:16px=
+;text-align:right;margin:0"><p style=3D"font-size:14px;line-height:24px;mar=
+gin:0">7 Comments</p></td></tr></tbody></table></a></td></tr></tbody></tabl=
+e></td></tr></tbody></table><table align=3D"center" width=3D"100%" class=3D=
+"postcard-container" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=
+=3D"presentation" style=3D"max-width:37.5em;padding-top:8px;padding-bottom:=
+8px;margin:0 auto;padding-left:1.6vw;padding-right:1.6vw"><tbody><tr style=
+=3D"width:100%"><td><table align=3D"center" width=3D"100%" class=3D"post-ca=
+rd-box" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentati=
+on" style=3D"max-width:37.5em"><tbody><tr style=3D"width:100%"><td><a href=
+=3D"https://www.glassdoor.co.in/Community/bowl-B64beac87e27faf8fd16ba3b3/po=
+st-P6855d9807fd2f4634dbfd1e6.htm?uvk=3DoprginmP%3A2wi76u3cNuI1mgJSwv1Ugw&am=
+p;utm_medium=3Demail&amp;utm_source=3DsocialBowlDigest&amp;utm_campaign=3Ds=
+ocialBowlDigest&amp;utm_content=3DsocialBowlDigest_postpos2-2_1750740615287=
+%3A-8120332614812579413" class=3D"test-post" style=3D"color:#067df7;text-de=
+coration:none;width:100%;padding:16px 0;border-radius:12px;border:1px solid=
+ #DADEE2;display:table;background-color:#ffffff;margin:0 auto" target=3D"_b=
+lank"><span>
+                 <!--[if mso]>
+                <a href=3D"https://www.glassdoor.co.in/Community/bowl-B64be=
+ac87e27faf8fd16ba3b3/post-P6855d9807fd2f4634dbfd1e6.htm?uvk=3DoprginmP%3A2w=
+i76u3cNuI1mgJSwv1Ugw&utm_medium=3Demail&utm_source=3DsocialBowlDigest&utm_c=
+ampaign=3DsocialBowlDigest&utm_content=3DsocialBowlDigest_postpos2-2_175074=
+0615287%3A-8120332614812579413">Have you ever felt sympathy for a bad manag=
+er/team member? I used to have a really harsh manager with super high stand=
+ards, who made my life really...</a>
+               <![endif]-->
+        </span><table align=3D"center" width=3D"100%" border=3D"0" cellPadd=
+ing=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"padding-left:16p=
+x;padding-right:12px"><tbody style=3D"width:100%"><tr style=3D"width:100%">=
+<td data-id=3D"__react-email-column"><table align=3D"center" width=3D"100%"=
+ border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tb=
+ody style=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"__react-em=
+ail-column" style=3D"width:32px"><img src=3D"https://www.glassdoor.com/asse=
+ts/email/brandRefresh/identities/topic-placeholder.png" style=3D"display:in=
+line-block;outline:none;border:1px solid #DADEE2;text-decoration:none;borde=
+r-radius:50%;overflow:hidden;box-sizing:border-box;object-fit:cover;height:=
+32px;width:32px"/></td><td data-id=3D"__react-email-column"><table align=3D=
+"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" ro=
+le=3D"presentation" style=3D"margin-left:8px"><tbody style=3D"width:100%"><=
+tr style=3D"width:100%"><td data-id=3D"__react-email-column"><p style=3D"fo=
+nt-size:14px;line-height:20px;margin:0;color:#008050;font-family:&quot;Glas=
+sdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-=
+style:normal;font-weight:600">The Water Cooler</p><p style=3D"font-size:14p=
+x;line-height:20px;margin:0;color:#647380;font-family:&quot;Glassdoor Sans&=
+quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-style:norma=
+l;font-weight:400">a Digital Specialist</p></td></tr></tbody></table></td><=
+/tr></tbody></table></td></tr></tbody></table><table align=3D"center" width=
+=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presenta=
+tion" style=3D"color:#00060C;padding:8px 12px 16px 16px;font-family:&quot;G=
+lassdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;fo=
+nt-size:14px;font-style:normal;font-weight:400;line-height:20px"><tbody sty=
+le=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"__react-email-col=
+umn" style=3D"vertical-align:top"><p style=3D"font-size:14px;line-height:va=
+r(--truncated-line-height, 20px);margin:0;position:relative;display:inline-=
+block">Have you ever felt sympathy for a bad manager/team member? I used to=
+ have a really harsh manager with super high standards, who made my life re=
+ally...<span style=3D"background-color:var(--truncated-background-color, #f=
+fffff);margin:0;line-height:var(--truncated-line-height, 20px)"><span style=
+=3D"color:#008855;font-weight:bold">read more</span></span></p></td></tr></=
+tbody></table><table align=3D"center" width=3D"100%" border=3D"0" cellPaddi=
+ng=3D"0" cellSpacing=3D"0" role=3D"presentation" style=3D"margin:10px 0 10p=
+x 0"><tbody style=3D"width:100%"><tr style=3D"width:100%"><td data-id=3D"__=
+react-email-column" style=3D"color:#00060C;font-family:&quot;Glassdoor Sans=
+&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-size:14px;=
+font-style:normal;font-weight:400;line-height:20px;padding-left:16px;text-a=
+lign:left"><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=
+=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody><tr><td><table align=
+=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0"=
+ role=3D"presentation"><tbody style=3D"width:100%"><tr style=3D"width:100%"=
+><td align=3D"left" data-id=3D"__react-email-column" style=3D"display:table=
+-cell;margin:10px 0 0 0"><span><img height=3D"16" src=3D"https://www.glassd=
+oor.com/assets/email/brandRefresh/reactions-icons.png" style=3D"display:inh=
+erit;outline:none;border:none;text-decoration:none;padding-right:8px;vertic=
+al-align:middle" width=3D"40"/><span style=3D"vertical-align:middle;display=
+:inline-block;line-height:16px;padding-top:2px">3</span></span></td></tr></=
+tbody></table></td></tr></tbody></table></td><td data-id=3D"__react-email-c=
+olumn" style=3D"color:#00060C;font-family:&quot;Glassdoor Sans&quot;, syste=
+m-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-size:14px;font-style:no=
+rmal;font-weight:400;line-height:20px;padding-right:16px;text-align:right;m=
+argin:0"><p style=3D"font-size:14px;line-height:24px;margin:0">7 Comments</=
+p></td></tr></tbody></table></a></td></tr></tbody></table></td></tr></tbody=
+></table><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D=
+"0" cellSpacing=3D"0" role=3D"presentation" style=3D"max-width:37.5em;margi=
+n:0 auto;width:fit-content;padding:24px 16px"><tbody><tr style=3D"width:100=
+%"><td><a href=3D"https://www.glassdoor.co.in/Community/bowl-B64beac87e27fa=
+f8fd16ba3b3.htm?uvk=3DoprginmP%3A2wi76u3cNuI1mgJSwv1Ugw&amp;utm_medium=3Dem=
+ail&amp;utm_source=3DsocialBowlDigest&amp;utm_campaign=3DsocialBowlDigest&a=
+mp;utm_content=3DsocialBowlDigest_cta_1750740615287%3A-8120332614812579413"=
+ class=3D"test-button" style=3D"color:#067df7;text-decoration:none;display:=
+flex;width:fit-content;position:relative;border:none;background:transparent=
+;padding:0;cursor:pointer;outline-offset:4px;transition:filter 250ms;white-=
+space:nowrap" target=3D"_blank"><span class=3D"special" style=3D"background=
+-color:#B780FF;text-align:center;border-radius:8px;color:#00060C;font-famil=
+y:&quot;Glassdoor Sans&quot;, system-ui, &quot;Segoe UI&quot;, Roboto, sans=
+-serif;font-size:14px;font-style:normal;font-weight:600;line-height:24px;he=
+ight:24px;padding:12px 16px;min-width:210px;z-index:1"><table align=3D"cent=
+er" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D=
+"presentation"><tbody><tr><td><table align=3D"center" width=3D"100%" border=
+=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presentation"><tbody sty=
+le=3D"width:100%"><tr style=3D"width:100%"><td align=3D"center" data-id=3D"=
+__react-email-column" style=3D"display:table-cell;margin:10px 0 0 0"><span>=
+<img height=3D"24" src=3D"https://www.glassdoor.com/assets/email/brandRefre=
+sh/icons/community-icon.png" style=3D"display:inherit;outline:none;border:n=
+one;text-decoration:none;padding-right:8px;vertical-align:middle" width=3D"=
+24"/><span style=3D"vertical-align:middle;display:inline-block;line-height:=
+24px;padding-top:2px">View more posts</span></span></td></tr></tbody></tabl=
+e></td></tr></tbody></table></span></a></td></tr></tbody></table><table ali=
+gn=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpacing=3D"=
+0" role=3D"presentation" style=3D"max-width:37.5em;padding:24px"><tbody><tr=
+ style=3D"width:100%"><td><table align=3D"center" width=3D"100%" class=3D"t=
+est-footer" border=3D"0" cellPadding=3D"0" cellSpacing=3D"0" role=3D"presen=
+tation" style=3D"color:#727272;font-family:&quot;Glassdoor Sans&quot;, syst=
+em-ui, &quot;Segoe UI&quot;, Roboto, sans-serif;font-size:14px;font-style:n=
+ormal;font-weight:400;line-height:20px;text-align:center"><tbody><tr><td><t=
+able align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" cellSpa=
+cing=3D"0" role=3D"presentation" style=3D"margin:0"><tbody><tr><td><p style=
+=3D"font-size:14px;line-height:24px;margin:0;text-align:center">This messag=
+e was sent to<br/><a href=3D"mailto:arkaghosh566@gmail.com" style=3D"color:=
+#008855;text-decoration:none;font-size:16px;font-style:normal;font-weight:4=
+00;line-height:24px;text-decoration-line:underline" target=3D"_blank">arkag=
+hosh566@gmail.com</a></p><p style=3D"font-size:14px;line-height:24px;margin=
+:0;text-align:center"><a href=3D"https://www.glassdoor.co.in/about/privacy.=
+htm?utm_medium=3Demail&amp;utm_source=3DsocialBowlDigest&amp;utm_campaign=
+=3DsocialBowlDigest&amp;utm_content=3DsocialBowlDigest-privacy" style=3D"co=
+lor:#008855;text-decoration:none;font-size:16px;font-style:normal;font-weig=
+ht:400;line-height:24px;text-decoration-line:underline" target=3D"_blank">P=
+rivacy Policy</a> <!-- -->|<!-- --> <a href=3D"https://www.glassdoor.co.in/=
+member/account/emailSettings_input.htm?utm_medium=3Demail&amp;utm_source=3D=
+socialBowlDigest&amp;utm_campaign=3DsocialBowlDigest&amp;utm_content=3Dsoci=
+alBowlDigest-email-preference" style=3D"color:#008855;text-decoration:none;=
+font-size:16px;font-style:normal;font-weight:400;line-height:24px;text-deco=
+ration-line:underline" target=3D"_blank">Manage Settings</a> <!-- -->|<!-- =
+--> <a href=3D"https://www.glassdoor.co.in/profile/unsubscribeEmail.htm?key=
+=3DoprginmP:2wi76u3cNuI1mgJSwv1Ugw&amp;emailType=3DCOMMUNITY_SOCIAL_DIGEST&=
+amp;emailCategory=3DCOMMUNITY_SOCIAL_DIGEST&amp;encryptedUserId=3D06CD332A7=
+3F012BC903896D7C7C1BEB7&amp;utm_medium=3Demail&amp;utm_source=3DsocialBowlD=
+igest&amp;utm_campaign=3DsocialBowlDigest&amp;utm_content=3DsocialBowlDiges=
+t-unsubscribe" style=3D"color:#008855;text-decoration:none;font-size:16px;f=
+ont-style:normal;font-weight:400;line-height:24px;text-decoration-line:unde=
+rline" target=3D"_blank">Unsubscribe</a> </p><p style=3D"font-size:14px;lin=
+e-height:24px;margin:0;text-align:center">=C2=A0</p></td></tr></tbody></tab=
+le><table align=3D"center" width=3D"100%" border=3D"0" cellPadding=3D"0" ce=
+llSpacing=3D"0" role=3D"presentation" style=3D"text-align:center;margin:0">=
+<tbody><tr><td><a href=3D"https://www.glassdoor.co.in?utm_medium=3Demail&am=
+p;utm_source=3DsocialBowlDigest&amp;utm_campaign=3DsocialBowlDigest&amp;utm=
+_content=3DsocialBowlDigest" style=3D"color:#008855;text-decoration:none;fo=
+nt-size:16px;font-style:normal;font-weight:400;line-height:24px;text-decora=
+tion-line:underline" target=3D"_blank">Glassdoor</a><p style=3D"font-size:1=
+4px;line-height:24px;margin:0;text-align:center">2261 Market Street STE 103=
+89, San Francisco, CA 94114</p><p style=3D"font-size:14px;line-height:24px;=
+margin:0;text-align:center">=C2=A0</p><p style=3D"font-size:14px;line-heigh=
+t:24px;margin:0;text-align:center">Copyright<!-- --> =C2=A9 <!-- -->2008-20=
+25, Glassdoor LLC. =E2=80=9CGlassdoor,=E2=80=9D =E2=80=9CWorklife Pro,=E2=
+=80=9D =E2=80=9CBowls=E2=80=9D and logo are proprietary trademarks of Glass=
+door LLC.</p></td></tr></tbody></table><img src=3D"https://www.glassdoor.co=
+m/assets/email/brandRefresh/logomark.png" style=3D"display:block;outline:no=
+ne;border:none;text-decoration:none;margin:8px auto 0 auto" width=3D"46"/><=
+/td></tr></tbody></table></td></tr></tbody></table></td></tr></tbody></tabl=
+e></td></tr></tbody></table><img src=3D"https://mail8.content.glassdoor.com=
+/wf/open?upn=3Du001.O04Rh1UIJ69Cpt7R-2BSLLNNzm33ZmVMh58MN-2BSLy6vntLZHAsrB8=
+W-2BJWuSkarBTZcL-2BdF0jz5DogO9rKnPY1v1qEsfjiqM-2BGE80BbPF9pr3O2F9XukssesMSW=
+TGaglTPlro83TZwheTMg3FBeYfp-2FiCgeJBBjf9hpqhQPKeeqArpTKctmbuuJr8Wyc-2FEO5P4=
+WM4YUprEH5hOARZZ7cyzsblztZriU00OB0Pmgw1dQUFXMNt-2FqRZ6KncbRmcLbFBupMDD0bjFh=
+bPMutAPHcRJQR-2BMab4rJaiun9tRW6haqy9d11G5lN0wOhPBNBRYYcFc6vT3VzrZ4fnQ9F0zVC=
+hiz6N4R2qhxqzGH0nunAn6v-2FHvOUY-2Bj4ilxDHAsxIW5A18KcnOfDF-2Fk4QPIZqK0L1wrPr=
+xP4zMS3dOm3FOLMGrcjHGMOnTGqjNl2EHzHSfbsyrrxhzMBWJZ423om5OfpRhUbq-2BtsbcmJ3G=
+D9rxMCxxmZv8-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"he=
+ight:1px !important;width:1px !important;border-width:0 !important;margin-t=
+op:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin=
+-left:0 !important;padding-top:0 !important;padding-bottom:0 !important;pad=
+ding-right:0 !important;padding-left:0 !important;"/></body></html>

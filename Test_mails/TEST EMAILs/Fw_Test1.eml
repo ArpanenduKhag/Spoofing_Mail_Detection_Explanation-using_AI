@@ -1,0 +1,1322 @@
+Delivered-To: khagarpanendu@gmail.com
+Received: by 2002:a05:7108:7f08:b0:461:89f2:46b with SMTP id iq8csp5796045gdb;
+        Fri, 4 Jul 2025 05:29:20 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFdltSKrc9CpGoFboJZ7uIZUpqpmosq+I4fnoDA0s36vxRJQ7j4kzDhhBDWv9CvC347VWJ9
+X-Received: by 2002:a6b:7403:0:b0:86c:cf7e:d85d with SMTP id ca18e2360f4ac-876e493ca35mr123981339f.12.1751632159812;
+        Fri, 04 Jul 2025 05:29:19 -0700 (PDT)
+ARC-Seal: i=2; a=rsa-sha256; t=1751632159; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=iwtwS3ZVA5PK8VP2Ta0uHkH7lCIdOi8iHEu/jL/FD19gOkVgShzddfNxyOCNO/84kN
+         P/mw6arA8UxdFp9YME+oniZBq1RCL92vewcN7SVc+uJx/aSJssnV+saNkdiXbfmmjTvp
+         1wfb711QKy8XaVIwftGsfuVXaD4uoQ/LKIpIkyxHJGucrlathmqrMc1uGmIOptBOm+Es
+         eivFslsCX017dMG6T4lEXkC+OoZDusGy1llgNOhJqHuC9gJyVDxbSxAbMxocIudS56Fn
+         dBI/dL84YxdwvmcfbthQNF99CxruFNfLPlNwD0km1hjx68rFxl+jwyfhA9ThUsTBVUc4
+         fHuw==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:msip_labels:content-language:accept-language
+         :in-reply-to:references:message-id:date:thread-index:thread-topic
+         :subject:cc:to:from:dkim-signature;
+        bh=XdHJJmuPoOyW1R1Psmg0cSosifk7sY866PAMVdmxQSE=;
+        fh=iXWPcAVbNsK4aqsg503YrdtLDHk7+99ERZnd+8AWNgo=;
+        b=gw8EB1HP5J8PqBxhzlcsFiW6/wv6jgFEhvtI3CLzMns8r0AxCVzfqDf0f0Ftx+33ae
+         dG7NJuj1k+zmWrYCZymt4iK88wKOuloTlZV6Jr/N9Knuno7fHRNJbRvMPkn9jUTgn7k7
+         +Ith5PV3i+PQXJb25dsncNtH77fq2QryNF0xhuvw//HayD7oAxx2zIA6u2iiA5r6bNKk
+         X986xYOC8AqC48uW25qpZBabjVlzkOi7ZzfUv4oxuVWBoYf4E09pNaHQ5WGKlWk5RM7i
+         hR4qGZRZ0OtaFgrlTZSlDivO5Z35BVZ0HPLIYN0DM+zsD7JQ+t2TXUeMdLlGseEjhAZI
+         d/gQ==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=permerror (no key for signature) header.i=@capsitech.com header.s=selector1 header.b=GHFTxLf2;
+       arc=pass (i=1 spf=pass spfdomain=capsitech.com dkim=pass dkdomain=capsitech.com dmarc=pass fromdomain=capsitech.com);
+       spf=pass (google.com: domain of arpanendu.khag@capsitech.com designates 2a01:111:f403:c409::1 as permitted sender) smtp.mailfrom=arpanendu.khag@capsitech.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=capsitech.com
+Return-Path: <arpanendu.khag@capsitech.com>
+Received: from MA0PR01CU009.outbound.protection.outlook.com (mail-southindiaazlp170100001.outbound.protection.outlook.com. [2a01:111:f403:c409::1])
+        by mx.google.com with ESMTPS id ca18e2360f4ac-876e07b3cf6si153393539f.51.2025.07.04.05.29.18
+        for <khagarpanendu@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 04 Jul 2025 05:29:19 -0700 (PDT)
+Received-SPF: pass (google.com: domain of arpanendu.khag@capsitech.com designates 2a01:111:f403:c409::1 as permitted sender) client-ip=2a01:111:f403:c409::1;
+Authentication-Results: mx.google.com;
+       dkim=permerror (no key for signature) header.i=@capsitech.com header.s=selector1 header.b=GHFTxLf2;
+       arc=pass (i=1 spf=pass spfdomain=capsitech.com dkim=pass dkdomain=capsitech.com dmarc=pass fromdomain=capsitech.com);
+       spf=pass (google.com: domain of arpanendu.khag@capsitech.com designates 2a01:111:f403:c409::1 as permitted sender) smtp.mailfrom=arpanendu.khag@capsitech.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=capsitech.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=dVcxQHxvNYEgbxUvAoVczlQSVM30svq+2Ddv2jyhZESYVSPOZ7OIRkWTWBqbVP8nZo/Q3mcPD5Kk8r9IfL8XPJr2a5ihugEkF5IpcduO5HQr3QHon9QVdEpF4hWy+9Wl5JvrS1wNh1j4g1xZTFdXr0EKxE1jelDUPbIDWc00rDaXrzopHD+Fb36Xv6K4gst1FYGvcY+GyjqKilM8Daotn0AyOC+jKWtsY9vFHAs4efkn98Nh8XP9o1CEGnSwYH5GGZ0u1RbhCGa1wSmywVKjSam/GRBAEjElKTgqQWv60YxjHuHvL9S2Kf5evLYyqbZfSprXJXGFOR6561zUgW4K5Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=XdHJJmuPoOyW1R1Psmg0cSosifk7sY866PAMVdmxQSE=;
+ b=g636UpfqW9nU2wpo6l+uPFsU3AbnIhm894CWTNEgKz75IkqGO7BmQW9p7gvAqa8wdOM89ajWczL+fBRWsRCffxQtFAnRRGthoj52Q2CfRYsacXFmo5BbZB/Rvgx2h3POArk/nM3mR/nZ3lQH/AeuR61+BCESNBof8lpONU+tY38VEKv3mduqneu2FAjvl1jxuvvD+L2ERSIv2+TgbvNeIhEHCKh9eaoXNd/nSjeFnckiPg9Ve25yiX+9WQ3JaL4ThwAv/ZMhCrAdFBcZO/UbdewmtvwborTlxg2nxIOy7YDLJgm2uqOvZnkx/ND6S0jXk/F4LVkbY3yhoWtqh+oVPQ==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=capsitech.com; dmarc=pass action=none
+ header.from=capsitech.com; dkim=pass header.d=capsitech.com; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=capsitech.com;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=XdHJJmuPoOyW1R1Psmg0cSosifk7sY866PAMVdmxQSE=;
+ b=GHFTxLf2Euzcz+5a5i29aXhkiCqHkUzEyhIkTyOrL580ChcVIfBHQfupy0vY8p5qwuQrw8XjPU+gLPe6ObTzyhdudE1pdpFd0c76MpweWRB5fO8jVXdBkFctylUphUhMiR0xLbNxjwEzuAxNj+h5VcSySDhJ0Hy5uipxN1XtGEw=
+Received: from PN2PR01MB9188.INDPRD01.PROD.OUTLOOK.COM (2603:1096:c01:15c::10)
+ by PN0PR01MB7967.INDPRD01.PROD.OUTLOOK.COM (2603:1096:c01:44::10) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.8901.23; Fri, 4 Jul
+ 2025 12:29:15 +0000
+Received: from PN2PR01MB9188.INDPRD01.PROD.OUTLOOK.COM
+ ([fe80::864e:f10:b3e5:dce2]) by PN2PR01MB9188.INDPRD01.PROD.OUTLOOK.COM
+ ([fe80::864e:f10:b3e5:dce2%2]) with mapi id 15.20.8901.021; Fri, 4 Jul 2025
+ 12:29:15 +0000
+From: Arpanendu Khag <arpanendu.khag@capsitech.com>
+To: "khagarpanendu@gmail.com" <khagarpanendu@gmail.com>
+CC: vishal singh <vishal.singh@capsitech.com>
+Subject: Fw: Top Jobs from Leading IT/Tech Companies like Makemytrip, Amazon
+ etc
+Thread-Topic: Top Jobs from Leading IT/Tech Companies like Makemytrip, Amazon
+ etc
+Thread-Index: AQHb7N7+IU9GA6mV20W6NRkrIourXbQh5HRWgAAAPGU=
+Date: Fri, 4 Jul 2025 12:29:15 +0000
+Message-ID:
+ <PN2PR01MB918899826A0BA5755E8425DD9A42A@PN2PR01MB9188.INDPRD01.PROD.OUTLOOK.COM>
+References:
+ <01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000@us-west-2.amazonses.com>
+ <CA+7JhM2Yt458Gk0OCWUsU6jeiiCA1J61BBnzKoLBb-03Sio78w@mail.gmail.com>
+ <MA0PR01MB70193B11351AC5BDEB57A4B99B42A@MA0PR01MB7019.INDPRD01.PROD.OUTLOOK.COM>
+In-Reply-To:
+ <MA0PR01MB70193B11351AC5BDEB57A4B99B42A@MA0PR01MB7019.INDPRD01.PROD.OUTLOOK.COM>
+Accept-Language: en-IN, en-US
+Content-Language: en-US
+X-MS-Has-Attach: yes
+X-MS-TNEF-Correlator:
+msip_labels:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=capsitech.com;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: PN2PR01MB9188:EE_|PN0PR01MB7967:EE_
+x-ms-office365-filtering-correlation-id: e98267f4-c02a-47ee-4e18-08ddbaf663e8
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam:
+ BCL:0;ARA:13230040|1800799024|366016|376014|4022899009|8096899003|13003099007|4053099003|38070700018;
+x-microsoft-antispam-message-info:
+ =?Windows-1252?Q?ZsgI4csV19jSKM4sZBSIEZ+W3pIE/oJJQNMjje0sVS3ICjzcCWAPMQis?=
+ =?Windows-1252?Q?m3Mz2ZySr6Haem4/snXt5JKOW2jPbuzaMo1ygYht8dcPMtcRST2yY78j?=
+ =?Windows-1252?Q?ROZmBITHK68Gzk38kMDPpvCsmvJYBupUdmQHiT/PMuAjzxIX/VP/5C7x?=
+ =?Windows-1252?Q?kl0jE+X0xNlImAHf82XhqIfr3WfA1oSSFf+py7m3AP2R4IOwPZmC4mPW?=
+ =?Windows-1252?Q?rnxj/2KYQBfl3i7YFzzvqbAawflaqpGFyXtQkMnl2+QnsXLqAvdk3vos?=
+ =?Windows-1252?Q?yh2pdZZbSsHHsTRyTl+gwYIpX9AUSG2QH+wsDCYrdUYUmrMu2O318gmt?=
+ =?Windows-1252?Q?URvjMyKsNgSsjnrOphLrWQz8baxjxidUUmPqMDX0yd9TEBGo/kdRMGR3?=
+ =?Windows-1252?Q?qFr5c/knUKMCc8964x0MsORb/QqeHhAEEwlKlUF/kxdpvpNDWIsCphff?=
+ =?Windows-1252?Q?37uHLANskQR66TczJncHDHOtNChYelhaQYL6gAFSrQ7kmejOshVhiio0?=
+ =?Windows-1252?Q?CwLPK5ndBhLSejzKpvwRx0xemMGVJbftfkQdyRTJ3COMN7awuL3uEdG1?=
+ =?Windows-1252?Q?Qk/oRX+8XMMAs/L0Q/kCH+RimzbPBxz64gXcK6JD5RP3dEnN7+AD0LM5?=
+ =?Windows-1252?Q?YtTCvkc8k2ypdGXiDW0P8rVpGJYktsuaAAOexH5T0xZF1mUJCSqi2ULF?=
+ =?Windows-1252?Q?aD2Sg2srfwp+L/25pUaCcgaUgYw2hsARlvAOiSulakcR+RCuOOunsC4C?=
+ =?Windows-1252?Q?Q2y/Vij+KapvLPsAFAnnmr0KmMTkLRo+Y8lUbxAvrWCvrqYL+5WaGKSK?=
+ =?Windows-1252?Q?YMYD9j40rbDyCrsonH/aSi+eyZaD3BpJApmGMuldcCQiBiAVWrQ+seja?=
+ =?Windows-1252?Q?7V07NXnV8lQkzOeeFniOmgTUoZ5kiDAGaWQeaj4bbAhhwwAw9Rt0juxz?=
+ =?Windows-1252?Q?dZo5xhzZ8Zb2K4mg9KOeTQvBRUEIpg6io4iVeYM9ipjEowRLfG2C0BNR?=
+ =?Windows-1252?Q?fgRViV+qldiyw672WCkls1yFoXsagtihwNZdN+6i46s10ag9DvxgX49/?=
+ =?Windows-1252?Q?m209yYJ55wadQiE+BvbZ7Q52Vrus4EzHgpZPa1YK7UQoNKLbW0Glq2bv?=
+ =?Windows-1252?Q?ICnfN7bgzbeDWIj6srLPLahIbJ820cOS7iZJr684tx4L8HSW16UzKvEo?=
+ =?Windows-1252?Q?E7tcrvPjpt+UaFpMisRi68m0RcftV2Q9+x07Tz5Zk9piWpoSXkOHmzgm?=
+ =?Windows-1252?Q?+UEhr2VKB1V8Gx3lM2Yt+/4QL4w82MHIWvbGv9Xz3l3cssAWy94aPHiI?=
+ =?Windows-1252?Q?YfPWPzxXL39t8+868nf2gMFGhU70Oad3LeTFL8u22midbUYhKyFcsbAD?=
+ =?Windows-1252?Q?++2B2cVHgDURjUPQ1nBlEt9UkRbpJUKDKt93J9TZvn8qK45RFYn1nJea?=
+ =?Windows-1252?Q?mBVwc/RFYSlTATbWHipohg13rT1M86G1FDvv2U7vqylSonhC+1Lgj7Gv?=
+ =?Windows-1252?Q?5qUgwIbrDA64EzPjFXynNmGnw3xm4h4EGLG6HQoZhMU4fzfz54M=3D?=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:en;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:PN2PR01MB9188.INDPRD01.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230040)(1800799024)(366016)(376014)(4022899009)(8096899003)(13003099007)(4053099003)(38070700018);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?Windows-1252?Q?JQ0EHJOjB3g/6G6Cc+1N1R/uM7Fk+D23MljkwY5oGIiR5ihyKahE0mLk?=
+ =?Windows-1252?Q?rJW0pFrRUDcRxLv14v3sA37zInfAv0DakRb/oKfa+ggnwmd3ohl9GpxT?=
+ =?Windows-1252?Q?8xr1cAzpnRHkWSJrw4dLgfl0zS+4jrtD32D88E34pixJje1kcJPT+pfI?=
+ =?Windows-1252?Q?OYzabh84J88d+v8hvgjqePRI9ILnp3U+toPHFDCypeZGQ5N0Pd2inGqW?=
+ =?Windows-1252?Q?A9XsdhcEFiRt8zWvCgdHAiZt//cKUe3rr6kFNwxLMYsKlsfGFxP1yBXd?=
+ =?Windows-1252?Q?xzjsgjGc3ziKTkCe4ZmP7+iv8tHdpmN0cC9WJZivmxbhA6UF/wPtgvit?=
+ =?Windows-1252?Q?jthwAak0zzB/eDCHG7Qu00n0hExDClUlGWLGP8q7/lLp8/45sjfNk1AK?=
+ =?Windows-1252?Q?axQWQ2MYhqBbVKfbZbyifFPs56uGW2IvVvD/D1qiP54JUR/Is7IIbErr?=
+ =?Windows-1252?Q?D0g96Iz63rlwF6LLYZGji7EBphJ54jzCukm7XumTgBzWAJA+fk3WXS87?=
+ =?Windows-1252?Q?V5kyg2tTuf0NT5/tLyh4Ikm/3MV5t44KYn3XGzo7ea0RTxketeSlV03e?=
+ =?Windows-1252?Q?Lkdd9e+P4W2KF8Mcf8SuF71GbEPPInEBe8Q2hsV/IqMY/HXHa16RGngd?=
+ =?Windows-1252?Q?P++/Ex9ArCEaq2rcTnnUnqNP7XX7KP0G6SFnjDmUC5lO82ccK5xC6QBl?=
+ =?Windows-1252?Q?1hZaAKrxPR8N/m6th3ZDAFjvRXMlQ6KczQuLsxC+BdGJP9eVZmKZYoLI?=
+ =?Windows-1252?Q?8Luw21LcI7D78CcRt6us52jucMV3XCdcIVSI9f+hLFaQOtTGJ6qWpsdk?=
+ =?Windows-1252?Q?I2rGh61EJJyt68KOTZoyAM2+TMbNlTwM1Bpc+Spdx/PWWo5FZB0V/w5p?=
+ =?Windows-1252?Q?/fnGIC9hpVlugeiuHKsvcVyuKhFZwKMGkhqVWXoFKStTjET6bKkdFdDn?=
+ =?Windows-1252?Q?LWbYHsNa+zF6pS9siya+Sxn7uPdVkx1bK4rXdZdmuYisuLSy0nNf+HiY?=
+ =?Windows-1252?Q?OZIkBABdNrNHmuZY6JUYZSCZHHU6wiu6sXVMFLm4dPYexMoGL67b0xg1?=
+ =?Windows-1252?Q?54snjBckNVxve6EVGk9ORjwgc4E80mXgRmztngp+MjEQBSjt+NLdrR4s?=
+ =?Windows-1252?Q?Gq1CoIxDhO7C0zQroBXtTiIsOi5C2Gg3zOT/nXgNfs1UynoQTF0r5DbP?=
+ =?Windows-1252?Q?CvKDwPh+0GQx5ueNvcVbmSm1I75vCV4jgsBvgDUSrEpl0sXUj3KLtQNG?=
+ =?Windows-1252?Q?eZLg6N+rpVDNUQnaqUhsTpCHfXmljoKVLPKY5Pq53Oh0z3oToqysEJDt?=
+ =?Windows-1252?Q?7Py+iWTSfCacnc52iSQdHKeVXrYYbsX+vgK1DngYj/W9eoMGY2ntBy2p?=
+ =?Windows-1252?Q?evga3OkjroAAHuTsKqwy2wA9AmWOE1+bYZZ7jQvKccwnLlgSAl94ds6k?=
+ =?Windows-1252?Q?ZdwjSQpent8wnE7eWgXVmDjhd8w0Oc5006zfov/d+F2BqRoN5sKONXFt?=
+ =?Windows-1252?Q?ceqlt+H06149oWCrCYdSllpQxVJ7cnhWgYR6jdEmuhWkQo7M1cVqWgFh?=
+ =?Windows-1252?Q?2rddlE/iB2H4mQugbp5pP9hrzIg5sQTFfHA0zvdBMAuM2z1wOJ292LFh?=
+ =?Windows-1252?Q?EisOTkAl0n1qO0LzZz0MXLCOe84HQuJGdadjsy6XYhpsJpNztrbsk0GW?=
+ =?Windows-1252?Q?Dp2J7dk+C61VGQsn+AylQTJpKNd9MBWA?=
+Content-Type: multipart/related;
+	boundary="_005_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_";
+	type="multipart/alternative"
+MIME-Version: 1.0
+X-OriginatorOrg: capsitech.com
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: PN2PR01MB9188.INDPRD01.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: e98267f4-c02a-47ee-4e18-08ddbaf663e8
+X-MS-Exchange-CrossTenant-originalarrivaltime: 04 Jul 2025 12:29:15.7227
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 7f2b7ffc-0fea-492c-9490-6200ea5abadd
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: rGLopMAs331cBGhle2fmhBoRxOutowBZ1kwgznwo4iT0WKX8yoRAfzCMDq94sjMnfoHVLWkYOIu2/EZ16mzKR06RHNpk/B903mKDGUmQHNQ=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: PN0PR01MB7967
+
+--_005_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_
+Content-Type: multipart/alternative;
+	boundary="_000_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_"
+
+--_000_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+
+
+Arpanendu Khag
+Assistant ML Engineer - L1
+
+CAPSITECH IT SERVICES PRIVATE LIMITED
+C1 & C2 Agro Food Park, RIICO Industrial Area | Boranada | Jodhpur-342012
+Phone: +91 0291 294 2244 |
+Email: arpanendu.khag@capsitech.com |
+Web URL : https://www.capsitech.com/
+[cid:7edfed39-b27c-4c95-af64-74eca7ebbb39]
+
+________________________________
+From: vishal singh <vishal.singh@capsitech.com>
+Sent: Friday, July 4, 2025 5:58 PM
+To: Arpanendu Khag <arpanendu.khag@capsitech.com>
+Subject: Fw: Top Jobs from Leading IT/Tech Companies like Makemytrip, Amazo=
+n etc
+
+
+
+Vishal Singh
+Assistant ML Engineer - L1
+
+CAPSITECH IT SERVICES PRIVATE LIMITED
+C1 & C2 Agro Food Park, RIICO Industrial Area | Boranada | Jodhpur-342012
+Phone: +91 0291 294 2244 |
+Email: vishal.singh@capsitech.com |
+Web URL : https://www.capsitech.com/
+[cid:9c952f7b-2f3c-48da-8a5d-ddd4f7030847]
+
+________________________________
+From: Vishal singh <vishalsingh08052003@gmail.com>
+Sent: 04 July 2025 17:57
+To: vishal singh <vishal.singh@capsitech.com>
+Subject: Fwd: Top Jobs from Leading IT/Tech Companies like Makemytrip, Amaz=
+on etc
+
+
+---------- Forwarded message ---------
+From: hirist.tech <info@hirist.tech>
+Date: Wed, 2 Jul 2025, 10:47
+Subject: Top Jobs from Leading IT/Tech Companies like Makemytrip, Amazon et=
+c
+To: <vishalsingh08052003@gmail.com<mailto:vishalsingh08052003@gmail.com>>
+
+
+
+Hello Vishal Singh,
+
+Below are the top Matching jobs based on your job feed tags, experience ran=
+ge, and location preference(s). Click on any job link to apply.
+
+  *   30/06 - GoKwik - Applied Scientist II - Machine Learning/Deep Learnin=
+g (1-4 yrs)<https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%=
+2Fj%2Fgokwik-applied-scientist-ii-machine-learningdeep-learning-1504515.htm=
+l%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000=
+/kin_HbNLv7BZ98qMpXBtF4x1JPcz5eyshUttukamZAQ=3D412> - Others
+
+
+  *   01/07 - NMG Technologies - Python Developer - Django/Flask (1-3 yrs)<=
+https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fnmg-te=
+chnologies-python-developer-djangoflask-1505067.html%3Fref=3Dep/1/01010197c=
+99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/jd_PLB-f7XEnUU1aMdIo_jy=
+IpzcFq2F3cLPm3HXJ7aE=3D412> - Gurgaon/Gurugram/Delhi NCR/Faridabad/Delhi/Gr=
+eater Noida
+
+
+  *   01/07 - Python Developer - Backend Technologies (1-2 yrs)<https://pos=
+toffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fpython-developer-=
+backend-technologies-1505193.html%3Fref=3Dep/1/01010197c99175c9-ee007729-3e=
+7a-4dcf-a9e4-247965a7db94-000000/N3hV17ayR-nNG82_Wfbh5kTWOmsvfy_bix7xqYWqm4=
+c=3D412> - Vadodara/Baroda
+
+
+  *   VGU Jaipur | MBA in Business Analytics<https://postoffice.hirist.tech=
+/CL0/https:%2F%2Fwww.hirist.tech%2Fcourse%2FVGU-Jaipur-%257c-MBA-in-Busines=
+s-Analytics--769.html%3Freforg=3Dlearning_All%26refinv=3Dlearning/1/0101019=
+7c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/yQfJdkvaRwHdz0o7fSCKl=
+XGh54qukhP46QMwfMzyxCM=3D412>
+
+
+  *   01/07 - Skyplusnews - Data Analyst - R/SQL/Python (0-4 yrs)<https://p=
+ostoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fskyplusnews-dat=
+a-analyst-rsqlpython-1505293.html%3Fref=3Dep/1/01010197c99175c9-ee007729-3e=
+7a-4dcf-a9e4-247965a7db94-000000/oLVZO9CAXxRmilTiUNPAm8h5ucnsdGfy_I_Ro4SAVx=
+w=3D412> - Anywhere in India/Multiple Locations
+
+
+  *   30/06 - Data Scientist - Python (1-6 yrs)<https://postoffice.hirist.t=
+ech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fdata-scientist-python-1504718.htm=
+l%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000=
+/oP6VfLuD1iCDGAatK_HT8pLrVuDepgEVaZaBZ0fX8q4=3D412> - Bangalore
+
+
+  *   30/06 - Gloify - Django Developer - Python (1-3 yrs)<https://postoffi=
+ce.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fgloify-django-develope=
+r-python-1-3-yrs-1504990.html%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4=
+dcf-a9e4-247965a7db94-000000/OKQZlcLXL8Gq9paOTMENRF8Z1WOCQMZru9CZ3TROK2U=3D=
+412> - Bangalore
+
+
+  *   30/06 - Software Testing Engineer - Automation Testing (1-5 yrs)<http=
+s://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fsoftware-t=
+esting-engineer-automation-testing-1504381.html%3Fref=3Dep/1/01010197c99175=
+c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/ZdET_Gpp2ZnbPTaZdNUIL3GqlJE7=
+WQ4Rxlh84qgQ_aQ=3D412> - Jaipur
+
+
+  *   30/06 - AI/ML Engineer (1-4 yrs)<https://postoffice.hirist.tech/CL0/h=
+ttps:%2F%2Fwww.hirist.tech%2Fj%2Faiml-engineer-1504326.html%3Fref=3Dep/1/01=
+010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/MHu4ndhxn7XyzO9L=
+r9HCZ25ImtdRk5GmhoXEKjDVsCY=3D412> - Bangalore/Pune
+
+
+  *   27/06 - Country Delight - Data Engineer - Spark/Python (1-3 yrs)<http=
+s://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fcountry-de=
+light-data-engineer-sparkpython-1503400.html%3Fref=3Dep/1/01010197c99175c9-=
+ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/d1j-Cmmppil_d5s8kF92mXnAa2s6B9Y=
+sBy9mBVuJEOI=3D412> - Hyderabad
+
+More jobs >><https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fjobfeed%2F%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a=
+7db94-000000/FlKdHQHiia2CZvXfCtLaU58uQ9f0nW46XI95cRg9ATA=3D412>
+
+Jobs which are matching your tags preferences but outside your experience a=
+nd location preferences. You can consider these jobs as well.
+
+  *   01/07 - [PREMIUM]: Python Backend Engineer (0-2 yrs)<https://postoffi=
+ce.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fpython-backend-enginee=
+r-1505356.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-2=
+47965a7db94-000000/k5HronDY6pyuuIUh16u5x_Pq6idTn_7w2W8JYBKcZmo=3D412> - Che=
+nnai
+
+
+  *   01/07 - Prompt Engineer - LLM/NLP (0-3 yrs)<https://postoffice.hirist=
+.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fprompt-engineer-llmnlp-1505466.=
+html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db9=
+4-000000/HF-zlY1Y1BiD7vPq8X4jApYo3R0MGQV8jtEIiWf1JY0=3D412> - Bangalore
+
+
+  *   01/07 - Blockchain Data & ML Engineer - Pandas/Numpy (0-2 yrs)<https:=
+//postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fj%2Fblockchain-d=
+ata-ml-engineer-pandasnumpy-1505340.html%3Fref=3Dep_sec2/1/01010197c99175c9=
+-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/VZz4q8b1m4dTILjABi34LceemFo2l7=
+aNYanE330Nl9M=3D412> - Indore
+
+More jobs >><https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fjobfeed%2F%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-24=
+7965a7db94-000000/jLb7qzhcMIGH7Y4XTYcyNplUigLwJzIq0EFWz912BAQ=3D412>
+
+Here's the list of keywords you are following -
+
+Python, <https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk=
+%2Fpython-jobs-9.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf=
+-a9e4-247965a7db94-000000/BWR62eBt0VNhDF2A2D2NAy-j5RMFghaI7KugIeMM-kc=3D412=
+> Machine Learning, <https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hir=
+ist.tech%2Fk%2Fmachine-learning-jobs-203.html%3Fref=3Dep_sec2/1/01010197c99=
+175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/iv91H3a1O_oWux21i5znzAFkA=
+-hg72W35XBLrKEFKoI=3D412> Computer Vision, <https://postoffice.hirist.tech/=
+CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fcomputer-vision-jobs-811.html%3Fref=
+=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/C=
+4_YCWJatk0M90XsWgJB0M5iCu9VeoMaBoxBKgquuNk=3D412> Artificial Intelligence, =
+<https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fartif=
+icial-intelligence-jobs-898.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee00772=
+9-3e7a-4dcf-a9e4-247965a7db94-000000/l_waxKvoJ34qVtlwjxArcOCcv6kSWXIegIx_M5=
+21tng=3D412> Flask, <https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hir=
+ist.tech%2Fk%2Fflask-jobs-1895.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee00=
+7729-3e7a-4dcf-a9e4-247965a7db94-000000/vuHOo3tl1sfqX75rEILezRYuqJZV445ccv0=
+kXVlrWmE=3D412> Deep Learning, <https://postoffice.hirist.tech/CL0/https:%2=
+F%2Fwww.hirist.tech%2Fk%2Fdeep-learning-jobs-2512.html%3Fref=3Dep_sec2/1/01=
+010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/rukFNt7xeWJkkvpb=
+PF7QWULtOdAid84wT3QwBDSW8Cg=3D412> Tensorflow, <https://postoffice.hirist.t=
+ech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Ftensorflow-jobs-2666.html%3Fref=
+=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/6=
+4GR0CNy1d4qULCXjQWRxEY2RBMuh0-YnFR0NLgvE9E=3D412> Git, <https://postoffice.=
+hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fgit-jobs-2918.html%3Fref=
+=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/A=
+uQHQkDInpuG8s9B0D4PLXcZ8_LCocB1h1xQGFohEL4=3D412> Pandas, <https://postoffi=
+ce.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fpandas-jobs-3259.html%=
+3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000=
+000/Hl3pHPXUCyMm9I1oIHOVT_9NySfKHe-PwwymOfTC6t0=3D412> Numpy,<https://posto=
+ffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fnumpy-jobs-3260.htm=
+l%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-0=
+00000/TfB1qjSge1H-yQJ8IzXYNFASdpygsK_YQf4aj6gwIw0=3D412>
+
+Click here<https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2=
+Fmeta%2F%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94=
+-000000/-rtrgGRyQE4gmd8tEEwsNudAiI0GCzBEYCznqbliKqM=3D412> to view all keyw=
+ords - www.hirist.tech/meta<https://postoffice.hirist.tech/CL0/https:%2F%2F=
+www.hirist.tech%2Fmeta%2F%3Fref=3Dep/2/01010197c99175c9-ee007729-3e7a-4dcf-=
+a9e4-247965a7db94-000000/mVawk1CI9mGW-JQNuB3pd7_XUFFGUjSHtLB9mqxtry0=3D412>
+
+Get notified when recruiters see your CV only on hirist mobile app - Androi=
+d App<https://postoffice.hirist.tech/CL0/https:%2F%2Fplay.google.com%2Fstor=
+e%2Fapps%2Fdetails%3Fid=3Dcom.hirist.jobseeker%26utm_source=3Dhirist_email%=
+26utm_campaign=3Dhirist_email_msg1%26utm_medium=3Demail%26ref=3Dhirist_emai=
+l_msg1/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/b0hrE=
+s8E4l68C3RVWMygU_XZ7nnkq3dStLr7GDw8YgM=3D412> or iOS App<https://postoffice=
+.hirist.tech/CL0/https:%2F%2Fapps.apple.com%2Fus%2Fapp%2Fhirist%2Fid9526979=
+60%3Fid=3Dcom.hirist.jobseeker%26utm_source=3Dhirist_email%26utm_campaign=
+=3Dhirist_email_msg1%26utm_medium=3Demail%26ref=3Dhirist_email_msg1/1/01010=
+197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/HqFFZvI16ZML3FebDE2=
+_TSFkrW2GqF_ZopMadijMjZ0=3D412>
+
+Best regards,
+
+Team hirist.tech<mailto:info@hirist.tech>
+
+info@hirist.tech<mailto:info@hirist.tech>
+
+________________________________
+You are receiving this email because you are registered to hirist.tech<http=
+s://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%3Fref=3Dep/1/010=
+10197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/x61ltDaQdZd1Y6j0x=
+zA-aS1a8k04W1x007zoKRNJwoU=3D412> as a Jobseeker. If you don=92t want to re=
+ceive emails like these anymore, you can unsubscribe<https://postoffice.hir=
+ist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Femail-unsubscribe%3FencKey=3Dc75=
+6c2e95777024ce87885545548c570:8f4de8a8941db627af6a4fd0fc31b07f0cc5abb336613=
+8177abe52437aca62c4eb50814a4d05d53a9868f17c6f25025064760f8172e3e9b25ceb7c7c=
+4804927e2f388c2e30f953a987e804a5eb0cab552dfb0c922bf6e5d0cb72c50ba37461a82d0=
+f0cf1791c46b9e7c2483e92a21c03080837b949a6e3376fc6e2f201dd915d24ae3203fe02fb=
+762e3cff41bc12bd110e653549d070fbc3d5005685d46bc20010ef962e2904aea310c3f75c3=
+b10bf7ed1e066a8cf878c515c952ac4cb84224e479e8fc87c997b8b048978d368d4683f4ad0=
+a5332b322638937fd0c40a5dbfa5f7ae2621bca932731c2f8e3af2a71570a44feaf8b983776=
+2154119416c2db3c71399cedabc6335f20a243f64c28b3cc820a39e4f52a06a692d38961130=
+012f3f0ae343c92fa87c330e2e778d5a95171c60ffb26defe92695bd68faef94093c55cf4a7=
+921ba5b66c2627f2a6397f538359674899859ea8e9078499739754079d3868157a6f91929da=
+fc78e8ab889d7d664eda8c12a6c9ff2c37af4d2ad88e1cf6e21d8e37845a93fbb2c52333145=
+a1121824d69255519441bd155319e8d3613a56be8b2fc660b4ad6bf0284e1cc1b12050a5f89=
+46774bdbf7af4603b56c6a0be69a69828838fa3062c828be762032c8f29106dbbcae3341200=
+8dd7c78131ebbce146990d711031c3459cea763e3606748%26ref=3Dep/1/01010197c99175=
+c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/Xdd1RPmt6hdF6gsQsOSOl62Vq1uV=
+vGVWu2unvMsZtgY=3D412>.
+Copyright =A9 2025 hirist.tech<https://postoffice.hirist.tech/CL0/https:%2F=
+%2Fwww.hirist.tech%3Fref=3Dep/2/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-24=
+7965a7db94-000000/4_OULyrowi0z-okOeaTttVxOya_v55xAvtMJQS-CXag=3D412>. All r=
+ights reserved. Sent by hirist.tech<https://postoffice.hirist.tech/CL0/http=
+s:%2F%2Fwww.hirist.tech%3Fref=3Dep/3/01010197c99175c9-ee007729-3e7a-4dcf-a9=
+e4-247965a7db94-000000/lpaRNH_f-Fd_4VSWMLhJAZtz7sMgwlmHiNQ59fBll1g=3D412> |=
+ 6th Floor, Kings Mall, Sector - 10, Rohini, Delhi-85
+
+--_000_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style type=3D"text/css" style=3D"display:none;"> P {margin-top:0;margin-bo=
+ttom:0;} </style>
+</head>
+<body dir=3D"ltr">
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+</div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" clas=
+s=3D"elementToProof">
+<br>
+</div>
+<div class=3D"elementToProof" id=3D"Signature">
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" clas=
+s=3D"elementToProof">
+<br>
+</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+Arpanendu Khag</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+Assistant ML Engineer - L1</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+<br>
+</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+CAPSITECH IT SERVICES PRIVATE LIMITED</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+C1 &amp; C2 Agro Food Park, RIICO Industrial Area | Boranada | Jodhpur-3420=
+12</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+Phone: +91 0291 294 2244 |</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+Email: arpanendu.khag@capsitech.com |&nbsp;</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_MSFontS=
+ervice, -apple-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12p=
+t; color: rgb(36, 36, 36);" class=3D"elementToProof">
+Web URL : <a title=3D"https://www.capsitech.com/" class=3D"OWAAutoLink" id=
+=3D"OWAd2de58d7-d12c-8477-dfea-e60d4750b664" href=3D"https://www.capsitech.=
+com/">
+https://www.capsitech.com/</a></div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);" clas=
+s=3D"elementToProof">
+<img style=3D"width: 167.683px; height: 50px; max-width: 765px;" height=3D"=
+50" width=3D"167" id=3D"image_0" data-outlook-trace=3D"F:1|T:1" src=3D"cid:=
+7edfed39-b27c-4c95-af64-74eca7ebbb39"></div>
+</div>
+<div id=3D"appendonsend"></div>
+<div style=3D"font-family: Aptos, Aptos_EmbeddedFont, Aptos_MSFontService, =
+Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb(0, 0, 0);">
+<br>
+</div>
+<hr style=3D"display: inline-block; width: 98%;">
+<div id=3D"divRplyFwdMsg">
+<div style=3D"direction: ltr; font-family: Calibri, sans-serif; font-size: =
+11pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;vishal singh &lt;vishal.singh@capsitech.com&gt;<br>
+<b>Sent:</b>&nbsp;Friday, July 4, 2025 5:58 PM<br>
+<b>To:</b>&nbsp;Arpanendu Khag &lt;arpanendu.khag@capsitech.com&gt;<br>
+<b>Subject:</b>&nbsp;Fw: Top Jobs from Leading IT/Tech Companies like Makem=
+ytrip, Amazon etc</div>
+<div style=3D"direction: ltr;">&nbsp;</div>
+</div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div id=3D"x_Signature">
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+Vishal Singh</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+Assistant ML Engineer - L1</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+<br>
+</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+CAPSITECH IT SERVICES PRIVATE LIMITED</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+C1 &amp; C2 Agro Food Park, RIICO Industrial Area | Boranada | Jodhpur-3420=
+12</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+Phone: +91 0291 294 2244 |</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+Email: vishal.singh@capsitech.com |&nbsp;</div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: white; margin: 0px; font-family: Aptos, Aptos_MSFontService, -appl=
+e-system, Roboto, Arial, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(36, 36, 36);">
+Web URL : <a style=3D"margin: 0px;" data-auth=3D"NotApplicable" title=3D"ht=
+tps://www.capsitech.com/" class=3D"x_OWAAutoLink" id=3D"OWAbc8e28ee-8101-08=
+80-cd33-132d96387b0f" href=3D"https://www.capsitech.com/">
+https://www.capsitech.com/</a></div>
+<div style=3D"direction: ltr; text-align: left; text-indent: 0px; backgroun=
+d-color: rgb(255, 255, 255); margin: 0px; font-family: Aptos, Aptos_Embedde=
+dFont, Aptos_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt=
+; color: black;">
+<img style=3D"width: 167.68px; height: 50px; max-width: 780px; min-width: a=
+uto; min-height: auto; margin: 0px;" size=3D"12652" height=3D"50" width=3D"=
+167" id=3D"x_x_image_0" data-outlook-trace=3D"F:3|T:3" src=3D"cid:9c952f7b-=
+2f3c-48da-8a5d-ddd4f7030847"></div>
+<div style=3D"direction: ltr; font-family: Aptos, Aptos_EmbeddedFont, Aptos=
+_MSFontService, Calibri, Helvetica, sans-serif; font-size: 12pt; color: rgb=
+(0, 0, 0);">
+<br>
+</div>
+</div>
+<div id=3D"x_appendonsend"></div>
+<hr style=3D"direction: ltr; display: inline-block; width: 98%;">
+<div id=3D"x_divRplyFwdMsg">
+<div style=3D"direction: ltr; font-family: Calibri, sans-serif; font-size: =
+11pt; color: rgb(0, 0, 0);">
+<b>From:</b>&nbsp;Vishal singh &lt;vishalsingh08052003@gmail.com&gt;<br>
+<b>Sent:</b>&nbsp;04 July 2025 17:57<br>
+<b>To:</b>&nbsp;vishal singh &lt;vishal.singh@capsitech.com&gt;<br>
+<b>Subject:</b>&nbsp;Fwd: Top Jobs from Leading IT/Tech Companies like Make=
+mytrip, Amazon etc</div>
+<div style=3D"direction: ltr;">&nbsp;</div>
+</div>
+<div style=3D"direction: ltr;"><br>
+</div>
+<div style=3D"direction: ltr;">---------- Forwarded message ---------<br>
+From: <b>hirist.tech</b>&nbsp;&lt;info@hirist.tech&gt;<br>
+Date: Wed, 2 Jul 2025, 10:47<br>
+Subject: Top Jobs from Leading IT/Tech Companies like Makemytrip, Amazon et=
+c<br>
+To: &lt;<a class=3D"OWAAutoLink" id=3D"OWA6dfbb190-2459-50eb-e9da-c876e9314=
+b73" href=3D"mailto:vishalsingh08052003@gmail.com">vishalsingh08052003@gmai=
+l.com</a>&gt;</div>
+<div style=3D"direction: ltr;"><br>
+<br>
+</div>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;">Hello Vis=
+hal Singh,</p>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;">Below are=
+ the top Matching jobs based on your job feed tags, experience range, and l=
+ocation preference(s). Click on any job link to apply.</p>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">30/06 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA401b19ca-02bb-c3e9-0aca-86bb9d7b4=
+34e" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fgokwik-applied-scientist-ii-machine-learningdeep-learning-1504515.ht=
+ml%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-00000=
+0/kin_HbNLv7BZ98qMpXBtF4x1JPcz5eyshUttukamZAQ=3D412">
+GoKwik - Applied Scientist II - Machine Learning/Deep Learning (1-4 yrs)</a=
+>&nbsp;- Others</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">01/07 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA24714900-7800-6178-bc6d-d0d797bdc=
+2b1" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fnmg-technologies-python-developer-djangoflask-1505067.html%3Fref=3De=
+p/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/jd_PLB-f7X=
+EnUU1aMdIo_jyIpzcFq2F3cLPm3HXJ7aE=3D412">
+NMG Technologies - Python Developer - Django/Flask (1-3 yrs)</a>&nbsp;- Gur=
+gaon/Gurugram/Delhi NCR/Faridabad/Delhi/Greater Noida</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">01/07 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA94baa950-ee55-353c-b231-814c17e89=
+1fb" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fpython-developer-backend-technologies-1505193.html%3Fref=3Dep/1/0101=
+0197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/N3hV17ayR-nNG82_Wf=
+bh5kTWOmsvfy_bix7xqYWqm4c=3D412">
+Python Developer - Backend Technologies (1-2 yrs)</a>&nbsp;- Vadodara/Barod=
+a</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px; list-style-type: none;"><span=
+ role=3D"presentation" style=3D"color: rgb(53, 172, 25);"><a style=3D"color=
+: rgb(53, 172, 25);" data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=
+=3D"OWA37e7d44b-d04d-352c-f6a5-653a2975d72b" href=3D"https://postoffice.hir=
+ist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fcourse%2FVGU-Jaipur-%257c-MBA-in=
+-Business-Analytics--769.html%3Freforg=3Dlearning_All%26refinv=3Dlearning/1=
+/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/yQfJdkvaRwHdz=
+0o7fSCKlXGh54qukhP46QMwfMzyxCM=3D412">VGU
+ Jaipur | MBA in Business Analytics</a></span></li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">01/07 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA0c89717d-c998-0a88-ee18-69ad28413=
+351" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fskyplusnews-data-analyst-rsqlpython-1505293.html%3Fref=3Dep/1/010101=
+97c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/oLVZO9CAXxRmilTiUNPA=
+m8h5ucnsdGfy_I_Ro4SAVxw=3D412">
+Skyplusnews - Data Analyst - R/SQL/Python (0-4 yrs)</a>&nbsp;- Anywhere in =
+India/Multiple Locations</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">30/06 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWAe7800718-6e47-067f-a09b-79c5fabb4=
+db4" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fdata-scientist-python-1504718.html%3Fref=3Dep/1/01010197c99175c9-ee0=
+07729-3e7a-4dcf-a9e4-247965a7db94-000000/oP6VfLuD1iCDGAatK_HT8pLrVuDepgEVaZ=
+aBZ0fX8q4=3D412">
+Data Scientist - Python (1-6 yrs)</a>&nbsp;- Bangalore</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">30/06 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA8e5a28e8-1dde-10ef-fb6a-4a52ec284=
+b6a" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fgloify-django-developer-python-1-3-yrs-1504990.html%3Fref=3Dep/1/010=
+10197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/OKQZlcLXL8Gq9paOT=
+MENRF8Z1WOCQMZru9CZ3TROK2U=3D412">
+Gloify - Django Developer - Python (1-3 yrs)</a>&nbsp;- Bangalore</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">30/06 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA19a0d05b-3104-3804-81b4-a3486c56c=
+ac4" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fsoftware-testing-engineer-automation-testing-1504381.html%3Fref=3Dep=
+/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/ZdET_Gpp2Zn=
+bPTaZdNUIL3GqlJE7WQ4Rxlh84qgQ_aQ=3D412">
+Software Testing Engineer - Automation Testing (1-5 yrs)</a>&nbsp;- Jaipur<=
+/li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">30/06 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA7fa38f39-702a-f771-d1ed-d8762a738=
+384" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Faiml-engineer-1504326.html%3Fref=3Dep/1/01010197c99175c9-ee007729-3e=
+7a-4dcf-a9e4-247965a7db94-000000/MHu4ndhxn7XyzO9Lr9HCZ25ImtdRk5GmhoXEKjDVsC=
+Y=3D412">
+AI/ML Engineer (1-4 yrs)</a>&nbsp;- Bangalore/Pune</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">27/06 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA1af88c30-e29a-5021-0ac1-42c486750=
+e13" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fcountry-delight-data-engineer-sparkpython-1503400.html%3Fref=3Dep/1/=
+01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/d1j-Cmmppil_d5=
+s8kF92mXnAa2s6B9YsBy9mBVuJEOI=3D412">
+Country Delight - Data Engineer - Spark/Python (1-3 yrs)</a>&nbsp;- Hyderab=
+ad</li></ul>
+<div style=3D"direction: ltr;"><br>
+<a data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWA2da55268-b393=
+-159c-bc11-de194bd7adb6" href=3D"https://postoffice.hirist.tech/CL0/https:%=
+2F%2Fwww.hirist.tech%2Fjobfeed%2F%3Fref=3Dep/1/01010197c99175c9-ee007729-3e=
+7a-4dcf-a9e4-247965a7db94-000000/FlKdHQHiia2CZvXfCtLaU58uQ9f0nW46XI95cRg9AT=
+A=3D412">More
+ jobs &gt;&gt;</a></div>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;">Jobs whic=
+h are matching your tags preferences but outside your experience and locati=
+on preferences. You can consider these jobs as well.</p>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">01/07 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA8a1896d3-302e-d478-e11c-12fa6bfa6=
+437" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fpython-backend-engineer-1505356.html%3Fref=3Dep_sec2/1/01010197c9917=
+5c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/k5HronDY6pyuuIUh16u5x_Pq6id=
+Tn_7w2W8JYBKcZmo=3D412">
+[PREMIUM]: Python Backend Engineer (0-2 yrs)</a>&nbsp;- Chennai</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">01/07 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA30e8293f-d62e-47e9-4b00-e57e5911b=
+d3a" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fprompt-engineer-llmnlp-1505466.html%3Fref=3Dep_sec2/1/01010197c99175=
+c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/HF-zlY1Y1BiD7vPq8X4jApYo3R0M=
+GQV8jtEIiWf1JY0=3D412">
+Prompt Engineer - LLM/NLP (0-3 yrs)</a>&nbsp;- Bangalore</li></ul>
+<div style=3D"direction: ltr;"><br>
+</div>
+<ul style=3D"direction: ltr;">
+<li style=3D"direction: ltr; margin-top: 2px;">01/07 - <a data-auth=3D"NotA=
+pplicable" class=3D"OWAAutoLink" id=3D"OWA34b71716-8bd7-2107-1fe2-1039239bd=
+6be" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech=
+%2Fj%2Fblockchain-data-ml-engineer-pandasnumpy-1505340.html%3Fref=3Dep_sec2=
+/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/VZz4q8b1m4d=
+TILjABi34LceemFo2l7aNYanE330Nl9M=3D412">
+Blockchain Data &amp; ML Engineer - Pandas/Numpy (0-2 yrs)</a>&nbsp;- Indor=
+e</li></ul>
+<div style=3D"direction: ltr;"><br>
+<a data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWA6bad9d2c-9d33=
+-fdaa-c6e9-68f3231c40a6" href=3D"https://postoffice.hirist.tech/CL0/https:%=
+2F%2Fwww.hirist.tech%2Fjobfeed%2F%3Fref=3Dep_sec2/1/01010197c99175c9-ee0077=
+29-3e7a-4dcf-a9e4-247965a7db94-000000/jLb7qzhcMIGH7Y4XTYcyNplUigLwJzIq0EFWz=
+912BAQ=3D412">More
+ jobs &gt;&gt;</a></div>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;">Here's th=
+e list of keywords you are following -</p>
+<div style=3D"direction: ltr;"><a style=3D"text-decoration: none;" data-aut=
+h=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWAc598dfc9-9277-41a5-1a8c-=
+8869aaf0f0e9" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hi=
+rist.tech%2Fk%2Fpython-jobs-9.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007=
+729-3e7a-4dcf-a9e4-247965a7db94-000000/BWR62eBt0VNhDF2A2D2NAy-j5RMFghaI7Kug=
+IeMM-kc=3D412">Python,
+</a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicable" class=
+=3D"OWAAutoLink" id=3D"OWA9f3b538e-5bd7-6cff-add2-adefdf227176" href=3D"htt=
+ps://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fmachine-l=
+earning-jobs-203.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf=
+-a9e4-247965a7db94-000000/iv91H3a1O_oWux21i5znzAFkA-hg72W35XBLrKEFKoI=3D412=
+">Machine
+ Learning, </a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicab=
+le" class=3D"OWAAutoLink" id=3D"OWAaddaf29b-a4bd-1567-215a-8d4443377cf6" hr=
+ef=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2F=
+computer-vision-jobs-811.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3=
+e7a-4dcf-a9e4-247965a7db94-000000/C4_YCWJatk0M90XsWgJB0M5iCu9VeoMaBoxBKgquu=
+Nk=3D412">Computer
+ Vision, </a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicable=
+" class=3D"OWAAutoLink" id=3D"OWA758ec383-5ea7-5a1b-7e62-061897aaab98" href=
+=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Far=
+tificial-intelligence-jobs-898.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee00=
+7729-3e7a-4dcf-a9e4-247965a7db94-000000/l_waxKvoJ34qVtlwjxArcOCcv6kSWXIegIx=
+_M521tng=3D412">Artificial
+ Intelligence, </a><a style=3D"text-decoration: none;" data-auth=3D"NotAppl=
+icable" class=3D"OWAAutoLink" id=3D"OWA3da64ec1-f201-a1e4-4315-6a0e9220db27=
+" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2F=
+k%2Fflask-jobs-1895.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4=
+dcf-a9e4-247965a7db94-000000/vuHOo3tl1sfqX75rEILezRYuqJZV445ccv0kXVlrWmE=3D=
+412">Flask,
+</a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicable" class=
+=3D"OWAAutoLink" id=3D"OWA80f05a62-c569-9556-36fd-442f29dab08f" href=3D"htt=
+ps://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fdeep-lear=
+ning-jobs-2512.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a=
+9e4-247965a7db94-000000/rukFNt7xeWJkkvpbPF7QWULtOdAid84wT3QwBDSW8Cg=3D412">=
+Deep
+ Learning, </a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicab=
+le" class=3D"OWAAutoLink" id=3D"OWA592ce089-d03b-ca96-1a9b-4d1ea4b95f26" hr=
+ef=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2F=
+tensorflow-jobs-2666.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-=
+4dcf-a9e4-247965a7db94-000000/64GR0CNy1d4qULCXjQWRxEY2RBMuh0-YnFR0NLgvE9E=
+=3D412">Tensorflow,
+</a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicable" class=
+=3D"OWAAutoLink" id=3D"OWA29c9c484-701c-9646-3bf7-953b037510e1" href=3D"htt=
+ps://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fgit-jobs-=
+2918.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965=
+a7db94-000000/AuQHQkDInpuG8s9B0D4PLXcZ8_LCocB1h1xQGFohEL4=3D412">Git,
+</a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicable" class=
+=3D"OWAAutoLink" id=3D"OWA63b15537-c479-d40c-cddf-89d16ff6b6cc" href=3D"htt=
+ps://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fpandas-jo=
+bs-3259.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247=
+965a7db94-000000/Hl3pHPXUCyMm9I1oIHOVT_9NySfKHe-PwwymOfTC6t0=3D412">Pandas,
+</a><a style=3D"text-decoration: none;" data-auth=3D"NotApplicable" class=
+=3D"OWAAutoLink" id=3D"OWA3753c424-8677-bba1-f54e-46a83a2908a3" href=3D"htt=
+ps://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fk%2Fnumpy-job=
+s-3260.html%3Fref=3Dep_sec2/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-2479=
+65a7db94-000000/TfB1qjSge1H-yQJ8IzXYNFASdpygsK_YQf4aj6gwIw0=3D412">Numpy,</=
+a></div>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;"><a style=
+=3D"margin-top: 0px; margin-bottom: 0px;" data-auth=3D"NotApplicable" class=
+=3D"OWAAutoLink" id=3D"OWA1c89c6cb-c240-04d7-2f87-c957dc91b9e7" href=3D"htt=
+ps://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%2Fmeta%2F%3Fref=
+=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/-rtrgG=
+RyQE4gmd8tEEwsNudAiI0GCzBEYCznqbliKqM=3D412">Click
+ here</a>&nbsp;to view all keywords - <a style=3D"margin-top: 0px; margin-b=
+ottom: 0px;" data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWAfc0=
+defc0-fb2a-69fa-c96e-75aa62ad78db" href=3D"https://postoffice.hirist.tech/C=
+L0/https:%2F%2Fwww.hirist.tech%2Fmeta%2F%3Fref=3Dep/2/01010197c99175c9-ee00=
+7729-3e7a-4dcf-a9e4-247965a7db94-000000/mVawk1CI9mGW-JQNuB3pd7_XUFFGUjSHtLB=
+9mqxtry0=3D412">
+www.hirist.tech/meta</a></p>
+<p style=3D"direction: ltr; margin: 20px 0px;"><b>Get notified when recruit=
+ers see your CV only on hirist mobile app -
+</b><a style=3D"margin-top: 0px; margin-bottom: 0px;" data-auth=3D"NotAppli=
+cable" class=3D"OWAAutoLink" id=3D"OWAbc9c6060-6605-c6e5-0220-24150e1c4d96"=
+ href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fplay.google.com%2Fs=
+tore%2Fapps%2Fdetails%3Fid=3Dcom.hirist.jobseeker%26utm_source=3Dhirist_ema=
+il%26utm_campaign=3Dhirist_email_msg1%26utm_medium=3Demail%26ref=3Dhirist_e=
+mail_msg1/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/b0=
+hrEs8E4l68C3RVWMygU_XZ7nnkq3dStLr7GDw8YgM=3D412">Android
+ App</a>&nbsp;or <a style=3D"margin-top: 0px; margin-bottom: 0px;" data-aut=
+h=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWAadf49f28-209e-c7f7-2ab4-=
+0a8ddda981c6" href=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fapps.a=
+pple.com%2Fus%2Fapp%2Fhirist%2Fid952697960%3Fid=3Dcom.hirist.jobseeker%26ut=
+m_source=3Dhirist_email%26utm_campaign=3Dhirist_email_msg1%26utm_medium=3De=
+mail%26ref=3Dhirist_email_msg1/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-2=
+47965a7db94-000000/HqFFZvI16ZML3FebDE2_TSFkrW2GqF_ZopMadijMjZ0=3D412">
+iOS App</a></p>
+<p style=3D"direction: ltr; margin-top: 20px; margin-bottom: 0px;">Best reg=
+ards,</p>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;"><a style=
+=3D"margin-top: 0px; margin-bottom: 0px;" class=3D"OWAAutoLink" id=3D"OWAf4=
+e93c32-6c1f-f21b-0a3e-7707a6ba1a25" href=3D"mailto:info@hirist.tech">Team h=
+irist.tech</a></p>
+<p style=3D"direction: ltr; margin-top: 0px; margin-bottom: 0px;"><a style=
+=3D"margin-top: 0px; margin-bottom: 0px;" class=3D"OWAAutoLink" id=3D"OWA54=
+7dc817-29cf-0362-9fe0-ea6c089fc577" href=3D"mailto:info@hirist.tech">info@h=
+irist.tech</a></p>
+<hr style=3D"direction: ltr;">
+<div style=3D"direction: ltr; margin-right: 30%; font-size: 13px; color: gr=
+ey;">You are receiving this email because you are registered to
+<a data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWA0f11e210-5060=
+-5875-a44e-8dae57da5b1e" href=3D"https://postoffice.hirist.tech/CL0/https:%=
+2F%2Fwww.hirist.tech%3Fref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-=
+247965a7db94-000000/x61ltDaQdZd1Y6j0xzA-aS1a8k04W1x007zoKRNJwoU=3D412">
+hirist.tech</a>&nbsp;as a Jobseeker. If you don=92t want to receive emails =
+like these anymore, you can
+<a data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=3D"OWA0e8a3f6d-8f9b=
+-cbf4-322e-10255359ca89" href=3D"https://postoffice.hirist.tech/CL0/https:%=
+2F%2Fwww.hirist.tech%2Femail-unsubscribe%3FencKey=3Dc756c2e95777024ce878855=
+45548c570:8f4de8a8941db627af6a4fd0fc31b07f0cc5abb3366138177abe52437aca62c4e=
+b50814a4d05d53a9868f17c6f25025064760f8172e3e9b25ceb7c7c4804927e2f388c2e30f9=
+53a987e804a5eb0cab552dfb0c922bf6e5d0cb72c50ba37461a82d0f0cf1791c46b9e7c2483=
+e92a21c03080837b949a6e3376fc6e2f201dd915d24ae3203fe02fb762e3cff41bc12bd110e=
+653549d070fbc3d5005685d46bc20010ef962e2904aea310c3f75c3b10bf7ed1e066a8cf878=
+c515c952ac4cb84224e479e8fc87c997b8b048978d368d4683f4ad0a5332b322638937fd0c4=
+0a5dbfa5f7ae2621bca932731c2f8e3af2a71570a44feaf8b9837762154119416c2db3c7139=
+9cedabc6335f20a243f64c28b3cc820a39e4f52a06a692d38961130012f3f0ae343c92fa87c=
+330e2e778d5a95171c60ffb26defe92695bd68faef94093c55cf4a7921ba5b66c2627f2a639=
+7f538359674899859ea8e9078499739754079d3868157a6f91929dafc78e8ab889d7d664eda=
+8c12a6c9ff2c37af4d2ad88e1cf6e21d8e37845a93fbb2c52333145a1121824d69255519441=
+bd155319e8d3613a56be8b2fc660b4ad6bf0284e1cc1b12050a5f8946774bdbf7af4603b56c=
+6a0be69a69828838fa3062c828be762032c8f29106dbbcae33412008dd7c78131ebbce14699=
+0d711031c3459cea763e3606748%26ref=3Dep/1/01010197c99175c9-ee007729-3e7a-4dc=
+f-a9e4-247965a7db94-000000/Xdd1RPmt6hdF6gsQsOSOl62Vq1uVvGVWu2unvMsZtgY=3D41=
+2">
+unsubscribe</a>.<br>
+Copyright =A9 2025 <a data-auth=3D"NotApplicable" class=3D"OWAAutoLink" id=
+=3D"OWAea2910dc-c69a-99f3-4f3c-026588717ec7" href=3D"https://postoffice.hir=
+ist.tech/CL0/https:%2F%2Fwww.hirist.tech%3Fref=3Dep/2/01010197c99175c9-ee00=
+7729-3e7a-4dcf-a9e4-247965a7db94-000000/4_OULyrowi0z-okOeaTttVxOya_v55xAvtM=
+JQS-CXag=3D412">
+hirist.tech</a>. All rights reserved. Sent by <a data-auth=3D"NotApplicable=
+" class=3D"OWAAutoLink" id=3D"OWA37b887a5-bcc1-07e4-ff59-e9d8cf585c6f" href=
+=3D"https://postoffice.hirist.tech/CL0/https:%2F%2Fwww.hirist.tech%3Fref=3D=
+ep/3/01010197c99175c9-ee007729-3e7a-4dcf-a9e4-247965a7db94-000000/lpaRNH_f-=
+Fd_4VSWMLhJAZtz7sMgwlmHiNQ59fBll1g=3D412">
+hirist.tech</a>&nbsp;| 6th Floor, Kings Mall, Sector - 10, Rohini, Delhi-85=
+</div>
+</body>
+</html>
+
+--_000_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_--
+
+--_005_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_
+Content-Type: image/png; name="Outlook-dsfdqp0h.png"
+Content-Description: Outlook-dsfdqp0h.png
+Content-Disposition: inline; filename="Outlook-dsfdqp0h.png"; size=12359;
+	creation-date="Fri, 04 Jul 2025 12:28:32 GMT";
+	modification-date="Fri, 04 Jul 2025 12:28:58 GMT"
+Content-ID: <9c952f7b-2f3c-48da-8a5d-ddd4f7030847>
+Content-Transfer-Encoding: base64
+
+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
+
+--_005_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_
+Content-Type: image/png; name="Outlook-ecrcrnve.png"
+Content-Description: Outlook-ecrcrnve.png
+Content-Disposition: inline; filename="Outlook-ecrcrnve.png"; size=9516;
+	creation-date="Fri, 04 Jul 2025 12:29:15 GMT";
+	modification-date="Fri, 04 Jul 2025 12:29:15 GMT"
+Content-ID: <7edfed39-b27c-4c95-af64-74eca7ebbb39>
+Content-Transfer-Encoding: base64
+
+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
+
+--_005_PN2PR01MB918899826A0BA5755E8425DD9A42APN2PR01MB9188INDP_--

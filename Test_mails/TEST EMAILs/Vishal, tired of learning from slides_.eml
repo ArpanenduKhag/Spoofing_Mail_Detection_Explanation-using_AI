@@ -1,0 +1,1303 @@
+Delivered-To: killmonger0805@gmail.com
+Received: by 2002:a17:505:7908:b0:1cf3:ee09:aace with SMTP id xu8csp2508696njc;
+        Mon, 30 Jun 2025 00:42:34 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IGK/Qczn3CFdpjIyAHeeVGrYeNArGMHZU9ystArfeVZgub+/X4jmnybODca782Afsw9jHWd
+X-Received: by 2002:a05:690c:6182:b0:711:33d3:92ed with SMTP id 00721157ae682-715171b802cmr177262907b3.38.1751269353722;
+        Mon, 30 Jun 2025 00:42:33 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1751269353; cv=none;
+        d=google.com; s=arc-20240605;
+        b=awcDsFzokYv97aO+3FNRQoMzPGBkPnZ2KRASsmEjiJDPKAmP/yv2USEQuPwqu0QqKH
+         3uERubnIpKgH6FYPwkjqsTS0EcCovpsOCZJ761KUvBgJtPj6z1uX3nik6IRFDS/wQWc8
+         cVMJbv2j5XKQVHLt0ao5xNnzrLPJKez8ztpxL/97VL9BwITbj3ERmcT9n5TrVmDi1A/Z
+         fbnefWTkyLC6yKlolWC0/lHwPk79WRFfLsU0115AXKxPe2vCxHePV+U8vlrbvJrUcLxA
+         LLQvEHCu4Cg0yi93jkH1e7PvroJbjZQLHjl8jj2clERa2aTH/4hp2qs0Js8JENjuCNmx
+         nb/g==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-id:list-unsubscribe-post:list-unsubscribe:feedback-id:reply-to
+         :campaignid:from:subject:emailidentifier:isdebug:userid:mime-version
+         :date:message-id:to:dkim-signature;
+        bh=addPz1ncIQ+HR8VPQDShQjC+I7cAEXacz+BbwRXtI90=;
+        fh=1eKjZLOE8U31C3N2FzbSuwffjB92qdpwc9Z7LE6Zk7c=;
+        b=KZCoXaQvoDT2674W0lrU18nESkDPOdSP12/m8XCQdm5rp3RzuzWBYtKlzZV4E75U5L
+         xXMgPJ6QmVtxw5DNZoGIkmmizkDx17TEU0/rx999YnD9WNplNFi1cOBAfAbF6iXjAuY4
+         prc8/8chB+CeyIuH1EseNOd7Txb3jYOlQLwALCCT2wokxi/wNMNCrKngQChFDHe/ZQcg
+         A6WiHlvfJ/wpRba0ZzDf7PB1Gl+wm9++6QAnk8YKPbmWmokWCgZOkX2xx2nwmTj2SwU5
+         pkoLhlQMu/r5/ZA7vwfh9ylFzppmb/VBcOTVl8/d+PdaBc1TCbS7YeesJHxUDMVLzPGP
+         ExJQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@newsletters.analyticsvidhya.com header.s=mailmodo header.b="7xFGIP4/";
+       spf=pass (google.com: domain of msprvs1=20276gp1s4ux4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com designates 156.70.13.88 as permitted sender) smtp.mailfrom="msprvs1=20276GP1s4UX4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=newsletters.analyticsvidhya.com
+Return-Path: <msprvs1=20276GP1s4UX4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com>
+Received: from mta-70-13-88.sparkpostmail.com (mta-70-13-88.sparkpostmail.com. [156.70.13.88])
+        by mx.google.com with ESMTPS id 00721157ae682-71515c782d7si72872177b3.140.2025.06.30.00.42.33
+        for <killmonger0805@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Mon, 30 Jun 2025 00:42:33 -0700 (PDT)
+Received-SPF: pass (google.com: domain of msprvs1=20276gp1s4ux4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com designates 156.70.13.88 as permitted sender) client-ip=156.70.13.88;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@newsletters.analyticsvidhya.com header.s=mailmodo header.b="7xFGIP4/";
+       spf=pass (google.com: domain of msprvs1=20276gp1s4ux4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com designates 156.70.13.88 as permitted sender) smtp.mailfrom="msprvs1=20276GP1s4UX4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com";
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=newsletters.analyticsvidhya.com
+Return-Path: <msprvs1=20276GP1s4UX4=bounces-303287-7560@mm-bounce.newsletters.analyticsvidhya.com>
+X-MSFBL: tneZVJP6FMeuWJCyMv+Uwsz9dUrDOjwuMKTqWS1TrJY=|eyJyIjoia2lsbG1vbmd
+	lcjA4MDVAZ21haWwuY29tIiwidGVuYW50X2lkIjoic3BjIiwiY3VzdG9tZXJfaWQ
+	iOiIzMDMyODciLCJtZXNzYWdlX2lkIjoiNjg1MmU5M2Y2MjY4ZDBjNDYzNTYiLCJ
+	zdWJhY2NvdW50X2lkIjoiNzU2MCJ9
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+	d=newsletters.analyticsvidhya.com; s=mailmodo; t=1751269353;
+	i=@newsletters.analyticsvidhya.com;
+	bh=addPz1ncIQ+HR8VPQDShQjC+I7cAEXacz+BbwRXtI90=;
+	h=To:Message-ID:Date:Content-Type:Subject:From:List-Unsubscribe:
+	 List-Unsubscribe-Post:From:To:Cc:Subject;
+	b=7xFGIP4/OX3LjA7vuiYajTnj+m1ZfTmqGXryt/EsRlatoNr04UKxO+24Ff/g59x4Q
+	 l8LytNCO54mrA4XXXtqkDcZ8gXjYKnFuCjsgE/Ng5jxdhBebInvMBzV44vsdIl7Kuh
+	 nHfeNNU29L+DDkmIMxMTkBXMEbvsWEKsvwGUZbyE=
+Received: from [10.90.24.104] ([10.90.24.104])
+	by i-043c0815e4248071f.mta1vrest.sd.prd.sparkpost (ecelerity 5.0.0.74499 r(msys-ecelerity:tags/5.0.0.7)) with REST
+	id 65/3E-20469-9EF32686; Mon, 30 Jun 2025 07:42:33 +0000
+To: killmonger0805@gmail.com
+Message-ID: <65.3E.20469.9EF32686@i-043c0815e4248071f.mta1vrest.sd.prd.sparkpost>
+Date: Mon, 30 Jun 2025 07:42:33 +0000
+Content-Type: multipart/alternative; boundary="_----sPJ2MB/3cKDFsYN1IyZzzg===_05/3E-20469-9EF32686"
+MIME-Version: 1.0
+Userid: 05d5a0f1-e319-4b9d-8059-66864c06619a
+Isdebug: false
+Emailidentifier: 75cf931e-80e6-52da-8689-13e2ab9ae001
+Subject: Vishal, tired of learning from slides?
+From: "Tanya Chitranshi" <tanya@newsletters.analyticsvidhya.com>
+Campaignid: 5a41b83d-9188-5fe1-8c1d-1a3b072747ea
+Reply-To: tanya@newsletters.analyticsvidhya.com
+Feedback-ID: 5a41b83d-9188-5fe1-8c1d-1a3b072747ea:05d5a0f1-e319-4b9d-8059-66864c06619a:AMP:b69b7f61-f8c4-4714-9f3d-af5e2221393c
+List-Unsubscribe: <mailto:unsubscribe@unsub.spmta.com?subject=unsubscribe:g3u43QxNKN-wrXJ8HK__crDbosO4LKQa6r9ALyZ8kUg~|eyAicmNwdF90byI6ICJraWxsbW9uZ2VyMDgwNUBnbWFpbC5jb20iLCAidGVuYW50X2lkIjogInNwYyIsICJjdXN0b21lcl9pZCI6ICIzMDMyODciLCAic3ViYWNjb3VudF9pZCI6ICI3NTYwIiwgIm1lc3NhZ2VfaWQiOiAiNjg1MmU5M2Y2MjY4ZDBjNDYzNTYiIH0~>,<https://unsubscribe.spmta.com/u/vfeF558sm1t3ONgp0rvg-w~~/AASgtxA~/y1BMvJas6fE4jy8gVM-M28GTJ1Wo2dsiKACn5D_6WZtftyfHJ_npHJ6T6hsZQ7bAZabJml9Q_a7lGo4-J6hHCg~~>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+List-Id: <spc.303287.7560.sparkpostmail.com>
+
+--_----sPJ2MB/3cKDFsYN1IyZzzg===_05/3E-20469-9EF32686
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset="UTF-8"
+
+Let=E2=80=99s build AI live at India=E2=80=99s most futuristic AI conferenc=
+e.=0A=0AHi=C2=A0Vishal,=0A=0A=C2=A0=0A=0AAI made another leap forward when =
+OpenAI unveiled o3, its most advanced=0Areasoning model to date, and switch=
+ed on long-term memory for ChatGPT =E2=80=93 letting=0Ait recall your earli=
+er conversations like an old friend.=0A=0A=C2=A0=0A=0AThe future keeps arri=
+ving faster than expected, and the best way to keep up is=0Ato jump in and =
+build.=0A=0A=C2=A0=0A=0AThat=E2=80=99s exactly the vibe at DataHack=C2=A0Su=
+mmit=C2=A02025, coming to Bengaluru from=0A20-23=C2=A0August.=C2=A0=0A=0A=
+=0ACURIOUS ABOUT THE DETAILS=3F=0A=0ADownload Brochure=0A[https://tn.btrkr.=
+com/clicks/plain/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52da-86=
+89-13e2ab9ae001/c73bc095-05d0-504b-b99a-b7b692051864=3FurlChildId=3D68ea6df=
+8-c5fc-5728-b58b-05d85bb7348f&templateId=3D2d64dd7f-e6ed-4ece-8429-1502b5a8=
+d1b5]=0A=0AAcross four days you=E2=80=99ll:=0A=0A=C2=A0=0A=0A * Catch 80+ A=
+I talks packed with real case studies and clear, take-home=0A   tactics.=0A=
+ * Jump into 50+ hack sessions and see GenAI and Agentic AI in action.=0A *=
+ Build GenAI and Agentic AI solutions in 10+ hands-on workshops.=0A=0A=C2=
+=A0=0A=0AIn case of queries, feel free to reply to this email or call us=0A=
+at=C2=A0+91-8368808185.=0A=0A=C2=A0=0A=0AWarm regards,=0ATanya Chitranshi=
+=0A=0A=C2=A0=0A=0AUnsubscribe here=0A[https://tn.btrkr.com/clicks/plain/5a4=
+1b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae001/4766=
+6eda-54fe-58b8-a475-9ced1bd97315=3FurlChildId=3D71ce4ffc-3633-5788-9e64-828=
+f68124fed&templateId=3D2d64dd7f-e6ed-4ece-8429-1502b5a8d1b5]=0A=0AClick her=
+e=0A[https://tn.btrkr.com/clicks/honey-link/plain/5a41b83d-9188-5fe1-8c1d-1=
+a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae001]signature=0A[https://tn.bt=
+rkr.com/opens/plain/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52da=
+-8689-13e2ab9ae001]
+--_----sPJ2MB/3cKDFsYN1IyZzzg===_05/3E-20469-9EF32686
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/x-amp-html; charset="UTF-8"
+
+<!DOCTYPE html><html amp4email><head><meta charset=3D"utf-8"><script async =
+src=3D"https://cdn.ampproject.org/v0.js"></script><style amp4email-boilerpl=
+ate>body{visibility:hidden}</style><style amp-custom>@media only screen and=
+ (min-width:480px){.mj-column-per-100{width:100%;max-width:100%}}.moz-text-=
+html .mj-column-per-100{width:100%;max-width:100%}.body-wrapper.disable-hea=
+ding-font-weight h1,.body-wrapper.disable-heading-font-weight h2,.body-wrap=
+per.disable-heading-font-weight h3,.body-wrapper.disable-heading-font-weigh=
+t h4,.body-wrapper.disable-heading-font-weight h5,.body-wrapper.disable-hea=
+ding-font-weight h6{font-weight:400}@media only screen and (min-width:480px=
+){.body-wrapper{padding-top:12px}}div p{margin:0 0}h1,h2,h3,h4,h5,h6{margin=
+:0}h1{font-size:28px}h2{font-size:24px}h3{font-size:20px}h4{font-size:18px}=
+p{font-size:16px}a{text-decoration:none}ol,ul{margin-top:0;margin-bottom:0}=
+.freeze-block-img img{object-fit:cover}.html-freeze-block-img img{object-f=
+it:cover}.custom-block-img img{object-fit:cover}.html-custom-block-img img{=
+object-fit:cover}.navbar-mj>.mj-inline-links>table{display:inline-block}.fo=
+rmeeyhs159-wrapper .input-style{color:#000;background-color:#fff;font-famil=
+y:Arial;font-size:13px;width:100%;border-width:2px;border-style:solid;borde=
+r-color:#e2e8f0;border-radius:4px;padding-top:5px;padding-bottom:5px;paddin=
+g-left:12px;padding-right:12px;line-height:1.5;align-self:flex-start;align:=
+left}@media screen and (max-width:500px){.formeeyhs159-wrapper .input-style=
+{width:100%;align:left;align-self:flex-start;padding-top:5px;padding-bottom=
+:5px;padding-left:12px;padding-right:12px}}.formeeyhs159-wrapper .input-out=
+er{padding-top:undefined;padding-bottom:undefined;padding-left:undefined;pa=
+dding-right:undefined}.formeeyhs159-wrapper .phone-input-wrapper{display:fl=
+ex;justify-content:flex-start}.formeeyhs159-wrapper .input-style{-webkit-ap=
+pearance:none;appearance:none;moz-appearance:none}.formeeyhs159-wrapper .an=
+swer{position:relative}.formeeyhs159-wrapper .select-box .select-box__arrow=
+{font-family:monospace;position:absolute;height:16px;top:calc(50% - 8px);ri=
+ght:10px;transform:rotate(180deg);font-size:14px}.formeeyhs159-wrapper .two=
+-fields-input{display:flex;flex-direction:row;gap:12px;width:100%;align-sel=
+f:flex-start}.flex-1{flex:1;position:relative}.flex-2{flex:2;position:relat=
+ive}.flex-3{flex:3;position:relative}.flex-4{flex:4;position:relative}.form=
+eeyhs159-wrapper .phone-style{align-self:auto}@media screen and (max-width:=
+500px){.formeeyhs159-wrapper .phone-input-wrapper{justify-content:flex-star=
+t}.formeeyhs159-wrapper .two-fields-input{align-self:flex-start}}.formeeyhs=
+159-wrapper .formula-style{padding:20px 24px;border-radius:0;border-width:1=
+px;border-style:solid;border-color:#fff;background-color:#f4fafc;label-padd=
+ing-bottom:12px;color:#000;font-size:14px}.formeeyhs159-wrapper .textarea-s=
+tyle{height:100px;align-self:flex-start;align:left}@media screen and (max-w=
+idth:500px){.formeeyhs159-wrapper .textarea-style{align:left;align-self:fle=
+x-start}}.formeeyhs159-wrapper .option-container{text-align:left}.formeeyhs=
+159-wrapper .consent-checkbox-label{justify-content:left;text-align:left}.f=
+ormeeyhs159-wrapper .option-container>div:last-child .select-container{marg=
+in-bottom:0}.formeeyhs159-wrapper .image-option-container{text-align:left}.=
+formeeyhs159-wrapper .image-option-container>div:last-child .select-contain=
+er{margin-bottom:0}.formeeyhs159-wrapper .chip-option-container{justify-con=
+tent:flex-start;display:flex;flex-wrap:wrap}.formeeyhs159-wrapper .select-c=
+ontainer{display:inline-flex;align-items:center;position:relative;margin-bo=
+ttom:0;margin-top:0;margin-left:0;cursor:pointer;font-size:11px;font-weight=
+:0;font-style:none;text-decoration:none;color:undefined}.formeeyhs159-wrapp=
+er .chip-select-container,.formeeyhs159-wrapper .image-select-container{dis=
+play:flex;flex-wrap:wrap;position:relative;margin-bottom:0;margin-top:0;mar=
+gin-left:0;cursor:pointer;font-size:11px;font-weight:0;font-style:none;text=
+-decoration:none;color:undefined}.formeeyhs159-wrapper .image-select-contai=
+ner{margin:0;height:100%}.formeeyhs159-wrapper .select-container input{disp=
+lay:none}.formeeyhs159-wrapper .chip-select-container input,.formeeyhs159-w=
+rapper .image-select-container input{display:none}.formeeyhs159-wrapper .ch=
+eckmark{height:25px;width:25px;margin-right:0;background-color:#e2e8f0;tran=
+sform:scale(.4);flex-shrink:0}.formeeyhs159-wrapper .chip-checkmark{margin-=
+right:0;background-color:#e2e8f0;color:#334155;transform:scale('1');padding=
+:8px 21px;font-weight:0;border-radius:24px;line-height:normal;text-decorati=
+on:none}.formeeyhs159-wrapper .image-checkmark{display:none}.formeeyhs159-w=
+rapper .select-container:hover input~.checkmark{box-shadow:0 0 0 2px #2674e=
+d}.formeeyhs159-wrapper .image-choice__separator{background:#e2e8f0;margin-=
+top:5px;width:100%}.formeeyhs159-wrapper .image-select-container input:chec=
+ked~.image-question .image-choice__separator{background:#2674ed}.formeeyhs1=
+59-wrapper .chip-select-container:hover input~.chip-checkmark,.formeeyhs159=
+-wrapper .consent-checkbox-container .consent-checkbox-label:hover input~.c=
+heckmark{box-shadow:0 0 0 2px #2674ed}.formeeyhs159-wrapper .image-select-c=
+ontainer input~.image-question{border-color:#e2e8f0;padding:2px;width:100%}=
+.formeeyhs159-wrapper .image-select-container input~.image-question img{di=
+splay:block;object-fit:cover}.formeeyhs159-wrapper .image-select-container =
+.image-question__label{padding:8px 10px}.formeeyhs159-wrapper .image-optio=
+n-container{display:flex;flex-wrap:wrap;justify-content:flex-start}.formeey=
+hs159-wrapper .image-select-container input:checked~.image-question{border-=
+color:#2674ed}.formeeyhs159-wrapper .select-container input:checked~.checkm=
+ark{background-color:#2674ed}.formeeyhs159-wrapper .consent-checkbox-contai=
+ner .consent-checkbox-label input:checked~.checkmark{background-color:#2674=
+ed}.formeeyhs159-wrapper .chip-select-container input:checked~.chip-checkma=
+rk{background-color:#2674ed;color:#fff}.formeeyhs159-wrapper .checkmark div=
+{content:"";position:absolute;display:none}.formeeyhs159-wrapper .select-co=
+ntainer input:checked~.checkmark div{display:block}.formeeyhs159-wrapper .s=
+elect-container .checkmark-check div{left:9px;top:5px;width:5px;height:10px=
+;border:solid #fff;border-width:0 3px 3px 0;transform:rotate(45deg)}.formee=
+yhs159-wrapper .checkmark-radio{border-radius:50%}.formeeyhs159-wrapper .se=
+lect-container .checkmark-radio div{top:50%;left:50%;width:8px;height:8px;b=
+order-radius:50%;background:#fff;transform:translate(-50%,-50%)}@media scre=
+en and (max-width:500px){.formeeyhs159-wrapper .option-container{text-align=
+:left}.formeeyhs159-wrapper .consent-checkbox-label{text-align:left}.formee=
+yhs159-wrapper .consent-checkbox-label{justify-content:left;text-align:left=
+}.formeeyhs159-wrapper .image-option-container{text-align:left}.formeeyhs15=
+9-wrapper .chip-option-container{justify-content:flex-start;text-align:left=
+}}.formeeyhs159-wrapper .nps-wrapper,.rating-wrapper{display:flex;flex-wrap=
+:wrap}.formeeyhs159-wrapper .rating-wrapper.five-star{justify-content:left}=
+.formeeyhs159-wrapper .emoji-wrapper{height:50px;display:flex;flex-wrap:wr=
+ap;align-items:center;line-height:1.5;margin-bottom:0;margin-top:0;margin-l=
+eft:0}.formeeyhs159-wrapper .emoji-wrapper label{margin-right:0}.formeeyhs1=
+59-wrapper .nps-wrapper label{color:#0f172a;position:relative;margin:0;widt=
+h:35px;height:35px}.nps-section{display:flex;flex-wrap:nowrap;gap:.5rem}.fo=
+rmeeyhs159-wrapper .nps-wrapper label input{width:100%;height:100%;opacity:=
+0;position:absolute;margin:0}.formeeyhs159-wrapper .nps-wrapper label span{=
+cursor:pointer;white-space:nowrap;position:absolute;height:calc(100% - 4px)=
+;width:calc(100% - 4px);display:flex;justify-content:center;align-items:cen=
+ter;font-size:14px;font-weight:300;background-color:rgb(255,255,255,.1);bor=
+der:2px solid #e2e8f0}.formeeyhs159-wrapper .nps-wrapper label input:checke=
+d~span{background-color:#2674ed;color:#fff;border:2px solid #2674ed;cursor:=
+pointer}.formeeyhs159-wrapper .nps-wrapper label input:not(:checked)~span{b=
+order:false;cursor:pointer}.formeeyhs159-wrapper .nps-wrapper span:hover{bo=
+rder:2px solid #2674ed;cursor:pointer}.formeeyhs159-wrapper .rating-wrapper=
+{justify-content:space-between}@media screen and (max-width:500px){.formeey=
+hs159-wrapper .nps-wrapper label span{font-size:14px}.formeeyhs159-wrapper =
+.nps-wrapper,.rating-wrapper{margin-left:0;margin-right:0}.formeeyhs159-wr=
+apper .rating-wrapper.five-star{justify-content:left}}@media screen and (ma=
+x-width:400px){.formeeyhs159-wrapper .rating-wrapper{flex-wrap:wrap;justify=
+-content:center}.formeeyhs159-wrapper .nps-wrapper label span{font-size:12p=
+x}}.formeeyhs159-wrapper .question{padding-top:0;padding-bottom:3px;padding=
+-left:0;padding-right:0;font-size:0;line-height:1.5;letter-spacing:0;align-=
+self:flex-start;align:left;color:#000;width:auto;element-padding-top:0;elem=
+ent-padding-bottom:5px;font-weight:400;background-color:#fff;font-family:Ar=
+ial;element-padding-right:0}@media screen and (max-width:500px){.formeeyhs1=
+59-wrapper .question{width:auto;align:left;align-self:flex-start;padding-to=
+p:0;padding-bottom:3px;padding-left:0;padding-right:0}}.formeeyhs159-wrappe=
+r .question{text-align:left}.formeeyhs159-wrapper div[submit-error] .overal=
+l.question p,.formeeyhs159-wrapper div[submit-success] .overall.question p,=
+.formeeyhs159-wrapper div[submitting] p{display:block}.formeeyhs159-wrappe=
+r .formula-field__padding{padding-top:0}.formeeyhs159-wrapper .overall>.ele=
+ment-wrapper{padding-top:0;padding-bottom:5px;padding-left:undefined;paddin=
+g-right:0}@media screen and (max-width:500px){.formeeyhs159-wrapper .questi=
+on{text-align:left}}.formeeyhs159-wrapper .button{margin-top:0;margin-botto=
+m:0;margin-left:0;margin-right:0;padding-top:6px;padding-bottom:6px;padding=
+-left:0;padding-right:0;border-width:0;border-style:solid;border-color:#267=
+4ed;border-radius:4px;align-self:flex-start;background-color:#2674ed;color:=
+#fff;width:160px;height:auto;font-size:13px;align:left;line-height:1;font-w=
+eight:400;font-style:normal;text-decoration:none;letter-spacing:0}@media sc=
+reen and (max-width:500px){.formeeyhs159-wrapper .button{width:160px;align:=
+left;align-self:flex-start;padding-top:6px;padding-bottom:6px;padding-left:=
+0;padding-right:0}}.formeeyhs159-wrapper .navigation-button-wrapper{justify=
+-content:left}.formeeyhs159-wrapper .btn-margin{margin-left:2px;margin-righ=
+t:12px}.formeeyhs159-wrapper .previous-button{background-color:white;outlin=
+e:1px solid #2674ed;color:#2674ed}@media screen and (max-width:500px){.form=
+eeyhs159-wrapper button.button{width:auto;padding-left:16px;padding-right:1=
+6px}.formeeyhs159-wrapper .navigation-button-wrapper{justify-content:left}}=
+.formeeyhs159-wrapper .answer>.question>p{display:block}.formeeyhs159-wrap=
+per .prev-button{background-color:#e9f9f6;color:#fff}.formeeyhs159-wrapper =
+.nps-styling{pre-color:#eee;hover-color:#ccc;checked-color:#2196f3}.formee=
+yhs159-wrapper .form-text{color:#1e293b;font-size:14px;line-height:1.5}.for=
+meeyhs159-wrapper .overall{background-color:#fff;width:100%;border-color:#f=
+8fafc;border-radius:4px;border-width:0;border-style:solid;font-family:Arial=
+;letter-spacing:0;align-self:flex-start;font-size:14px;padding-top:0;paddin=
+g-bottom:0;padding-left:20px;padding-right:20px;over-all-color:#4b5193;alig=
+n:left;color:#000}@media screen and (max-width:500px){.formeeyhs159-wrapper=
+ .overall{width:100%;align:left;align-self:flex-start;padding-top:0;padding=
+-bottom:0;padding-left:20px;padding-right:20px}}.formeeyhs159-wrapper{word-=
+break:break-word}.formeeyhs159-wrapper .text-style{color:#64748b;font-size:=
+14px;line-height:1.5}.button-elementtep161633{outline:0;background-color:#2=
+674ed;color:#fff;border-radius:4px;padding-left:0;padding-right:0;padding-t=
+op:6px;padding-bottom:6px;margin-left:0;margin-right:0;margin-top:2px;margi=
+n-bottom:2px;height:auto;width:136px;letter-spacing:0;border-color:#000;bor=
+der-width:0;border-style:solid;line-height:1;font-size:13px;font-family:Hel=
+vetica;align:center;align-self:flex-start;font-weight:400;font-style:normal=
+;text-decoration:none}@media screen and (max-width:500px){.button-elementte=
+p161633.success-btn{padding-left:16px;padding-right:16px}}@media only scree=
+n and (max-width:480px){.full-width-mobile{width:100%}}.formeeyhs159-wrappe=
+r .slider-wrapper{align-self:flex-start;align:left;width:100%}.formeeyhs159=
+-wrapper .slider-value{display:flex;justify-content:space-between;color:rgb=
+a(0,0,0,.6);font-weight:400;font-size:13px;margin:0 0 12px 0}.formeeyhs159-=
+wrapper .selected-value{display:flex;padding:4px 8px;justify-content:center=
+;align-items:center;border-radius:4px;background:rgba(0,0,0,.1);width:max-c=
+ontent;margin:12px 0 0 0;color:rgba(0,0,0,.9);font-size:14px;font-weight:40=
+0}body{padding:0}.rating-wrapper label input{opacity:0;position:absolute;ma=
+rgin:0}.rating-wrapper label span{display:inline-block}.emoji-wrapper label=
+ input:checked~span{font-size:40px}.emoji-wrapper label span{font-size:30px=
+;margin:0 5px}@media screen and (min-width:500px){#date-time>.input-style{w=
+idth:40%}.ratingText{font-size:34px}}@media screen and (max-width:500px){#d=
+ate-time{flex-direction:column}#date-time>.input-style{margin-bottom:10px;b=
+ox-sizing:border-box}.ratingText{font-size:30px}}.navigation-button-wrapper=
+{display:flex;flex-direction:row;justify-content:space-around;margin:0 auto=
+}.navigation-button-wrapper>button{cursor:pointer}.navigation-button-wrappe=
+r>button>label{cursor:pointer}figure.table{margin:0}figure.table table{widt=
+h:100%}figure.table table td,figure.table table th{min-width:2em;padding:.4=
+em;border:1px solid #bfbfbf}@media screen and (max-width:480px){.mj-sa-colu=
+mn-per-10{width:15%}.mj-sa-column-per-70{width:65%}}.amp-html-block .brand-=
+library-widget h1,.bl-typography-block-wrapper h1,.brand-library-widget h1{=
+font-size:28px}.amp-html-block .brand-library-widget h2,.bl-typography-bloc=
+k-wrapper h2,.brand-library-widget h2{font-size:24px}.amp-html-block .brand=
+-library-widget h3,.bl-typography-block-wrapper h3,.brand-library-widget h3=
+{font-size:20px}.amp-html-block .brand-library-widget h4,.bl-typography-blo=
+ck-wrapper h4,.brand-library-widget h4{font-size:18px}.amp-html-block .bran=
+d-library-widget p,.amp-html-block .brand-library-widget.checkbox-option,.a=
+mp-html-block .brand-library-widget.radio-option,.bl-typography-block-wrapp=
+er ol li,.bl-typography-block-wrapper p,.bl-typography-block-wrapper ul li,=
+.brand-library-widget ol li,.brand-library-widget p,.brand-library-widget =
+ul li{font-size:16px}.bl-typography-block-wrapper.bl-typography-freeze-bloc=
+k-wrapper h1,.bl-typography-block-wrapper.bl-typography-freeze-block-wrappe=
+r h2,.bl-typography-block-wrapper.bl-typography-freeze-block-wrapper h3,.bl=
+-typography-block-wrapper.bl-typography-freeze-block-wrapper h4,.bl-typogra=
+phy-block-wrapper.bl-typography-freeze-block-wrapper ol li,.bl-typography-b=
+lock-wrapper.bl-typography-freeze-block-wrapper p,.bl-typography-block-wrap=
+per.bl-typography-freeze-block-wrapper ul li{color:inherit}.form-text h1,.f=
+orm-text h2,.form-text h3,.form-text h4,.form-text p{color:revert;font-size=
+:revert;font-family:inherit}.question h1,.question h2,.question h3,.questio=
+n h4,.question p{color:revert;font-size:revert;font-family:inherit}.navigat=
+ion-button-wrapper p{color:revert;font-size:revert;font-family:inherit}.amp=
+-html-block p{font-size:inherit;color:revert}.amp-btn-wrapper p{font-size:i=
+nherit;color:revert}@media (max-width:480px){.amp-html-block .brand-library=
+-widget h1,.bl-typography-block-wrapper h1{font-size:28px}.amp-html-block .=
+brand-library-widget h2,.bl-typography-block-wrapper h2{font-size:24px}.amp=
+-html-block .brand-library-widget h3,.bl-typography-block-wrapper h3{font-s=
+ize:20px}.amp-html-block .brand-library-widget h4,.bl-typography-block-wrap=
+per h4{font-size:18px}.amp-html-block .brand-library-widget ol li,.amp-html=
+-block .brand-library-widget p,.amp-html-block .brand-library-widget ul li,=
+.bl-typography-block-wrapper ol li,.bl-typography-block-wrapper p,.bl-typo=
+graphy-block-wrapper ul li{font-size:16px}.amp-btn-wrapper p{font-size:inhe=
+rit}}.hide-on-desktop{display:none;mso-hide:all}@media screen and (max-widt=
+h:480px){.hide-on-desktop{display:revert}.hide-on-mobile{display:none}}body=
+{margin:0;padding:0}table,td{border-collapse:collapse}img{border:0;height:a=
+uto;line-height:100%;outline:0}p{display:block;margin:13px 0}</style><scrip=
+t async custom-element=3D"amp-form" src=3D"https://cdn.ampproject.org/v0/am=
+p-form-0.1.js"></script><script async custom-element=3D"amp-bind" src=3D"ht=
+tps://cdn.ampproject.org/v0/amp-bind-0.1.js"></script><script custom-templa=
+te=3D"amp-mustache" src=3D"https://cdn.ampproject.org/v0/amp-mustache-0.2.j=
+s" async></script></head><body style=3D"word-spacing:normal;background-colo=
+r:#f8fafc"><span style=3D"display:none">Let&#x2019;s build AI live at India=
+&#x2019;s most futuristic AI conference.</span><div class=3D"body-wrapper" =
+style=3D"background-color:#f8fafc"><!--[if mso | IE]><table align=3D"center=
+" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"prese=
+ntation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#FFFFFF" ><tr><td =
+style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![en=
+dif]--><div style=3D"background:#fff;background-color:#fff;margin:0 auto;bo=
+rder-radius:0;max-width:600px"><table align=3D"center" border=3D"0" cellpad=
+ding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#fff=
+;background-color:#fff;width:100%;border-radius:0"><tbody><tr><td style=3D"=
+border:0 solid transparent;direction:ltr;font-size:0;padding:0;padding-bott=
+om:0;padding-left:0;padding-right:0;padding-top:0;text-align:center"><!--[i=
+f mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cel=
+lspacing=3D"0"><tr><td class=3D"" width=3D"600px" ><table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:=
+600px;" width=3D"600"><tr><td style=3D"line-height:0px;font-size:0px;mso-li=
+ne-height-rule:exactly;"><![endif]--><div style=3D"background:0 0;backgroun=
+d-color:transparent;margin:0 auto;border-radius:0;max-width:600px"><table a=
+lign=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"pr=
+esentation" style=3D"background:0 0;background-color:transparent;width:100%=
+;border-radius:0"><tbody><tr><td style=3D"border:0 solid transparent;direct=
+ion:ltr;font-size:0;padding:16px 20px 16px 20px;text-align:center"><!--[if =
+mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0"><tr><td class=3D"" style=3D"vertical-align:top;width:560px;"><=
+![endif]--><div class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"f=
+ont-size:0;text-align:left;direction:ltr;display:inline-block;vertical-alig=
+n:top;width:100%"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"vertical-align:top" width=3D"100%"><tbody><tr=
+><td align=3D"left" style=3D"font-size:0;padding:10px 25px;padding-top:0;pa=
+dding-right:0;padding-bottom:0;padding-left:0;word-break:break-word"><div s=
+tyle=3D"font-family:Arial;font-size:13px;line-height:1.5;text-align:left;co=
+lor:#000"><p style=3D"line-height:1.25"><span style=3D"color:#000;font-fami=
+ly:Arial;font-size:13px">Hi&#xA0;</span><span style=3D"font-family:Arial;fo=
+nt-size:13px">Vishal,</span></p><p>&#xA0;</p><p><span style=3D"font-size:13=
+px"><i>AI made another leap forward when <strong>OpenAI unveiled o3</strong=
+>, its most advanced reasoning model to date, and switched on <strong>long-=
+term memory</strong> for ChatGPT &#x2013; letting it recall your earlier co=
+nversations like an old friend.</i></span></p><p>&#xA0;</p><p><span style=
+=3D"font-size:13px">The future keeps arriving faster than expected, and the=
+ best way to keep up is to jump in and build.</span></p><p>&#xA0;</p><p><sp=
+an style=3D"color:#000;font-family:Arial;font-size:13px">That&#x2019;s exac=
+tly the vibe at <strong>DataHack&#xA0;Summit&#xA0;2025</strong>, coming to =
+Bengaluru from <strong>20-23&#xA0;August</strong>.&#xA0;</span></p></div></=
+td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]=
+--></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table></td=
+></tr><![endif]--><div on=3D"tap:AMP.setState({formeeyhs159: {fuuid: formee=
+yhs159.fuuid || floor(random() * 100000),=0A      responses: {=0A    =0A}}}=
+)" role=3D"tab" tabindex=3D"1" class=3D"amp-form-block amp-html-block forme=
+eyhs159-wrapper dont" style=3D"margin:auto;text-align:left" id=3D"formWidge=
+tFallbackAnchorLinkformeeyhs159"><div class=3D"data"><amp-state id=3D"forme=
+eyhs159"><script type=3D"application/json">{"currentStep":"stepbjwuw140","r=
+esponses":{"stepbjwuw140":{"elementqumw41624isd":"IN+91"}},"formHistory":[]=
+}</script></amp-state></div><form id=3D"form_formeeyhs159_stepbjwuw140" cla=
+ss=3D"formeeyhs159" style=3D"display:flex;flex-direction:column;max-width:1=
+00vw" method=3D"post" custom-validation-reporting=3D"show-all-on-submit" on=
+=3D"submit-success:AMP.setState({formeeyhs159:{currentStep: &apos;success&a=
+pos;}})" action-xhr=3D"https://tn.btrkr.com/submissions/5a41b83d-9188-5fe1-=
+8c1d-1a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae001=3Fsender=3Dtanya@new=
+sletters.analyticsvidhya.com&amp;formId=3Dformeeyhs159"><div class=3D"overa=
+ll screen current_screen" style=3D"box-sizing:border-box" [hidden]=3D"forme=
+eyhs159.currentStep !=3D &apos;stepbjwuw140&apos;"><div><div class=3D"answe=
+r"><div class=3D"form-text" style=3D"padding-left:0;padding-right:0;padding=
+-top:10px;padding-bottom:10px;box-sizing:border-box"><p><span style=3D"back=
+ground-color:#fff;color:#000;font-family:Arial,sans-serif;font-size:13px"><=
+i>Curious about the details=3F</i></span></p></div></div></div><div class=
+=3D"element-wrapper"><div class=3D"question"><p>Please enter your phone num=
+ber*</p></div><div class=3D"answer"><div class=3D"input-outer phone-input-w=
+rapper"><div style=3D"display:flex;width:100%"><div class=3D"select-box" st=
+yle=3D"width:40%;position:relative"><select class=3D"input-style dropdown" =
+style=3D"border-top-right-radius:0;border-bottom-right-radius:0;border-righ=
+t:0;align-self:unset;width:100%" required on=3D"input-throttled:AMP.setStat=
+e({formeeyhs159: {responses: {stepbjwuw140: {elementqumw41624isd: event.val=
+ue}}}})"><option value disabled=3D"disabled">Country</option><option value=
+=3D"AD+376" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41=
+624isd =3D=3D &apos;AD+376&apos;">&#x1F1E6;&#x1F1E9; +376 Andorra</option><=
+option value=3D"AE+971" [selected]=3D"formeeyhs159.responses.stepbjwuw140.e=
+lementqumw41624isd =3D=3D &apos;AE+971&apos;">&#x1F1E6;&#x1F1EA; +971 Unite=
+d Arab Emirates</option><option value=3D"AF+93" [selected]=3D"formeeyhs159.=
+responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AF+93&apos;">&#x1F1=
+E6;&#x1F1EB; +93 Afghanistan</option><option value=3D"AG+1268" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AG=
++1268&apos;">&#x1F1E6;&#x1F1EC; +1268 Antigua and Barbuda</option><option v=
+alue=3D"AI+1264" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementq=
+umw41624isd =3D=3D &apos;AI+1264&apos;">&#x1F1E6;&#x1F1EE; +1264 Anguilla</=
+option><option value=3D"AL+355" [selected]=3D"formeeyhs159.responses.stepbj=
+wuw140.elementqumw41624isd =3D=3D &apos;AL+355&apos;">&#x1F1E6;&#x1F1F1; +3=
+55 Albania</option><option value=3D"AM+374" [selected]=3D"formeeyhs159.resp=
+onses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AM+374&apos;">&#x1F1E6;=
+&#x1F1F2; +374 Armenia</option><option value=3D"AO+244" [selected]=3D"forme=
+eyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AO+244&apos=
+;">&#x1F1E6;&#x1F1F4; +244 Angola</option><option value=3D"AQ+672" [selecte=
+d]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;=
+AQ+672&apos;">&#x1F1E6;&#x1F1F6; +672 Antarctica</option><option value=3D"A=
+R+54" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd=
+ =3D=3D &apos;AR+54&apos;">&#x1F1E6;&#x1F1F7; +54 Argentina</option><option=
+ value=3D"AS+1684" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elemen=
+tqumw41624isd =3D=3D &apos;AS+1684&apos;">&#x1F1E6;&#x1F1F8; +1684 American=
+ Samoa</option><option value=3D"AT+43" [selected]=3D"formeeyhs159.responses=
+.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AT+43&apos;">&#x1F1E6;&#x1F=
+1F9; +43 Austria</option><option value=3D"AU+61" [selected]=3D"formeeyhs159=
+.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AU+61&apos;">&#x1=
+F1E6;&#x1F1FA; +61 Australia</option><option value=3D"AW+297" [selected]=3D=
+"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;AW+29=
+7&apos;">&#x1F1E6;&#x1F1FC; +297 Aruba</option><option value=3D"AX+358" [se=
+lected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &=
+apos;AX+358&apos;">&#x1F1E6;&#x1F1FD; +358 Aland</option><option value=3D"A=
+Z+994" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624is=
+d =3D=3D &apos;AZ+994&apos;">&#x1F1E6;&#x1F1FF; +994 Azerbaijan</option><op=
+tion value=3D"BA+387" [selected]=3D"formeeyhs159.responses.stepbjwuw140.ele=
+mentqumw41624isd =3D=3D &apos;BA+387&apos;">&#x1F1E7;&#x1F1E6; +387 Bosnia =
+and Herzegovina</option><option value=3D"BB+1246" [selected]=3D"formeeyhs15=
+9.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BB+1246&apos;">&#=
+x1F1E7;&#x1F1E7; +1246 Barbados</option><option value=3D"BD+880" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BD=
++880&apos;">&#x1F1E7;&#x1F1E9; +880 Bangladesh</option><option value=3D"BE+=
+32" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;BE+32&apos;">&#x1F1E7;&#x1F1EA; +32 Belgium</option><option va=
+lue=3D"BF+226" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqum=
+w41624isd =3D=3D &apos;BF+226&apos;">&#x1F1E7;&#x1F1EB; +226 Burkina Faso</=
+option><option value=3D"BG+359" [selected]=3D"formeeyhs159.responses.stepbj=
+wuw140.elementqumw41624isd =3D=3D &apos;BG+359&apos;">&#x1F1E7;&#x1F1EC; +3=
+59 Bulgaria</option><option value=3D"BH+973" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BH+973&apos;">&#x1F1E7=
+;&#x1F1ED; +973 Bahrain</option><option value=3D"BI+257" [selected]=3D"form=
+eeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BI+257&apo=
+s;">&#x1F1E7;&#x1F1EE; +257 Burundi</option><option value=3D"BJ+229" [selec=
+ted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apo=
+s;BJ+229&apos;">&#x1F1E7;&#x1F1EF; +229 Benin</option><option value=3D"BL+5=
+90" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;BL+590&apos;">&#x1F1E7;&#x1F1F1; +590 Saint Barthelemy</option=
+><option value=3D"BM+1441" [selected]=3D"formeeyhs159.responses.stepbjwuw14=
+0.elementqumw41624isd =3D=3D &apos;BM+1441&apos;">&#x1F1E7;&#x1F1F2; +1441 =
+Bermuda</option><option value=3D"BN+673" [selected]=3D"formeeyhs159.respons=
+es.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BN+673&apos;">&#x1F1E7;&#x=
+1F1F3; +673 Brunei</option><option value=3D"BO+591" [selected]=3D"formeeyhs=
+159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BO+591&apos;">&=
+#x1F1E7;&#x1F1F4; +591 Bolivia</option><option value=3D"BQ+5997" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BQ=
++5997&apos;">&#x1F1E7;&#x1F1F6; +5997 Bonaire</option><option value=3D"BR+5=
+5" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;BR+55&apos;">&#x1F1E7;&#x1F1F7; +55 Brazil</option><option val=
+ue=3D"BS+1242" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqum=
+w41624isd =3D=3D &apos;BS+1242&apos;">&#x1F1E7;&#x1F1F8; +1242 Bahamas</opt=
+ion><option value=3D"BT+975" [selected]=3D"formeeyhs159.responses.stepbjwuw=
+140.elementqumw41624isd =3D=3D &apos;BT+975&apos;">&#x1F1E7;&#x1F1F9; +975 =
+Bhutan</option><option value=3D"BV+47" [selected]=3D"formeeyhs159.responses=
+.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BV+47&apos;">&#x1F1E7;&#x1F=
+1FB; +47 Bouvet Island</option><option value=3D"BW+267" [selected]=3D"forme=
+eyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;BW+267&apos=
+;">&#x1F1E7;&#x1F1FC; +267 Botswana</option><option value=3D"BY+375" [selec=
+ted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apo=
+s;BY+375&apos;">&#x1F1E7;&#x1F1FE; +375 Belarus</option><option value=3D"BZ=
++501" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd=
+ =3D=3D &apos;BZ+501&apos;">&#x1F1E7;&#x1F1FF; +501 Belize</option><option =
+value=3D"CA+1" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqum=
+w41624isd =3D=3D &apos;CA+1&apos;">&#x1F1E8;&#x1F1E6; +1 Canada</option><op=
+tion value=3D"CC+61" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elem=
+entqumw41624isd =3D=3D &apos;CC+61&apos;">&#x1F1E8;&#x1F1E8; +61 Cocos (Kee=
+ling) Islands</option><option value=3D"CD+243" [selected]=3D"formeeyhs159.r=
+esponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CD+243&apos;">&#x1F1=
+E8;&#x1F1E9; +243 Democratic Republic of the Congo</option><option value=3D=
+"CF+236" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624=
+isd =3D=3D &apos;CF+236&apos;">&#x1F1E8;&#x1F1EB; +236 Central African Repu=
+blic</option><option value=3D"CG+242" [selected]=3D"formeeyhs159.responses.=
+stepbjwuw140.elementqumw41624isd =3D=3D &apos;CG+242&apos;">&#x1F1E8;&#x1F1=
+EC; +242 Republic of the Congo</option><option value=3D"CH+41" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CH=
++41&apos;">&#x1F1E8;&#x1F1ED; +41 Switzerland</option><option value=3D"CI+2=
+25" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;CI+225&apos;">&#x1F1E8;&#x1F1EE; +225 Ivory Coast</option><opt=
+ion value=3D"CK+682" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elem=
+entqumw41624isd =3D=3D &apos;CK+682&apos;">&#x1F1E8;&#x1F1F0; +682 Cook Isl=
+ands</option><option value=3D"CL+56" [selected]=3D"formeeyhs159.responses.s=
+tepbjwuw140.elementqumw41624isd =3D=3D &apos;CL+56&apos;">&#x1F1E8;&#x1F1F1=
+; +56 Chile</option><option value=3D"CM+237" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CM+237&apos;">&#x1F1E8=
+;&#x1F1F2; +237 Cameroon</option><option value=3D"CN+86" [selected]=3D"form=
+eeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CN+86&apos=
+;">&#x1F1E8;&#x1F1F3; +86 China</option><option value=3D"CO+57" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CO=
++57&apos;">&#x1F1E8;&#x1F1F4; +57 Colombia</option><option value=3D"CR+506"=
+ [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=
+=3D &apos;CR+506&apos;">&#x1F1E8;&#x1F1F7; +506 Costa Rica</option><option =
+value=3D"CU+53" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqu=
+mw41624isd =3D=3D &apos;CU+53&apos;">&#x1F1E8;&#x1F1FA; +53 Cuba</option><o=
+ption value=3D"CV+238" [selected]=3D"formeeyhs159.responses.stepbjwuw140.el=
+ementqumw41624isd =3D=3D &apos;CV+238&apos;">&#x1F1E8;&#x1F1FB; +238 Cape V=
+erde</option><option value=3D"CW+5999" [selected]=3D"formeeyhs159.responses=
+.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CW+5999&apos;">&#x1F1E8;&#x=
+1F1FC; +5999 Curacao</option><option value=3D"CX+61" [selected]=3D"formeeyh=
+s159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;CX+61&apos;">&=
+#x1F1E8;&#x1F1FD; +61 Christmas Island</option><option value=3D"CY+357" [se=
+lected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &=
+apos;CY+357&apos;">&#x1F1E8;&#x1F1FE; +357 Cyprus</option><option value=3D"=
+CZ+420" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624i=
+sd =3D=3D &apos;CZ+420&apos;">&#x1F1E8;&#x1F1FF; +420 Czech Republic</optio=
+n><option value=3D"DE+49" [selected]=3D"formeeyhs159.responses.stepbjwuw140=
+.elementqumw41624isd =3D=3D &apos;DE+49&apos;">&#x1F1E9;&#x1F1EA; +49 Germ=
+any</option><option value=3D"DJ+253" [selected]=3D"formeeyhs159.responses.s=
+tepbjwuw140.elementqumw41624isd =3D=3D &apos;DJ+253&apos;">&#x1F1E9;&#x1F1E=
+F; +253 Djibouti</option><option value=3D"DK+45" [selected]=3D"formeeyhs159=
+.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;DK+45&apos;">&#x1=
+F1E9;&#x1F1F0; +45 Denmark</option><option value=3D"DM+1767" [selected]=3D"=
+formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;DM+176=
+7&apos;">&#x1F1E9;&#x1F1F2; +1767 Dominica</option><option value=3D"DO+1809=
+" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=
+=3D &apos;DO+1809&apos;">&#x1F1E9;&#x1F1F4; +1809 Dominican Republic</optio=
+n><option value=3D"DZ+213" [selected]=3D"formeeyhs159.responses.stepbjwuw14=
+0.elementqumw41624isd =3D=3D &apos;DZ+213&apos;">&#x1F1E9;&#x1F1FF; +213 Al=
+geria</option><option value=3D"EC+593" [selected]=3D"formeeyhs159.responses=
+.stepbjwuw140.elementqumw41624isd =3D=3D &apos;EC+593&apos;">&#x1F1EA;&#x1=
+F1E8; +593 Ecuador</option><option value=3D"EE+372" [selected]=3D"formeeyhs=
+159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;EE+372&apos;">&=
+#x1F1EA;&#x1F1EA; +372 Estonia</option><option value=3D"EG+20" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;EG=
++20&apos;">&#x1F1EA;&#x1F1EC; +20 Egypt</option><option value=3D"EH+212" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;EH+212&apos;">&#x1F1EA;&#x1F1ED; +212 Western Sahara</option><option =
+value=3D"ER+291" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementq=
+umw41624isd =3D=3D &apos;ER+291&apos;">&#x1F1EA;&#x1F1F7; +291 Eritrea</opt=
+ion><option value=3D"ES+34" [selected]=3D"formeeyhs159.responses.stepbjwuw1=
+40.elementqumw41624isd =3D=3D &apos;ES+34&apos;">&#x1F1EA;&#x1F1F8; +34 Spa=
+in</option><option value=3D"ET+251" [selected]=3D"formeeyhs159.responses.st=
+epbjwuw140.elementqumw41624isd =3D=3D &apos;ET+251&apos;">&#x1F1EA;&#x1F1F9=
+; +251 Ethiopia</option><option value=3D"FI+358" [selected]=3D"formeeyhs159=
+.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;FI+358&apos;">&#x=
+1F1EB;&#x1F1EE; +358 Finland</option><option value=3D"FJ+679" [selected]=3D=
+"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;FJ+67=
+9&apos;">&#x1F1EB;&#x1F1EF; +679 Fiji</option><option value=3D"FK+500" [sel=
+ected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &a=
+pos;FK+500&apos;">&#x1F1EB;&#x1F1F0; +500 Falkland Islands</option><option =
+value=3D"FM+691" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementq=
+umw41624isd =3D=3D &apos;FM+691&apos;">&#x1F1EB;&#x1F1F2; +691 Micronesia</=
+option><option value=3D"FO+298" [selected]=3D"formeeyhs159.responses.stepbj=
+wuw140.elementqumw41624isd =3D=3D &apos;FO+298&apos;">&#x1F1EB;&#x1F1F4; +2=
+98 Faroe Islands</option><option value=3D"FR+33" [selected]=3D"formeeyhs159=
+.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;FR+33&apos;">&#x1=
+F1EB;&#x1F1F7; +33 France</option><option value=3D"GA+241" [selected]=3D"fo=
+rmeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;GA+241&a=
+pos;">&#x1F1EC;&#x1F1E6; +241 Gabon</option><option value=3D"GB+44" [select=
+ed]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos=
+;GB+44&apos;">&#x1F1EC;&#x1F1E7; +44 United Kingdom</option><option value=
+=3D"GD+1473" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw4=
+1624isd =3D=3D &apos;GD+1473&apos;">&#x1F1EC;&#x1F1E9; +1473 Grenada</optio=
+n><option value=3D"GE+995" [selected]=3D"formeeyhs159.responses.stepbjwuw14=
+0.elementqumw41624isd =3D=3D &apos;GE+995&apos;">&#x1F1EC;&#x1F1EA; +995 Ge=
+orgia</option><option value=3D"GF+594" [selected]=3D"formeeyhs159.responses=
+.stepbjwuw140.elementqumw41624isd =3D=3D &apos;GF+594&apos;">&#x1F1EC;&#x1=
+F1EB; +594 French Guiana</option><option value=3D"GG+44" [selected]=3D"form=
+eeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;GG+44&apos=
+;">&#x1F1EC;&#x1F1EC; +44 Guernsey</option><option value=3D"GH+233" [select=
+ed]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos=
+;GH+233&apos;">&#x1F1EC;&#x1F1ED; +233 Ghana</option><option value=3D"GI+35=
+0" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;GI+350&apos;">&#x1F1EC;&#x1F1EE; +350 Gibraltar</option><optio=
+n value=3D"GL+299" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elemen=
+tqumw41624isd =3D=3D &apos;GL+299&apos;">&#x1F1EC;&#x1F1F1; +299 Greenland<=
+/option><option value=3D"GM+220" [selected]=3D"formeeyhs159.responses.stepb=
+jwuw140.elementqumw41624isd =3D=3D &apos;GM+220&apos;">&#x1F1EC;&#x1F1F2; +=
+220 Gambia</option><option value=3D"GN+224" [selected]=3D"formeeyhs159.resp=
+onses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;GN+224&apos;">&#x1F1EC;=
+&#x1F1F3; +224 Guinea</option><option value=3D"GP+590" [selected]=3D"formee=
+yhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;GP+590&apos;=
+">&#x1F1EC;&#x1F1F5; +590 Guadeloupe</option><option value=3D"GQ+240" [sele=
+cted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &ap=
+os;GQ+240&apos;">&#x1F1EC;&#x1F1F6; +240 Equatorial Guinea</option><option =
+value=3D"GR+30" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqu=
+mw41624isd =3D=3D &apos;GR+30&apos;">&#x1F1EC;&#x1F1F7; +30 Greece</option>=
+<option value=3D"GS+500" [selected]=3D"formeeyhs159.responses.stepbjwuw140.=
+elementqumw41624isd =3D=3D &apos;GS+500&apos;">&#x1F1EC;&#x1F1F8; +500 Sout=
+h Georgia and the South Sandwich Islands</option><option value=3D"GT+502" [=
+selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D=
+ &apos;GT+502&apos;">&#x1F1EC;&#x1F1F9; +502 Guatemala</option><option valu=
+e=3D"GU+1671" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw=
+41624isd =3D=3D &apos;GU+1671&apos;">&#x1F1EC;&#x1F1FA; +1671 Guam</option>=
+<option value=3D"GW+245" [selected]=3D"formeeyhs159.responses.stepbjwuw140.=
+elementqumw41624isd =3D=3D &apos;GW+245&apos;">&#x1F1EC;&#x1F1FC; +245 Guin=
+ea-Bissau</option><option value=3D"GY+592" [selected]=3D"formeeyhs159.respo=
+nses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;GY+592&apos;">&#x1F1EC;&=
+#x1F1FE; +592 Guyana</option><option value=3D"HK+852" [selected]=3D"formeey=
+hs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;HK+852&apos;"=
+>&#x1F1ED;&#x1F1F0; +852 Hong Kong</option><option value=3D"HM+61" [selecte=
+d]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;=
+HM+61&apos;">&#x1F1ED;&#x1F1F2; +61 Heard Island and McDonald Islands</opti=
+on><option value=3D"HN+504" [selected]=3D"formeeyhs159.responses.stepbjwuw1=
+40.elementqumw41624isd =3D=3D &apos;HN+504&apos;">&#x1F1ED;&#x1F1F3; +504 H=
+onduras</option><option value=3D"HR+385" [selected]=3D"formeeyhs159.respons=
+es.stepbjwuw140.elementqumw41624isd =3D=3D &apos;HR+385&apos;">&#x1F1ED;&#x=
+1F1F7; +385 Croatia</option><option value=3D"HT+509" [selected]=3D"formeeyh=
+s159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;HT+509&apos;">=
+&#x1F1ED;&#x1F1F9; +509 Haiti</option><option value=3D"HU+36" [selected]=3D=
+"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;HU+36=
+&apos;">&#x1F1ED;&#x1F1FA; +36 Hungary</option><option value=3D"ID+62" [sel=
+ected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &a=
+pos;ID+62&apos;">&#x1F1EE;&#x1F1E9; +62 Indonesia</option><option value=3D"=
+IE+353" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624i=
+sd =3D=3D &apos;IE+353&apos;">&#x1F1EE;&#x1F1EA; +353 Ireland</option><opti=
+on value=3D"IL+972" [selected]=3D"formeeyhs159.responses.stepbjwuw140.eleme=
+ntqumw41624isd =3D=3D &apos;IL+972&apos;">&#x1F1EE;&#x1F1F1; +972 Israel</o=
+ption><option value=3D"IM+44" [selected]=3D"formeeyhs159.responses.stepbjwu=
+w140.elementqumw41624isd =3D=3D &apos;IM+44&apos;">&#x1F1EE;&#x1F1F2; +44 I=
+sle of Man</option><option value=3D"IN+91" selected=3D"selected" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;IN=
++91&apos;">&#x1F1EE;&#x1F1F3; +91 India</option><option value=3D"IO+246" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;IO+246&apos;">&#x1F1EE;&#x1F1F4; +246 British Indian Ocean Territory<=
+/option><option value=3D"IQ+964" [selected]=3D"formeeyhs159.responses.stepb=
+jwuw140.elementqumw41624isd =3D=3D &apos;IQ+964&apos;">&#x1F1EE;&#x1F1F6; +=
+964 Iraq</option><option value=3D"IR+98" [selected]=3D"formeeyhs159.respons=
+es.stepbjwuw140.elementqumw41624isd =3D=3D &apos;IR+98&apos;">&#x1F1EE;&#x1=
+F1F7; +98 Iran</option><option value=3D"IS+354" [selected]=3D"formeeyhs159.=
+responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;IS+354&apos;">&#x1F=
+1EE;&#x1F1F8; +354 Iceland</option><option value=3D"IT+39" [selected]=3D"fo=
+rmeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;IT+39&ap=
+os;">&#x1F1EE;&#x1F1F9; +39 Italy</option><option value=3D"JE+44" [selected=
+]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;J=
+E+44&apos;">&#x1F1EF;&#x1F1EA; +44 Jersey</option><option value=3D"JM+1876"=
+ [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=
+=3D &apos;JM+1876&apos;">&#x1F1EF;&#x1F1F2; +1876 Jamaica</option><option v=
+alue=3D"JO+962" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqu=
+mw41624isd =3D=3D &apos;JO+962&apos;">&#x1F1EF;&#x1F1F4; +962 Jordan</optio=
+n><option value=3D"JP+81" [selected]=3D"formeeyhs159.responses.stepbjwuw140=
+.elementqumw41624isd =3D=3D &apos;JP+81&apos;">&#x1F1EF;&#x1F1F5; +81 Japa=
+n</option><option value=3D"KE+254" [selected]=3D"formeeyhs159.responses.ste=
+pbjwuw140.elementqumw41624isd =3D=3D &apos;KE+254&apos;">&#x1F1F0;&#x1F1EA;=
+ +254 Kenya</option><option value=3D"KG+996" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;KG+996&apos;">&#x1F1F0=
+;&#x1F1EC; +996 Kyrgyzstan</option><option value=3D"KH+855" [selected]=3D"f=
+ormeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;KH+855&=
+apos;">&#x1F1F0;&#x1F1ED; +855 Cambodia</option><option value=3D"KI+686" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;KI+686&apos;">&#x1F1F0;&#x1F1EE; +686 Kiribati</option><option value=
+=3D"KM+269" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41=
+624isd =3D=3D &apos;KM+269&apos;">&#x1F1F0;&#x1F1F2; +269 Comoros</option><=
+option value=3D"KN+1869" [selected]=3D"formeeyhs159.responses.stepbjwuw140.=
+elementqumw41624isd =3D=3D &apos;KN+1869&apos;">&#x1F1F0;&#x1F1F3; +1869 Sa=
+int Kitts and Nevis</option><option value=3D"KP+850" [selected]=3D"formeeyh=
+s159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;KP+850&apos;">=
+&#x1F1F0;&#x1F1F5; +850 North Korea</option><option value=3D"KR+82" [select=
+ed]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos=
+;KR+82&apos;">&#x1F1F0;&#x1F1F7; +82 South Korea</option><option value=3D"K=
+W+965" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624is=
+d =3D=3D &apos;KW+965&apos;">&#x1F1F0;&#x1F1FC; +965 Kuwait</option><option=
+ value=3D"KY+1345" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elemen=
+tqumw41624isd =3D=3D &apos;KY+1345&apos;">&#x1F1F0;&#x1F1FE; +1345 Cayman I=
+slands</option><option value=3D"KZ+7" [selected]=3D"formeeyhs159.responses.=
+stepbjwuw140.elementqumw41624isd =3D=3D &apos;KZ+7&apos;">&#x1F1F0;&#x1F1FF=
+; +7 Kazakhstan</option><option value=3D"LA+856" [selected]=3D"formeeyhs159=
+.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;LA+856&apos;">&#x=
+1F1F1;&#x1F1E6; +856 Laos</option><option value=3D"LB+961" [selected]=3D"fo=
+rmeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;LB+961&a=
+pos;">&#x1F1F1;&#x1F1E7; +961 Lebanon</option><option value=3D"LC+1758" [se=
+lected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &=
+apos;LC+1758&apos;">&#x1F1F1;&#x1F1E8; +1758 Saint Lucia</option><option va=
+lue=3D"LI+423" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqum=
+w41624isd =3D=3D &apos;LI+423&apos;">&#x1F1F1;&#x1F1EE; +423 Liechtenstein<=
+/option><option value=3D"LK+94" [selected]=3D"formeeyhs159.responses.stepbj=
+wuw140.elementqumw41624isd =3D=3D &apos;LK+94&apos;">&#x1F1F1;&#x1F1F0; +94=
+ Sri Lanka</option><option value=3D"LR+231" [selected]=3D"formeeyhs159.resp=
+onses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;LR+231&apos;">&#x1F1F1;=
+&#x1F1F7; +231 Liberia</option><option value=3D"LS+266" [selected]=3D"forme=
+eyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;LS+266&apos=
+;">&#x1F1F1;&#x1F1F8; +266 Lesotho</option><option value=3D"LT+370" [select=
+ed]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos=
+;LT+370&apos;">&#x1F1F1;&#x1F1F9; +370 Lithuania</option><option value=3D"L=
+U+352" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624is=
+d =3D=3D &apos;LU+352&apos;">&#x1F1F1;&#x1F1FA; +352 Luxembourg</option><op=
+tion value=3D"LV+371" [selected]=3D"formeeyhs159.responses.stepbjwuw140.ele=
+mentqumw41624isd =3D=3D &apos;LV+371&apos;">&#x1F1F1;&#x1F1FB; +371 Latvia<=
+/option><option value=3D"LY+218" [selected]=3D"formeeyhs159.responses.stepb=
+jwuw140.elementqumw41624isd =3D=3D &apos;LY+218&apos;">&#x1F1F1;&#x1F1FE; +=
+218 Libya</option><option value=3D"MA+212" [selected]=3D"formeeyhs159.respo=
+nses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MA+212&apos;">&#x1F1F2;&=
+#x1F1E6; +212 Morocco</option><option value=3D"MC+377" [selected]=3D"formee=
+yhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MC+377&apos;=
+">&#x1F1F2;&#x1F1E8; +377 Monaco</option><option value=3D"MD+373" [selected=
+]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;M=
+D+373&apos;">&#x1F1F2;&#x1F1E9; +373 Moldova</option><option value=3D"ME+38=
+2" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;ME+382&apos;">&#x1F1F2;&#x1F1EA; +382 Montenegro</option><opti=
+on value=3D"MF+590" [selected]=3D"formeeyhs159.responses.stepbjwuw140.eleme=
+ntqumw41624isd =3D=3D &apos;MF+590&apos;">&#x1F1F2;&#x1F1EB; +590 Saint Mar=
+tin</option><option value=3D"MG+261" [selected]=3D"formeeyhs159.responses.s=
+tepbjwuw140.elementqumw41624isd =3D=3D &apos;MG+261&apos;">&#x1F1F2;&#x1F1E=
+C; +261 Madagascar</option><option value=3D"MH+692" [selected]=3D"formeeyhs=
+159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MH+692&apos;">&=
+#x1F1F2;&#x1F1ED; +692 Marshall Islands</option><option value=3D"MK+389" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;MK+389&apos;">&#x1F1F2;&#x1F1F0; +389 North Macedonia</option><option=
+ value=3D"ML+223" [selected]=3D"formeeyhs159.responses.stepbjwuw140.element=
+qumw41624isd =3D=3D &apos;ML+223&apos;">&#x1F1F2;&#x1F1F1; +223 Mali</optio=
+n><option value=3D"MM+95" [selected]=3D"formeeyhs159.responses.stepbjwuw140=
+.elementqumw41624isd =3D=3D &apos;MM+95&apos;">&#x1F1F2;&#x1F1F2; +95 Myan=
+mar (Burma)</option><option value=3D"MN+976" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MN+976&apos;">&#x1F1F2=
+;&#x1F1F3; +976 Mongolia</option><option value=3D"MO+853" [selected]=3D"for=
+meeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MO+853&ap=
+os;">&#x1F1F2;&#x1F1F4; +853 Macao</option><option value=3D"MP+1670" [selec=
+ted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apo=
+s;MP+1670&apos;">&#x1F1F2;&#x1F1F5; +1670 Northern Mariana Islands</option>=
+<option value=3D"MQ+596" [selected]=3D"formeeyhs159.responses.stepbjwuw140.=
+elementqumw41624isd =3D=3D &apos;MQ+596&apos;">&#x1F1F2;&#x1F1F6; +596 Mart=
+inique</option><option value=3D"MR+222" [selected]=3D"formeeyhs159.response=
+s.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MR+222&apos;">&#x1F1F2;&#x1=
+F1F7; +222 Mauritania</option><option value=3D"MS+1664" [selected]=3D"forme=
+eyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MS+1664&apo=
+s;">&#x1F1F2;&#x1F1F8; +1664 Montserrat</option><option value=3D"MT+356" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;MT+356&apos;">&#x1F1F2;&#x1F1F9; +356 Malta</option><option value=3D"=
+MU+230" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624i=
+sd =3D=3D &apos;MU+230&apos;">&#x1F1F2;&#x1F1FA; +230 Mauritius</option><op=
+tion value=3D"MV+960" [selected]=3D"formeeyhs159.responses.stepbjwuw140.ele=
+mentqumw41624isd =3D=3D &apos;MV+960&apos;">&#x1F1F2;&#x1F1FB; +960 Maldive=
+s</option><option value=3D"MW+265" [selected]=3D"formeeyhs159.responses.ste=
+pbjwuw140.elementqumw41624isd =3D=3D &apos;MW+265&apos;">&#x1F1F2;&#x1F1FC;=
+ +265 Malawi</option><option value=3D"MX+52" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MX+52&apos;">&#x1F1F2;=
+&#x1F1FD; +52 Mexico</option><option value=3D"MY+60" [selected]=3D"formeeyh=
+s159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MY+60&apos;">&=
+#x1F1F2;&#x1F1FE; +60 Malaysia</option><option value=3D"MZ+258" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;MZ=
++258&apos;">&#x1F1F2;&#x1F1FF; +258 Mozambique</option><option value=3D"NA+=
+264" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;NA+264&apos;">&#x1F1F3;&#x1F1E6; +264 Namibia</option><option =
+value=3D"NC+687" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementq=
+umw41624isd =3D=3D &apos;NC+687&apos;">&#x1F1F3;&#x1F1E8; +687 New Caledoni=
+a</option><option value=3D"NE+227" [selected]=3D"formeeyhs159.responses.ste=
+pbjwuw140.elementqumw41624isd =3D=3D &apos;NE+227&apos;">&#x1F1F3;&#x1F1EA;=
+ +227 Niger</option><option value=3D"NF+672" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;NF+672&apos;">&#x1F1F3=
+;&#x1F1EB; +672 Norfolk Island</option><option value=3D"NG+234" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;NG=
++234&apos;">&#x1F1F3;&#x1F1EC; +234 Nigeria</option><option value=3D"NI+505=
+" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=
+=3D &apos;NI+505&apos;">&#x1F1F3;&#x1F1EE; +505 Nicaragua</option><option v=
+alue=3D"NL+31" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqum=
+w41624isd =3D=3D &apos;NL+31&apos;">&#x1F1F3;&#x1F1F1; +31 Netherlands</opt=
+ion><option value=3D"NO+47" [selected]=3D"formeeyhs159.responses.stepbjwuw1=
+40.elementqumw41624isd =3D=3D &apos;NO+47&apos;">&#x1F1F3;&#x1F1F4; +47 Nor=
+way</option><option value=3D"NP+977" [selected]=3D"formeeyhs159.responses.s=
+tepbjwuw140.elementqumw41624isd =3D=3D &apos;NP+977&apos;">&#x1F1F3;&#x1F1F=
+5; +977 Nepal</option><option value=3D"NR+674" [selected]=3D"formeeyhs159.r=
+esponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;NR+674&apos;">&#x1F1=
+F3;&#x1F1F7; +674 Nauru</option><option value=3D"NU+683" [selected]=3D"form=
+eeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;NU+683&apo=
+s;">&#x1F1F3;&#x1F1FA; +683 Niue</option><option value=3D"NZ+64" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;NZ=
++64&apos;">&#x1F1F3;&#x1F1FF; +64 New Zealand</option><option value=3D"OM+9=
+68" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;OM+968&apos;">&#x1F1F4;&#x1F1F2; +968 Oman</option><option val=
+ue=3D"PA+507" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw=
+41624isd =3D=3D &apos;PA+507&apos;">&#x1F1F5;&#x1F1E6; +507 Panama</option>=
+<option value=3D"PE+51" [selected]=3D"formeeyhs159.responses.stepbjwuw140.e=
+lementqumw41624isd =3D=3D &apos;PE+51&apos;">&#x1F1F5;&#x1F1EA; +51 Peru</o=
+ption><option value=3D"PF+689" [selected]=3D"formeeyhs159.responses.stepbjw=
+uw140.elementqumw41624isd =3D=3D &apos;PF+689&apos;">&#x1F1F5;&#x1F1EB; +68=
+9 French Polynesia</option><option value=3D"PG+675" [selected]=3D"formeeyhs=
+159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;PG+675&apos;">&=
+#x1F1F5;&#x1F1EC; +675 Papua New Guinea</option><option value=3D"PH+63" [se=
+lected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &=
+apos;PH+63&apos;">&#x1F1F5;&#x1F1ED; +63 Philippines</option><option value=
+=3D"PK+92" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw416=
+24isd =3D=3D &apos;PK+92&apos;">&#x1F1F5;&#x1F1F0; +92 Pakistan</option><op=
+tion value=3D"PL+48" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elem=
+entqumw41624isd =3D=3D &apos;PL+48&apos;">&#x1F1F5;&#x1F1F1; +48 Poland</op=
+tion><option value=3D"PM+508" [selected]=3D"formeeyhs159.responses.stepbjwu=
+w140.elementqumw41624isd =3D=3D &apos;PM+508&apos;">&#x1F1F5;&#x1F1F2; +508=
+ Saint Pierre and Miquelon</option><option value=3D"PN+64" [selected]=3D"fo=
+rmeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;PN+64&ap=
+os;">&#x1F1F5;&#x1F1F3; +64 Pitcairn Islands</option><option value=3D"PR+17=
+87" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;PR+1787&apos;">&#x1F1F5;&#x1F1F7; +1787 Puerto Rico</option><o=
+ption value=3D"PS+970" [selected]=3D"formeeyhs159.responses.stepbjwuw140.el=
+ementqumw41624isd =3D=3D &apos;PS+970&apos;">&#x1F1F5;&#x1F1F8; +970 Palest=
+ine</option><option value=3D"PT+351" [selected]=3D"formeeyhs159.responses.s=
+tepbjwuw140.elementqumw41624isd =3D=3D &apos;PT+351&apos;">&#x1F1F5;&#x1F1F=
+9; +351 Portugal</option><option value=3D"PW+680" [selected]=3D"formeeyhs15=
+9.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;PW+680&apos;">&#x=
+1F1F5;&#x1F1FC; +680 Palau</option><option value=3D"PY+595" [selected]=3D"f=
+ormeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;PY+595&=
+apos;">&#x1F1F5;&#x1F1FE; +595 Paraguay</option><option value=3D"QA+974" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;QA+974&apos;">&#x1F1F6;&#x1F1E6; +974 Qatar</option><option value=3D"=
+RE+262" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624i=
+sd =3D=3D &apos;RE+262&apos;">&#x1F1F7;&#x1F1EA; +262 Reunion</option><opti=
+on value=3D"RO+40" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elemen=
+tqumw41624isd =3D=3D &apos;RO+40&apos;">&#x1F1F7;&#x1F1F4; +40 Romania</opt=
+ion><option value=3D"RS+381" [selected]=3D"formeeyhs159.responses.stepbjwuw=
+140.elementqumw41624isd =3D=3D &apos;RS+381&apos;">&#x1F1F7;&#x1F1F8; +381 =
+Serbia</option><option value=3D"RU+7" [selected]=3D"formeeyhs159.responses.=
+stepbjwuw140.elementqumw41624isd =3D=3D &apos;RU+7&apos;">&#x1F1F7;&#x1F1FA=
+; +7 Russia</option><option value=3D"RW+250" [selected]=3D"formeeyhs159.res=
+ponses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;RW+250&apos;">&#x1F1F7=
+;&#x1F1FC; +250 Rwanda</option><option value=3D"SA+966" [selected]=3D"forme=
+eyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SA+966&apos=
+;">&#x1F1F8;&#x1F1E6; +966 Saudi Arabia</option><option value=3D"SB+677" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;SB+677&apos;">&#x1F1F8;&#x1F1E7; +677 Solomon Islands</option><option=
+ value=3D"SC+248" [selected]=3D"formeeyhs159.responses.stepbjwuw140.element=
+qumw41624isd =3D=3D &apos;SC+248&apos;">&#x1F1F8;&#x1F1E8; +248 Seychelles<=
+/option><option value=3D"SD+249" [selected]=3D"formeeyhs159.responses.stepb=
+jwuw140.elementqumw41624isd =3D=3D &apos;SD+249&apos;">&#x1F1F8;&#x1F1E9; +=
+249 Sudan</option><option value=3D"SE+46" [selected]=3D"formeeyhs159.respon=
+ses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SE+46&apos;">&#x1F1F8;&#x=
+1F1EA; +46 Sweden</option><option value=3D"SG+65" [selected]=3D"formeeyhs15=
+9.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SG+65&apos;">&#x1=
+F1F8;&#x1F1EC; +65 Singapore</option><option value=3D"SH+290" [selected]=3D=
+"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SH+29=
+0&apos;">&#x1F1F8;&#x1F1ED; +290 Saint Helena</option><option value=3D"SI+3=
+86" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;SI+386&apos;">&#x1F1F8;&#x1F1EE; +386 Slovenia</option><option=
+ value=3D"SJ+4779" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elemen=
+tqumw41624isd =3D=3D &apos;SJ+4779&apos;">&#x1F1F8;&#x1F1EF; +4779 Svalbard=
+ and Jan Mayen</option><option value=3D"SK+421" [selected]=3D"formeeyhs159.=
+responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SK+421&apos;">&#x1F=
+1F8;&#x1F1F0; +421 Slovakia</option><option value=3D"SL+232" [selected]=3D"=
+formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SL+232=
+&apos;">&#x1F1F8;&#x1F1F1; +232 Sierra Leone</option><option value=3D"SM+37=
+8" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;SM+378&apos;">&#x1F1F8;&#x1F1F2; +378 San Marino</option><opti=
+on value=3D"SN+221" [selected]=3D"formeeyhs159.responses.stepbjwuw140.eleme=
+ntqumw41624isd =3D=3D &apos;SN+221&apos;">&#x1F1F8;&#x1F1F3; +221 Senegal</=
+option><option value=3D"SO+252" [selected]=3D"formeeyhs159.responses.stepbj=
+wuw140.elementqumw41624isd =3D=3D &apos;SO+252&apos;">&#x1F1F8;&#x1F1F4; +2=
+52 Somalia</option><option value=3D"SR+597" [selected]=3D"formeeyhs159.resp=
+onses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SR+597&apos;">&#x1F1F8;=
+&#x1F1F7; +597 Suriname</option><option value=3D"SS+211" [selected]=3D"form=
+eeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SS+211&apo=
+s;">&#x1F1F8;&#x1F1F8; +211 South Sudan</option><option value=3D"ST+239" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;ST+239&apos;">&#x1F1F8;&#x1F1F9; +239 Sao Tome and Principe</option><=
+option value=3D"SV+503" [selected]=3D"formeeyhs159.responses.stepbjwuw140.e=
+lementqumw41624isd =3D=3D &apos;SV+503&apos;">&#x1F1F8;&#x1F1FB; +503 El Sa=
+lvador</option><option value=3D"SX+1721" [selected]=3D"formeeyhs159.respons=
+es.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SX+1721&apos;">&#x1F1F8;&#=
+x1F1FD; +1721 Sint Maarten</option><option value=3D"SY+963" [selected]=3D"f=
+ormeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;SY+963&=
+apos;">&#x1F1F8;&#x1F1FE; +963 Syria</option><option value=3D"SZ+268" [sele=
+cted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &ap=
+os;SZ+268&apos;">&#x1F1F8;&#x1F1FF; +268 Eswatini</option><option value=3D"=
+TC+1649" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624=
+isd =3D=3D &apos;TC+1649&apos;">&#x1F1F9;&#x1F1E8; +1649 Turks and Caicos I=
+slands</option><option value=3D"TD+235" [selected]=3D"formeeyhs159.response=
+s.stepbjwuw140.elementqumw41624isd =3D=3D &apos;TD+235&apos;">&#x1F1F9;&#x1=
+F1E9; +235 Chad</option><option value=3D"TF+262" [selected]=3D"formeeyhs159=
+.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;TF+262&apos;">&#x=
+1F1F9;&#x1F1EB; +262 French Southern Territories</option><option value=3D"T=
+G+228" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624is=
+d =3D=3D &apos;TG+228&apos;">&#x1F1F9;&#x1F1EC; +228 Togo</option><option v=
+alue=3D"TH+66" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqum=
+w41624isd =3D=3D &apos;TH+66&apos;">&#x1F1F9;&#x1F1ED; +66 Thailand</option=
+><option value=3D"TJ+992" [selected]=3D"formeeyhs159.responses.stepbjwuw140=
+.elementqumw41624isd =3D=3D &apos;TJ+992&apos;">&#x1F1F9;&#x1F1EF; +992 Ta=
+jikistan</option><option value=3D"TK+690" [selected]=3D"formeeyhs159.respon=
+ses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;TK+690&apos;">&#x1F1F9;&#=
+x1F1F0; +690 Tokelau</option><option value=3D"TL+670" [selected]=3D"formeey=
+hs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;TL+670&apos;"=
+>&#x1F1F9;&#x1F1F1; +670 East Timor</option><option value=3D"TM+993" [selec=
+ted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apo=
+s;TM+993&apos;">&#x1F1F9;&#x1F1F2; +993 Turkmenistan</option><option value=
+=3D"TN+216" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41=
+624isd =3D=3D &apos;TN+216&apos;">&#x1F1F9;&#x1F1F3; +216 Tunisia</option><=
+option value=3D"TO+676" [selected]=3D"formeeyhs159.responses.stepbjwuw140.e=
+lementqumw41624isd =3D=3D &apos;TO+676&apos;">&#x1F1F9;&#x1F1F4; +676 Tonga=
+</option><option value=3D"TR+90" [selected]=3D"formeeyhs159.responses.stepb=
+jwuw140.elementqumw41624isd =3D=3D &apos;TR+90&apos;">&#x1F1F9;&#x1F1F7; +9=
+0 Turkey</option><option value=3D"TT+1868" [selected]=3D"formeeyhs159.respo=
+nses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;TT+1868&apos;">&#x1F1F9;=
+&#x1F1F9; +1868 Trinidad and Tobago</option><option value=3D"TV+688" [selec=
+ted]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apo=
+s;TV+688&apos;">&#x1F1F9;&#x1F1FB; +688 Tuvalu</option><option value=3D"TW+=
+886" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;TW+886&apos;">&#x1F1F9;&#x1F1FC; +886 Taiwan</option><option v=
+alue=3D"TZ+255" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqu=
+mw41624isd =3D=3D &apos;TZ+255&apos;">&#x1F1F9;&#x1F1FF; +255 Tanzania</opt=
+ion><option value=3D"UA+380" [selected]=3D"formeeyhs159.responses.stepbjwuw=
+140.elementqumw41624isd =3D=3D &apos;UA+380&apos;">&#x1F1FA;&#x1F1E6; +380 =
+Ukraine</option><option value=3D"UG+256" [selected]=3D"formeeyhs159.respons=
+es.stepbjwuw140.elementqumw41624isd =3D=3D &apos;UG+256&apos;">&#x1F1FA;&#x=
+1F1EC; +256 Uganda</option><option value=3D"US+1" [selected]=3D"formeeyhs15=
+9.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;US+1&apos;">&#x1F=
+1FA;&#x1F1F8; +1 United States</option><option value=3D"UY+598" [selected]=
+=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;UY=
++598&apos;">&#x1F1FA;&#x1F1FE; +598 Uruguay</option><option value=3D"UZ+998=
+" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=
+=3D &apos;UZ+998&apos;">&#x1F1FA;&#x1F1FF; +998 Uzbekistan</option><option =
+value=3D"VA+379" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementq=
+umw41624isd =3D=3D &apos;VA+379&apos;">&#x1F1FB;&#x1F1E6; +379 Vatican City=
+</option><option value=3D"VC+1784" [selected]=3D"formeeyhs159.responses.ste=
+pbjwuw140.elementqumw41624isd =3D=3D &apos;VC+1784&apos;">&#x1F1FB;&#x1F1E8=
+; +1784 Saint Vincent and the Grenadines</option><option value=3D"VE+58" [s=
+elected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D =
+&apos;VE+58&apos;">&#x1F1FB;&#x1F1EA; +58 Venezuela</option><option value=
+=3D"VG+1284" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw4=
+1624isd =3D=3D &apos;VG+1284&apos;">&#x1F1FB;&#x1F1EC; +1284 British Virgin=
+ Islands</option><option value=3D"VI+1340" [selected]=3D"formeeyhs159.respo=
+nses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;VI+1340&apos;">&#x1F1FB;=
+&#x1F1EE; +1340 U.S. Virgin Islands</option><option value=3D"VN+84" [select=
+ed]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos=
+;VN+84&apos;">&#x1F1FB;&#x1F1F3; +84 Vietnam</option><option value=3D"VU+67=
+8" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =
+=3D=3D &apos;VU+678&apos;">&#x1F1FB;&#x1F1FA; +678 Vanuatu</option><option =
+value=3D"WF+681" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementq=
+umw41624isd =3D=3D &apos;WF+681&apos;">&#x1F1FC;&#x1F1EB; +681 Wallis and F=
+utuna</option><option value=3D"WS+685" [selected]=3D"formeeyhs159.responses=
+.stepbjwuw140.elementqumw41624isd =3D=3D &apos;WS+685&apos;">&#x1F1FC;&#x1=
+F1F8; +685 Samoa</option><option value=3D"XK+377" [selected]=3D"formeeyhs15=
+9.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;XK+377&apos;">&#x=
+1F1FD;&#x1F1F0; +377 Kosovo</option><option value=3D"YE+967" [selected]=3D"=
+formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &apos;YE+967=
+&apos;">&#x1F1FE;&#x1F1EA; +967 Yemen</option><option value=3D"YT+262" [sel=
+ected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624isd =3D=3D &a=
+pos;YT+262&apos;">&#x1F1FE;&#x1F1F9; +262 Mayotte</option><option value=3D"=
+ZA+27" [selected]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41624is=
+d =3D=3D &apos;ZA+27&apos;">&#x1F1FF;&#x1F1E6; +27 South Africa</option><op=
+tion value=3D"ZM+260" [selected]=3D"formeeyhs159.responses.stepbjwuw140.ele=
+mentqumw41624isd =3D=3D &apos;ZM+260&apos;">&#x1F1FF;&#x1F1F2; +260 Zambia<=
+/option><option value=3D"ZW+263" [selected]=3D"formeeyhs159.responses.stepb=
+jwuw140.elementqumw41624isd =3D=3D &apos;ZW+263&apos;">&#x1F1FF;&#x1F1FC; +=
+263 Zimbabwe</option></select> <span class=3D"select-box__arrow">^</span></=
+div><input class=3D"input-style" type=3D"number" required placeholder style=
+=3D"box-sizing:border-box;border-top-left-radius:0;border-bottom-left-radiu=
+s:0;width:60%" [value]=3D"formeeyhs159.responses.stepbjwuw140.elementqumw41=
+624 || &apos;&apos;" on=3D"change:AMP.setState({formeeyhs159: {responses: {=
+stepbjwuw140: {elementqumw41624: event.value}}}})"></div></div><input class=
+=3D"input-style" name=3D"elementqumw41624" id=3D"elementqumw41624" required=
+ style=3D"box-sizing:border-box;display:none" [value]=3D"(formeeyhs159.resp=
+onses.stepbjwuw140.elementqumw41624isd || &apos;&apos; ).substr(2) + (forme=
+eyhs159.responses.stepbjwuw140.elementqumw41624 || &apos;&apos;)" [pattern]=
+=3D"false=0A    =3F &apos;.*&apos;=0A    :&apos;(^\+\d{4,}$)&apos;"><div vi=
+sible-when-invalid=3D"valueMissing" style=3D"font-size:13px;padding-top:4px=
+;text-align:left" validation-for=3D"elementqumw41624">This field is require=
+d</div><div visible-when-invalid=3D"patternMismatch" style=3D"font-size:13p=
+x;margin-top:4px" validation-for=3D"elementqumw41624">Please enter a valid =
+phone number</div></div></div><div class=3D"element-wrapper"><div class=3D"=
+question"><p>&#xA0;</p></div><div class=3D"answer"><div class=3D"option-con=
+tainer elementrjej11625-option-container"><amp-state id=3D"elementrjej11625=
+ChoiceValueState"><script type=3D"application/json">{}</script></amp-state>=
+<div class=3D"elementrjej11625-select-choice"><label class=3D"select-contai=
+ner checkbox-option"><input type=3D"checkbox" name=3D"elementrjej11625[]" v=
+alue=3D"Send%20WhatsApp%20Updates" on=3D"change:AMP.setState({requiredCheck=
+box: {elementrjej11625: event.checked =3D=3D true =3F (requiredCheckbox.ele=
+mentrjej11625 || 0) + 1 : (requiredCheckbox.elementrjej11625 || 0) - 1}, =
+=0A        formeeyhs159: {responses: {stepbjwuw140: {elementrjej11625: (ele=
+mentrjej11625ChoiceValueState[encodeURIComponent(formeeyhs159.responses.ste=
+pbjwuw140.elementrjej11625)] ||                =0Aformeeyhs159.responses.st=
+epbjwuw140.elementrjej11625 || 0) + elementrjej11625ChoiceValueState[event.=
+value] * (event.checked =3D=3D true =3F 1 : -1)}}}})"><div class=3D"checkma=
+rk checkmark-check"><div></div></div>Send WhatsApp Updates</label></div></d=
+iv></div></div><input hidden id=3D"fuuid" name=3D"fuuid" [value]=3D"formeey=
+hs159.fuuid"> <input hidden id=3D"next-step-id" name=3D"next-step-id" [valu=
+e]=3D"&apos;success&apos;"> <input hidden id=3D"total-steps" name=3D"total-=
+steps" value=3D"2"><div class=3D"navigation-button-wrapper"><button class=
+=3D"button" type=3D"button" on=3D"tap:AMP.setState({formeeyhs159: {fuuid: f=
+ormeeyhs159.fuuid || floor(random() * 100000)}}),form_formeeyhs159_stepbjwu=
+w140.submit"><p>Download Brochure</p></button></div></div><div [hidden]=3D"=
+((&apos;success&apos;) !=3D &apos;success&apos; || (formeeyhs159.currentSte=
+p =3D=3D &apos;stepbjwuw140&apos; &amp;&amp; &apos;success&apos; !=3D &apos=
+;success&apos;))"><div submitting><div style=3D"display:flex;flex-direction=
+:column"><div class=3D"overall question" style=3D"font-size:16px;box-sizing=
+:border-box"><p style=3D"text-align:center;color:#000">Form submitting... T=
+hank you for waiting.</p></div></div></div><div submit-success><div style=
+=3D"display:flex;flex-direction:column"><div class=3D"overall" style=3D"fon=
+t-size:16px;box-sizing:border-box"><div><div class=3D"answer"><div class=3D=
+"form-text" style=3D"padding-left:0;padding-right:0;padding-top:10px;paddin=
+g-bottom:10px;box-sizing:border-box"><p style=3D"text-align:center"><span s=
+tyle=3D"font-size:13px">Thank you for your interest in the DataHack Summit =
+2025.</span></p></div></div></div><div class=3D"element-wrapper"><div class=
+=3D"answer"><div style=3D"display:flex;justify-content:center"><a href=3D"h=
+ttps://tn.btrkr.com/clicks/amp/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931=
+e-80e6-52da-8689-13e2ab9ae001/c73bc095-05d0-504b-b99a-b7b692051864=3FurlChi=
+ldId=3Df88bc824-109c-52ae-b34e-d59de87b1818&templateId=3D2d64dd7f-e6ed-4ece=
+-8429-1502b5a8d1b5" data-block-id=3D"formeeyhs159" data-block-type=3D"form"=
+ data-url-id=3D"f88bc824-109c-52ae-b34e-d59de87b1818"><button type=3D"butto=
+n" style=3D"cursor:pointer" class=3D"button-elementtep161633 success-btn"><=
+p>Visit Website</p></button></a></div></div></div></div></div></div><div su=
+bmit-error><template type=3D"amp-mustache"><div style=3D"display:flex;flex-=
+direction:column"><div class=3D"overall question" style=3D"font-size:16px;b=
+ox-sizing:border-box;color:#000">Your form submission has failed. Please tr=
+y again.</div></div></template></div></div></form></div><!--[if mso | IE]><=
+tr><td class=3D"" width=3D"600px" ><table align=3D"center" border=3D"0" cel=
+lpadding=3D"0" cellspacing=3D"0" class=3D"" style=3D"width:600px;" width=3D=
+"600"><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:e=
+xactly;"><![endif]--><div style=3D"background:0 0;background-color:transpar=
+ent;margin:0 auto;border-radius:0;max-width:600px"><table align=3D"center" =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"background:0 0;background-color:transparent;width:100%;border-radius:0=
+"><tbody><tr><td style=3D"border:0 solid transparent;direction:ltr;font-siz=
+e:0;padding:16px 20px 16px 20px;text-align:center"><!--[if mso | IE]><table=
+ role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr=
+><td class=3D"" style=3D"vertical-align:top;width:560px;"><![endif]--><div =
+class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0;text-=
+align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"vertical-align:top" width=3D"100%"><tbody><tr><td align=3D"le=
+ft" style=3D"font-size:0;padding:10px 25px;padding-top:0;padding-right:0;pa=
+dding-bottom:0;padding-left:0;word-break:break-word"><div style=3D"font-fam=
+ily:Arial;font-size:13px;line-height:1.5;text-align:left;color:#000"><p><sp=
+an style=3D"color:#000;font-family:Arial;font-size:13px">Across four days y=
+ou&#x2019;ll:</span></p><p>&#xA0;</p><ul><li style=3D"font-size:13px"><span=
+ style=3D"font-size:13px"><strong>Catch 80+ AI talks</strong> packed with r=
+eal case studies and clear, take-home tactics.</span></li><li style=3D"font=
+-size:13px"><span style=3D"font-size:13px"><strong>Jump into 50+ hack sessi=
+ons</strong> and see GenAI and Agentic AI in action.</span></li><li style=
+=3D"font-size:13px"><span style=3D"font-size:13px"><strong>Build GenAI and =
+Agentic AI solutions in </strong>10+ hands-on workshops<strong>.</strong></=
+span></li></ul><p>&#xA0;</p><p><span style=3D"font-size:13px">In case of qu=
+eries, feel free to reply to this email or call us at&#xA0;<strong>+91-8368=
+808185.</strong></span></p><p>&#xA0;</p><p><span style=3D"background-color:=
+transparent;color:#000;font-family:Arial;font-size:10pt">Warm regards,</spa=
+n><br><span style=3D"background-color:transparent;color:#000;font-family:Ar=
+ial;font-size:10pt">Tanya Chitranshi</span></p><p style=3D"line-height:1.25=
+">&#xA0;</p><p style=3D"line-height:1.25"><a href=3D"https://tn.btrkr.com/c=
+licks/amp/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52da-8689-13e2=
+ab9ae001/47666eda-54fe-58b8-a475-9ced1bd97315=3FurlChildId=3D71ce4ffc-3633-=
+5788-9e64-828f68124fed&templateId=3D2d64dd7f-e6ed-4ece-8429-1502b5a8d1b5" d=
+ata-block-type=3D"freeze-block" data-url-id=3D"71ce4ffc-3633-5788-9e64-828f=
+68124fed"><span style=3D"color:#00e;font-family:Arial;font-size:10px"><u>Un=
+subscribe here</u></span></a></p></div></td></tr></tbody></table></div><!--=
+[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></table></div=
+><!--[if mso | IE]></td></tr></table></td></tr></table><![endif]--></td></t=
+r></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]--></d=
+iv><a style=3D"display:inline-block;font-size:1px;height:1px;width:1px;max-=
+height:1px;max-width:1px;overflow:hidden;color:transparent;mso-hide:all;" h=
+ref=3D"https://tn.btrkr.com/clicks/honey-link/amp/5a41b83d-9188-5fe1-8c1d-1=
+a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae001">Click here</a><amp-img wi=
+dth=3D"1" height=3D"1" alt=3D"signature" src=3D"https://tn.btrkr.com/opens/=
+amp/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae0=
+01"></amp-img></body></html>
+--_----sPJ2MB/3cKDFsYN1IyZzzg===_05/3E-20469-9EF32686
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset="UTF-8"
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" xmlns:v=3D"urn:=
+schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-microsoft-com:office:offi=
+ce"><head><title>mailer</title><!--[if !mso]><!--><meta http-equiv=3D"X-UA-=
+Compatible" content=3D"IE=3Dedge"><!--<![endif]--><meta http-equiv=3D"Conte=
+nt-Type" content=3D"text/html; charset=3DUTF-8"><meta name=3D"viewport" con=
+tent=3D"width=3Ddevice-width,initial-scale=3D1"><style type=3D"text/css">#o=
+utlook a{padding:0}body{margin:0;padding:0;-webkit-text-size-adjust:100%;-m=
+s-text-size-adjust:100%}table,td{border-collapse:collapse;mso-table-lspace:=
+0;mso-table-rspace:0}img{border:0;height:auto;line-height:100%;outline:0;te=
+xt-decoration:none;-ms-interpolation-mode:bicubic}p{display:block;margin:13=
+px 0}</style><!--[if mso]>=0A    <noscript>=0A    <xml>=0A    <o:OfficeDocu=
+mentSettings>=0A      <o:AllowPNG/>=0A      <o:PixelsPerInch>96</o:PixelsPe=
+rInch>=0A    </o:OfficeDocumentSettings>=0A    </xml>=0A    </noscript>=0A =
+   <![endif]--><!--[if lte mso 11]>=0A    <style type=3D"text/css">=0A     =
+ .mj-outlook-group-fix { width:100% !important; }=0A    </style>=0A    <![e=
+ndif]--><style type=3D"text/css">@media only screen and (min-width:480px){.=
+mj-column-per-100{width:100%!important;max-width:100%}}</style><style media=
+=3D"screen and (min-width:480px)">.moz-text-html .mj-column-per-100{width:1=
+00%!important;max-width:100%}</style><style type=3D"text/css"></style><styl=
+e type=3D"text/css">.body-wrapper.disable-heading-font-weight h1,.body-wrap=
+per.disable-heading-font-weight h2,.body-wrapper.disable-heading-font-weigh=
+t h3,.body-wrapper.disable-heading-font-weight h4,.body-wrapper.disable-hea=
+ding-font-weight h5,.body-wrapper.disable-heading-font-weight h6{font-weigh=
+t:400}div p{margin:0 0}h1,h2,h3,h4,h5,h6{margin:0}h1{font-size:28px}h2{font=
+-size:24px}h3{font-size:20px}h4{font-size:18px}p{font-size:16px}a{text-deco=
+ration:none}ol,ul{margin-top:0;margin-bottom:0}.freeze-block-img img{object=
+-fit:cover}.html-freeze-block-img img{object-fit:cover}.custom-block-img im=
+g{object-fit:cover}.html-custom-block-img img{object-fit:cover}.navbar-mj>.=
+mj-inline-links>table{display:inline-block}body{padding:0}figure.table{marg=
+in:0}figure.table table{width:100%}figure.table table td,figure.table table=
+ th{min-width:2em;padding:.4em;border:1px solid #bfbfbf}.amp-html-block .br=
+and-library-widget h1,.bl-typography-block-wrapper h1,.brand-library-widget=
+ h1{font-size:28px}.amp-html-block .brand-library-widget h2,.bl-typography-=
+block-wrapper h2,.brand-library-widget h2{font-size:24px}.amp-html-block .b=
+rand-library-widget h3,.bl-typography-block-wrapper h3,.brand-library-widge=
+t h3{font-size:20px}.amp-html-block .brand-library-widget h4,.bl-typography=
+-block-wrapper h4,.brand-library-widget h4{font-size:18px}.amp-html-block .=
+brand-library-widget p,.amp-html-block .brand-library-widget.checkbox-optio=
+n,.amp-html-block .brand-library-widget.radio-option,.bl-typography-block-w=
+rapper ol li,.bl-typography-block-wrapper p,.bl-typography-block-wrapper ul=
+ li,.brand-library-widget ol li,.brand-library-widget p,.brand-library-widg=
+et ul li{font-size:16px}.bl-typography-block-wrapper.bl-typography-freeze-b=
+lock-wrapper h1,.bl-typography-block-wrapper.bl-typography-freeze-block-wra=
+pper h2,.bl-typography-block-wrapper.bl-typography-freeze-block-wrapper h3,=
+.bl-typography-block-wrapper.bl-typography-freeze-block-wrapper h4,.bl-typ=
+ography-block-wrapper.bl-typography-freeze-block-wrapper ol li,.bl-typograp=
+hy-block-wrapper.bl-typography-freeze-block-wrapper p,.bl-typography-block-=
+wrapper.bl-typography-freeze-block-wrapper ul li{color:inherit}.form-text h=
+1,.form-text h2,.form-text h3,.form-text h4,.form-text p{color:revert;font-=
+size:revert;font-family:inherit}.question h1,.question h2,.question h3,.que=
+stion h4,.question p{color:revert;font-size:revert;font-family:inherit}.nav=
+igation-button-wrapper p{color:revert;font-size:revert;font-family:inherit}=
+.amp-html-block p{font-size:inherit;color:revert}.amp-btn-wrapper p{font-s=
+ize:inherit;color:revert}.hide-on-desktop{display:none;mso-hide:all}.hide-o=
+n-desktop{mso-hide:all;display:none}.hide-on-desktop div,.hide-on-desktop p=
+,.hide-on-desktop table,.hide-on-desktop tbody,.hide-on-desktop td,.hide-on=
+-desktop tr{mso-hide:all;display:none}</style><style type=3D"text/css">@med=
+ia only screen and (min-width:480px){.body-wrapper{padding-top:12px}}</styl=
+e><style type=3D"text/css">@media screen and (min-width:280px) and (max-wid=
+th:299px){.ratio-20,.ratio-25,.ratio-33{width:45%!important}.ratio-66,.rati=
+o-75,.ratio-80{width:45%!important}}</style><style type=3D"text/css">@media=
+ screen and (min-width:300px) and (max-width:359px){.ratio-20,.ratio-25,.ra=
+tio-33{width:40%!important}.ratio-66,.ratio-75,.ratio-80{width:60%!importan=
+t}}</style><style type=3D"text/css">@media screen and (min-width:360px) and=
+ (max-width:459px){.ratio-20,.ratio-25{width:33%!important}.ratio-75,.ratio=
+-80{width:66%!important}}</style><style type=3D"text/css">@media screen and=
+ (min-width:460px) and (max-width:560px){.ratio-20{width:25%!important}.rat=
+io-80{width:75%!important}}</style><style type=3D"text/css">@media screen a=
+nd (max-width:480px){.mj-sa-column-per-10{width:15%}.mj-sa-column-per-70{wi=
+dth:65%}}</style><style type=3D"text/css">@media only screen and (max-width=
+:480px){table.mj-full-width-mobile{width:100%!important}td.mj-full-width-mo=
+bile{width:auto!important}.html-freeze-block-img .mj-full-width-mobile img{=
+height:auto!important}.html-custom-block-img .mj-full-width-mobile img{heig=
+ht:auto!important}}</style><style type=3D"text/css">@media only screen and =
+(min-width:480px){.mj-column-per-100{width:100%!important;max-width:100%}.m=
+j-column-per-10{width:10%!important;max-width:10%}.mj-column-per-65{width:6=
+5%!important;max-width:65%}.mj-column-per-34{width:34%!important;max-width:=
+34%!important}.mj-column-per-66{width:66%!important;max-width:66%!important=
+}.mj-column-per-25{width:25%!important;max-width:25%}.mj-column-per-100{wid=
+th:100%;max-width:100%}.mj-column-per-33-33{width:33.33%;max-width:33.33%}.=
+mj-column-per-33-34{width:33.34%;max-width:33.34%}}</style><style type=3D"t=
+ext/css">@media (max-width:480px){.amp-html-block .brand-library-widget h1,=
+.bl-typography-block-wrapper h1{font-size:28px}.amp-html-block .brand-libr=
+ary-widget h2,.bl-typography-block-wrapper h2{font-size:24px}.amp-html-bloc=
+k .brand-library-widget h3,.bl-typography-block-wrapper h3{font-size:20px}.=
+amp-html-block .brand-library-widget h4,.bl-typography-block-wrapper h4{fon=
+t-size:18px}.amp-html-block .brand-library-widget ol li,.amp-html-block .br=
+and-library-widget p,.amp-html-block .brand-library-widget ul li,.bl-typogr=
+aphy-block-wrapper ol li,.bl-typography-block-wrapper p,.bl-typography-bloc=
+k-wrapper ul li{font-size:16px}.amp-btn-wrapper p{font-size:inherit}}</styl=
+e><style type=3D"text/css">@media screen and (max-width:480px){.hide-on-des=
+ktop{display:revert}.hide-on-mobile{display:none}}</style><style type=3D"te=
+xt/css">@media only screen and (max-width:480px){.hide-on-desktop{display:r=
+evert}.hide-on-desktop div,.hide-on-desktop p,.hide-on-desktop table,.hide-=
+on-desktop tbody,.hide-on-desktop td,.hide-on-desktop tr{display:revert}.hi=
+de-on-mobile{display:none;mso-hide:all;font-size:0;max-height:0}.hide-on-mo=
+bile div,.hide-on-mobile p,.hide-on-mobile table,.hide-on-mobile tbody,.hid=
+e-on-mobile td,.hide-on-mobile tr{display:none;mso-hide:all;font-size:0;max=
+-height:0}}</style></head><body style=3D"word-spacing:normal;background-col=
+or:#f8fafc"><span style=3D"display:none">Let&#x2019;s build AI live at Indi=
+a&#x2019;s most futuristic AI conference.</span><div class=3D"body-wrapper"=
+ style=3D"background-color:#f8fafc"><!--[if mso | IE]><table align=3D"cente=
+r" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"pres=
+entation" style=3D"width:600px;" width=3D"600" bgcolor=3D"#FFFFFF" ><tr><td=
+ style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![e=
+ndif]--><div style=3D"background:#fff;background-color:#fff;margin:0 auto;b=
+order-radius:0;max-width:600px"><table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:#ff=
+f;background-color:#fff;width:100%;border-radius:0"><tbody><tr><td style=3D=
+"border:0 solid transparent;direction:ltr;font-size:0;padding:0;padding-bot=
+tom:0;padding-left:0;padding-right:0;padding-top:0;text-align:center"><!--[=
+if mso | IE]><table role=3D"presentation" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0"><tr><td class=3D"" width=3D"600px" ><table align=3D"center"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presen=
+tation" style=3D"width:600px;" width=3D"600" bgcolor=3D"transparent" ><tr><=
+td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><!=
+[endif]--><div style=3D"background:0 0;background-color:transparent;margin:=
+0 auto;border-radius:0;max-width:600px"><table align=3D"center" border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"backgr=
+ound:0 0;background-color:transparent;width:100%;border-radius:0"><tbody><t=
+r><td style=3D"border:0 solid transparent;direction:ltr;font-size:0;padding=
+:16px 20px 16px 20px;text-align:center"><!--[if mso | IE]><table role=3D"pr=
+esentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=
+=3D"" style=3D"vertical-align:top;width:560px;" ><![endif]--><div class=3D"=
+mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0;text-align:lef=
+t;direction:ltr;display:inline-block;vertical-align:top;width:100%"><table =
+border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" styl=
+e=3D"vertical-align:top" width=3D"100%"><tbody><tr><td align=3D"left" style=
+=3D"font-size:0;padding:10px 25px;padding-top:0;padding-right:0;padding-bot=
+tom:0;padding-left:0;word-break:break-word"><div style=3D"font-family:Arial=
+;font-size:13px;line-height:1.5;text-align:left;color:#000"><p style=3D"lin=
+e-height:1.25"><span style=3D"color:#000;font-family:Arial;font-size:13px">=
+Hi&#xA0;</span><span style=3D"font-family:Arial;font-size:13px">Vishal,</sp=
+an></p><p>&#xA0;</p><p><span style=3D"font-size:13px"><i>AI made another le=
+ap forward when <strong>OpenAI unveiled o3</strong>, its most advanced reas=
+oning model to date, and switched on <strong>long-term memory</strong> for =
+ChatGPT &#x2013; letting it recall your earlier conversations like an old f=
+riend.</i></span></p><p>&#xA0;</p><p><span style=3D"font-size:13px">The fut=
+ure keeps arriving faster than expected, and the best way to keep up is to =
+jump in and build.</span></p><p>&#xA0;</p><p><span style=3D"color:#000;font=
+-family:Arial;font-size:13px">That&#x2019;s exactly the vibe at <strong>Dat=
+aHack&#xA0;Summit&#xA0;2025</strong>, coming to Bengaluru from <strong>20-2=
+3&#xA0;August</strong>.&#xA0;</span></p></div></td></tr></tbody></table></d=
+iv><!--[if mso | IE]></td></tr></table><![endif]--></td></tr></tbody></tabl=
+e></div><!--[if mso | IE]></td></tr></table></td></tr><tr><td class=3D"bg-f=
+orm1wq2c160-outlook" width=3D"600px" ><table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"bg-form1wq2c160-outlook" role=
+=3D"presentation" style=3D"width:600px;" width=3D"600" bgcolor=3D"transpare=
+nt" ><tr><td style=3D"line-height:0px;font-size:0px;mso-line-height-rule:ex=
+actly;"><![endif]--><div class=3D"bg-form1wq2c160" style=3D"background:0 0;=
+background-color:transparent;margin:0 auto;border-radius:0;max-width:600px"=
+><table align=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"background:0 0;background-color:transparent;w=
+idth:100%;border-radius:0"><tbody><tr><td style=3D"border:0 solid transpare=
+nt;direction:ltr;font-size:0;padding:20px 0;padding-bottom:0;padding-left:0=
+;padding-right:0;padding-top:0;text-align:center"><!--[if mso | IE]><table =
+role=3D"presentation" border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr>=
+<td class=3D"" style=3D"vertical-align:top;width:600px;" ><![endif]--><div =
+class=3D"mj-column-per-100 mj-outlook-group-fix" style=3D"font-size:0;text-=
+align:left;direction:ltr;display:inline-block;vertical-align:top;width:100%=
+"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentat=
+ion" style=3D"background-color:transparent;border:0 solid transparent;borde=
+r-radius:0;vertical-align:top" width=3D"100%"><tbody><tr><td align=3D"left"=
+ style=3D"font-size:0;padding:10px 25px;padding-top:0;padding-right:0;paddi=
+ng-bottom:0;padding-left:20px;word-break:break-word"><div style=3D"font-fam=
+ily:Helvetica;font-size:24px;font-weight:700;letter-spacing:0;line-height:1=
+.5;text-align:left;color:#1e293b"><h2><span style=3D"background-color:#fff=
+;color:#000;font-family:Arial,sans-serif;font-size:13px"><i>Curious about t=
+he details=3F</i></span></h2></div></td></tr><tr><td align=3D"left" class=
+=3D"amp-btn-wrapper" style=3D"font-size:0;padding:8px 0 8px 20px;word-break=
+:break-word"><table border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=
+=3D"presentation" style=3D"border-collapse:separate;width:182px;line-height=
+:100%"><tbody><tr><td align=3D"center" bgcolor=3D"#2674ed" role=3D"presenta=
+tion" style=3D"border-bottom:none;border-left:none;border-radius:4px;border=
+-right:none;border-top:none;border:0 solid transparent;cursor:auto;font-sty=
+le:normal;height:auto;background:#2674ed;padding:0"><a href=3D"https://tn.b=
+trkr.com/clicks/html/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52d=
+a-8689-13e2ab9ae001/c73bc095-05d0-504b-b99a-b7b692051864=3FurlChildId=3D68e=
+a6df8-c5fc-5728-b58b-05d85bb7348f&templateId=3D2d64dd7f-e6ed-4ece-8429-1502=
+b5a8d1b5" style=3D"display:inline-block;width:182px;background:#2674ed;colo=
+r:#fff;font-family:Helvetica;font-size:13px;font-style:normal;font-weight:4=
+00;line-height:1;letter-spacing:0;margin:0;text-decoration:none;text-transf=
+orm:none;padding:6px 0 6px 0;border-radius:4px" target=3D"_blank" data-bloc=
+k-id=3D"formeeyhs159" data-block-type=3D"form" data-url-id=3D"68ea6df8-c5fc=
+-5728-b58b-05d85bb7348f">Download Brochure</a></td></tr></tbody></table></t=
+d></tr></tbody></table></div><!--[if mso | IE]></td></tr></table><![endif]-=
+-></td></tr></tbody></table></div><!--[if mso | IE]></td></tr></table></td>=
+</tr><tr><td class=3D"" width=3D"600px" ><table align=3D"center" border=3D"=
+0" cellpadding=3D"0" cellspacing=3D"0" class=3D"" role=3D"presentation" sty=
+le=3D"width:600px;" width=3D"600" bgcolor=3D"transparent" ><tr><td style=3D=
+"line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]--><=
+div style=3D"background:0 0;background-color:transparent;margin:0 auto;bord=
+er-radius:0;max-width:600px"><table align=3D"center" border=3D"0" cellpaddi=
+ng=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"background:0 0;ba=
+ckground-color:transparent;width:100%;border-radius:0"><tbody><tr><td style=
+=3D"border:0 solid transparent;direction:ltr;font-size:0;padding:16px 20px =
+16px 20px;text-align:center"><!--[if mso | IE]><table role=3D"presentation"=
+ border=3D"0" cellpadding=3D"0" cellspacing=3D"0"><tr><td class=3D"" style=
+=3D"vertical-align:top;width:560px;" ><![endif]--><div class=3D"mj-column-p=
+er-100 mj-outlook-group-fix" style=3D"font-size:0;text-align:left;direction=
+:ltr;display:inline-block;vertical-align:top;width:100%"><table border=3D"0=
+" cellpadding=3D"0" cellspacing=3D"0" role=3D"presentation" style=3D"vertic=
+al-align:top" width=3D"100%"><tbody><tr><td align=3D"left" style=3D"font-si=
+ze:0;padding:10px 25px;padding-top:0;padding-right:0;padding-bottom:0;paddi=
+ng-left:0;word-break:break-word"><div style=3D"font-family:Arial;font-size:=
+13px;line-height:1.5;text-align:left;color:#000"><p><span style=3D"color:#0=
+00;font-family:Arial;font-size:13px">Across four days you&#x2019;ll:</span>=
+</p><p>&#xA0;</p><ul><li style=3D"font-size:13px"><span style=3D"font-size:=
+13px"><strong>Catch 80+ AI talks</strong> packed with real case studies and=
+ clear, take-home tactics.</span></li><li style=3D"font-size:13px"><span st=
+yle=3D"font-size:13px"><strong>Jump into 50+ hack sessions</strong> and see=
+ GenAI and Agentic AI in action.</span></li><li style=3D"font-size:13px"><s=
+pan style=3D"font-size:13px"><strong>Build GenAI and Agentic AI solutions i=
+n </strong>10+ hands-on workshops<strong>.</strong></span></li></ul><p>&#xA=
+0;</p><p><span style=3D"font-size:13px">In case of queries, feel free to re=
+ply to this email or call us at&#xA0;<strong>+91-8368808185.</strong></span=
+></p><p>&#xA0;</p><p><span style=3D"background-color:transparent;color:#000=
+;font-family:Arial;font-size:10pt">Warm regards,</span><br><span style=3D"b=
+ackground-color:transparent;color:#000;font-family:Arial;font-size:10pt">Ta=
+nya Chitranshi</span></p><p style=3D"line-height:1.25">&#xA0;</p><p style=
+=3D"line-height:1.25"><a href=3D"https://tn.btrkr.com/clicks/html/5a41b83d-=
+9188-5fe1-8c1d-1a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae001/47666eda-5=
+4fe-58b8-a475-9ced1bd97315=3FurlChildId=3D71ce4ffc-3633-5788-9e64-828f68124=
+fed&templateId=3D2d64dd7f-e6ed-4ece-8429-1502b5a8d1b5" data-block-type=3D"f=
+reeze-block" data-url-id=3D"71ce4ffc-3633-5788-9e64-828f68124fed"><span sty=
+le=3D"color:#00e;font-family:Arial;font-size:10px"><u>Unsubscribe here</u><=
+/span></a></p></div></td></tr></tbody></table></div><!--[if mso | IE]></td>=
+</tr></table><![endif]--></td></tr></tbody></table></div><!--[if mso | IE]>=
+</td></tr></table></td></tr></table><![endif]--></td></tr></tbody></table><=
+/div><!--[if mso | IE]></td></tr></table><![endif]--></div><a style=3D"disp=
+lay:inline-block;font-size:1px;height:1px;width:1px;max-height:1px;max-widt=
+h:1px;overflow:hidden;color:transparent;mso-hide:all;" href=3D"https://tn.b=
+trkr.com/clicks/honey-link/html/5a41b83d-9188-5fe1-8c1d-1a3b072747ea/75cf93=
+1e-80e6-52da-8689-13e2ab9ae001">Click here</a><img width=3D"1" height=3D"1"=
+ alt=3D"signature" src=3D"https://tn.btrkr.com/opens/html/5a41b83d-9188-5fe=
+1-8c1d-1a3b072747ea/75cf931e-80e6-52da-8689-13e2ab9ae001"></body></html>
+--_----sPJ2MB/3cKDFsYN1IyZzzg===_05/3E-20469-9EF32686--
+

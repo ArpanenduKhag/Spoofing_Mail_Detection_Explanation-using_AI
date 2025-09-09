@@ -1,0 +1,30 @@
+Subject: Learn React programming right in your browser [major freeCodeCamp curriculum update]
+
+From: Quincy Larson quincy@freecodecamp.org
+To: rajshreesingh789@gmail.com
+Date: 21 June 2025 at 21:33
+
+Here are this week's five freeCodeCamp resources that are worth your time:
+
+The freeCodeCamp community just released three new sections of our Certified Full Stack Developer curriculum: React Hooks and State, Testing, and Performance. These include dozens of lectures, workshops, and interactive labs. As you progress through the coursework, you'll build your own fully playable Tic Tac Toe game, color picker, and more. We'll continue to publish the remaining modules throughout 2025. If you start the curriculum now, you can be one of the first people to earn the cert when we add the final exam and capstone project in early 2026. (fully interactive curriculum): https://www.freecodecamp.org/news/learn-react-in-your-browser-freecodecamp-full-stack-curriculum-mid-2025-update/
+
+freeCodeCamp also published this comprehensive course that will help you earn the Google Cloud Data Analytics certificate. You'll learn about SQL, BigQuery, data visualization, data lakehouse architecture, and more. (10 hour YouTube course): https://www.freecodecamp.org/news/beginners-guide-to-cloud-data-analytics/
+
+Logic and reason underpin all of software development. And this freeCodeCamp handbook will teach you how to think critically when testing your code. You'll learn how to use Modus Ponens, Modus Tollens, Contrapositives, Truth Tables, and other philosophical tools to map out all the places where your software can go off the rails. (full-length handbook): https://www.freecodecamp.org/news/the-logic-philosophy-and-science-of-software-testing-handbook-for-developers/
+
+Learn the fundamentals of data communication and networking in this new freeCodeCamp handbook. You'll learn about routing, switching, Network Topologies, the seven layers of the OSI Model, and more. (full-length handbook): https://www.freecodecamp.org/news/the-data-communication-and-networking-handbook/
+
+Finally, you may practice good operational security on your laptop. But what about your phone? This quick article will give you some practical tips for locking down your phone. (7 minute read): https://www.freecodecamp.org/news/how-to-improve-your-phones-privacy/
+
+These are just a few of the open source learning resources the freeCodeCamp community published this week. We're working hard to build a learner's paradise - with courses on everything from computer science to Spanish. If you're serious about life-long learning, then congratulations. You're in the right place. You've found your people. Now help the community do even more by supporting our charity and our mission: https://www.freecodecamp.org/donate
+
+Quote of the Week:
+"A top coder sees a program graphically. A data structure as a hierarchy of relationships, a program as a network of data pipes. The first and only time they reduce pictures to words is when they write code." - Robert Wagner, Programmer and Computer Science professor
+
+Until next week, happy coding.
+
+-- Quincy Larson
+
+Teacher and founder of freeCodeCamp.org
+
+If these aren't worth your time, you can turn them off: https://www.freecodecamp.org/ue/QprZ4CGRzdiRs84rga270
